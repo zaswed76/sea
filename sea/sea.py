@@ -45,13 +45,30 @@ class Sea(list):
             self.append(line)
 
 class Ship(list):
+    Vertical = 1
+    Horizontal = 0
     def __init__(self, bow, course, deck):
         super().__init__()
+        self.x, self.y = bow
+        self.course = course
+        self.deck = deck
+        self.corpus = self._set_corpus()
+        self._around = []
+
+    def _set_corpus(self):
+        if self.course == self.Horizontal:
+            return [(self.x + n, self.y) for n in range(self.deck)]
+        else:
+            return [(self.x, self.y + n) for n in range(self.deck)]
+
+
+    def _set_around(self):
+        pass
+
+
+
 
 if __name__ == '__main__':
-    sea = Sea()
-    sea.create_field(10, 10)
-    print(sea[0][6].distance_to_obstacles_x)
-    sea[0][6].distance_to_obstacles_x = 8
-    print(sea[0][6].distance_to_obstacles_x)
+    s = Ship((1, 1), Ship.Horizontal, 2)
+    print(s.corpus)
 
