@@ -1,3 +1,4 @@
-base_project_template
+sea
 =====================
 __version__ = '0.1.1'
+
