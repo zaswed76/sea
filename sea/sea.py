@@ -59,7 +59,10 @@ class Ship(list):
         self.deck = deck
         self.corpus = []
         self.around = []
+        self.top_beacon = []
+        self.left_beacon = []
         self.set_ship()
+
 
     def _border_filter(self, x, y):
         return self.min < x < self.max and self.min < y < self.max
@@ -72,6 +75,8 @@ class Ship(list):
         right = (self.x + self.deck, self.y)
         top = [(self.x+n, top_y) for n in range(-1, self.deck+1)]
         bot = [(self.x+n, bottom_y) for n in range(-1, self.deck+1)]
+
+
         res.append(left)
         res.append(right)
         res.extend(top)
@@ -102,13 +107,26 @@ class Ship(list):
             self.corpus = [(self.x, self.y + n) for n in range(self.deck)]
             self.around = self._around_ver()
             self.extend(self.corpus + self.around)
+        self.top_beacon = self.set_top_beacon
+        self.left_beacon = self.set_left_beacon
 
 
+    @property
+    def set_top_beacon(self):
+        ty = self.y - 1
+        return [(x, y) for x, y in self if y == ty]
+
+    @property
+    def set_left_beacon(self):
+        tx = self.x - 1
+        return [(x, y) for x, y in self if x == tx]
 
 
 
 if __name__ == '__main__':
-    s = Ship((9, 9), Ship.Vertical, 1)
-    print(s)
+    s = Ship((6, 5), Ship.Vertical, 3)
+    print(s.top_beacon)
+    print(s.left_beacon)
+    # print(s.set_left_beacon)
 
 
