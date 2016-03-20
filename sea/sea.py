@@ -53,13 +53,15 @@ class Sea(dict):
             for x in range(width):
                 self[(x, y)] = Cell(x, y)
 
-    def calc_permissible(self, course, deck):
+    def set_permissible(self, course, deck):
         for cell in self.values():
             if course == Ship.Horizontal:
+                cell.distance_to_obstacles_x = deck
                 if cell.distance_to_obstacles_x >= deck:
                     self.permissible.append(cell)
             else:
-                if cell.distance_to_obstacles_x >= deck:
+                cell.distance_to_obstacles_y = deck
+                if cell.distance_to_obstacles_y >= deck:
                     self.permissible.append(cell)
 
 
@@ -150,6 +152,6 @@ class Ship(list):
 if __name__ == '__main__':
     s = Sea()
     s.create_field(10, 10)
-    s.calc_permissible(Ship.Horizontal, 9)
+    s.set_permissible(Ship.Horizontal, 4)
     print(s.permissible)
 
