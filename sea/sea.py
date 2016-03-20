@@ -11,6 +11,7 @@ class Cell:
         self.y = y
         self.x = x
         self.shooting = False  # стреляли ли в эту клетку
+        self.ship_place = False  # размещает ли корабль
         self._distance_to_obstacles_x = _max - (self.x - 1)
         self._distance_to_obstacles_y = _max - (self.y - 1)
 
@@ -20,7 +21,7 @@ class Cell:
 
     @distance_to_obstacles_x.setter
     def distance_to_obstacles_x(self, obstacles):
-        self._distance_to_obstacles_x = _max - (obstacles - 1)
+        self._distance_to_obstacles_x = obstacles - self.x
 
     @property
     def distance_to_obstacles_y(self):
@@ -28,15 +29,22 @@ class Cell:
 
     @distance_to_obstacles_y.setter
     def distance_to_obstacles_y(self, obstacles):
-        self._distance_to_obstacles_y = _max - (obstacles - 1)
+        self._distance_to_obstacles_y = obstacles - self.y
 
     def __repr__(self):
         return '({}, {})'.format(self.y, self.x)
 
 
+class Fleet(list):
+    def __init__(self, names):
+        super().__init__()
+        self.extend(names)
+
+
 class Sea(list):
     def __init__(self):
         super().__init__()
+        self.ships = []
 
 
     def create_field(self, width, height):
@@ -45,6 +53,18 @@ class Sea(list):
             for x in range(width):
                 line.append((Cell(x, y)))
             self.append(line)
+
+    def permissible(self, course):
+        for line in self:
+            for x in line
+
+
+
+    def add_ship(self, ship):
+        pass
+
+
+
 
 class Ship(list):
     Vertical = 1
@@ -124,9 +144,8 @@ class Ship(list):
 
 
 if __name__ == '__main__':
-    s = Ship((6, 5), Ship.Vertical, 3)
-    print(s.top_beacon)
-    print(s.left_beacon)
-    # print(s.set_left_beacon)
-
+    c = Cell(5, 5)
+    print(c.distance_to_obstacles_x)
+    c.distance_to_obstacles_x = 8
+    print(c.distance_to_obstacles_x)
 
