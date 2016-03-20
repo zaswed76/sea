@@ -32,7 +32,7 @@ class Cell:
         self._distance_to_obstacles_y = obstacles - self.y
 
     def __repr__(self):
-        return '({}, {})'.format(self.y, self.x)
+        return '({}, {})'.format(self.x, self.y)
 
 
 class Fleet(list):
@@ -41,22 +41,26 @@ class Fleet(list):
         self.extend(names)
 
 
-class Sea(list):
+class Sea(dict):
     def __init__(self):
         super().__init__()
         self.ships = []
+        self.permissible = []
 
 
     def create_field(self, width, height):
         for y in range(height):
-            line = []
             for x in range(width):
-                line.append((Cell(x, y)))
-            self.append(line)
+                self[(x, y)] = Cell(x, y)
 
-    def permissible(self, course):
-        for line in self:
-            for x in line
+    def calc_permissible(self, course, deck):
+        for cell in self.values():
+            if course == Ship.Horizontal:
+                if cell.distance_to_obstacles_x >= deck:
+                    self.permissible.append(cell)
+            else:
+                if cell.distance_to_obstacles_x >= deck:
+                    self.permissible.append(cell)
 
 
 
@@ -144,8 +148,8 @@ class Ship(list):
 
 
 if __name__ == '__main__':
-    c = Cell(5, 5)
-    print(c.distance_to_obstacles_x)
-    c.distance_to_obstacles_x = 8
-    print(c.distance_to_obstacles_x)
+    s = Sea()
+    s.create_field(10, 10)
+    s.calc_permissible(Ship.Horizontal, 9)
+    print(s.permissible)
 
