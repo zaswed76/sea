@@ -5,8 +5,8 @@
 _max = 9
 _min = 0
 
-class Cell:
 
+class Cell:
     def __init__(self, x, y):
         self.y = y
         self.x = x
@@ -32,7 +32,7 @@ class Cell:
         self._distance_to_obstacles_y = obstacles - self.y
 
     def __repr__(self):
-        return '({}, {})'.format(self.x, self.y)
+        return 'Cell - ({}, {})'.format(self.x, self.y)
 
 
 class Fleet(list):
@@ -45,36 +45,32 @@ class Sea(dict):
     def __init__(self):
         super().__init__()
         self.ships = []
-        self.permissible = []
-
 
     def create_field(self, width, height):
         for y in range(height):
             for x in range(width):
                 self[(x, y)] = Cell(x, y)
 
-    def set_permissible(self, course, deck):
+    def permissible(self, course, deck):
+        permissible = []
         for cell in self.values():
             if course == Ship.Horizontal:
-                cell.distance_to_obstacles_x = deck
                 if cell.distance_to_obstacles_x >= deck:
-                    self.permissible.append(cell)
+                    permissible.append(cell)
             else:
-                cell.distance_to_obstacles_y = deck
                 if cell.distance_to_obstacles_y >= deck:
-                    self.permissible.append(cell)
-
-
+                    permissible.append(cell)
+        return permissible
 
     def add_ship(self, ship):
-        pass
-
+        for cell in ship:
+            print(self[cell])
 
 
 
 class Ship(list):
-    Vertical = 1
-    Horizontal = 0
+    Vertical = 'vertical'
+    Horizontal = 'horizontal'
 
     def __init__(self, bow, course, deck):
         super().__init__()
@@ -89,7 +85,6 @@ class Ship(list):
         self.left_beacon = []
         self.set_ship()
 
-
     def _border_filter(self, x, y):
         return self.min < x < self.max and self.min < y < self.max
 
@@ -99,9 +94,9 @@ class Ship(list):
         bottom_y = self.y + 1
         left = (self.x - 1, self.y)
         right = (self.x + self.deck, self.y)
-        top = [(self.x+n, top_y) for n in range(-1, self.deck+1)]
-        bot = [(self.x+n, bottom_y) for n in range(-1, self.deck+1)]
-
+        top = [(self.x + n, top_y) for n in range(-1, self.deck + 1)]
+        bot = [(self.x + n, bottom_y) for n in
+               range(-1, self.deck + 1)]
 
         res.append(left)
         res.append(right)
@@ -113,29 +108,31 @@ class Ship(list):
         res = []
         left_x = self.x - 1
         right_x = self.x + 1
-        top = (self.x, self.y-1)
+        top = (self.x, self.y - 1)
         bottom = (self.x, self.y + self.deck)
-        left = [(left_x, self.y+n) for n in range(-1, self.deck+1)]
-        right = [(right_x, self.y+n) for n in range(-1, self.deck+1)]
+        left = [(left_x, self.y + n) for n in
+                range(-1, self.deck + 1)]
+        right = [(right_x, self.y + n) for n in
+                 range(-1, self.deck + 1)]
         res.append(top)
         res.append(bottom)
         res.extend(left)
         res.extend(right)
         return [(x, y) for x, y in res if self._border_filter(x, y)]
 
-
     def set_ship(self):
         if self.course == self.Horizontal:
-            self.corpus = [(self.x + n, self.y) for n in range(self.deck)]
+            self.corpus = [(self.x + n, self.y) for n in
+                           range(self.deck)]
             self.around = self._around_hor()
             self.extend(self.corpus + self.around)
         else:
-            self.corpus = [(self.x, self.y + n) for n in range(self.deck)]
+            self.corpus = [(self.x, self.y + n) for n in
+                           range(self.deck)]
             self.around = self._around_ver()
             self.extend(self.corpus + self.around)
         self.top_beacon = self.set_top_beacon
         self.left_beacon = self.set_left_beacon
-
 
     @property
     def set_top_beacon(self):
@@ -148,10 +145,12 @@ class Ship(list):
         return [(x, y) for x, y in self if x == tx]
 
 
+    def to_display_location(self):
+        for cell in self.left_beacon:
+            print(cell)
 
 if __name__ == '__main__':
     s = Sea()
     s.create_field(10, 10)
     s.set_permissible(Ship.Horizontal, 4)
     print(s.permissible)
-

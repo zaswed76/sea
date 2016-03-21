@@ -1,11 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from sea.sea import Cell, Sea, Ship
 
 
-import pytils
+ship = Ship((5, 5), Ship.Horizontal, 2)
+sea = Sea()
+sea.create_field(10, 10)
+sea.add_ship(ship)
 
-print(pytils.numeral.in_words(27789))
+
+
+# for x, y in left:
+#     for n in range(-4, 0):
+
+
+
+print(list(range(-4, 0)))
 
 
 

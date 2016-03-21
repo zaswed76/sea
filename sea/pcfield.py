@@ -12,10 +12,17 @@ class Pc:
         self.sea.create_field(10, 10)
 
     def add_fleet(self):
-        for deck in self.ship_names:
+        # for deck in self.ship_names:
+            deck = 4
             course = random.choice([Ship.Vertical, Ship.Horizontal])
-            permissible = [y for y in self.sea]
-            print(permissible)
+            perm = self.sea.permissible(course, deck)
+            print(course)
+            bow = random.choice(perm)
+            ship = Ship(bow, course, deck)
+            print(ship.corpus)
+            ship.to_display_location()
+
+            return
 
 
 
