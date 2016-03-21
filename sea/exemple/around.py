@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from sea.sea import Cell, Sea, Ship
+from sea import Cell, Sea, Ship
 
 
 ship = Ship((5, 5), Ship.Horizontal, 2)
@@ -16,7 +16,7 @@ sea.add_ship(ship)
 
 
 
-print(list(range(-4, 0)))
+# print(list(range(-4, 0)))
 
 
 

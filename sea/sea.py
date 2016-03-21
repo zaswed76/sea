@@ -64,7 +64,7 @@ class Sea(dict):
 
     def add_ship(self, ship):
         for cell in ship:
-            print(self[cell])
+            self[cell].ship_place = True
 
 
 
