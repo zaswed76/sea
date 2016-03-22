@@ -44,7 +44,7 @@ class Fleet(list):
 class Sea(dict):
     def __init__(self):
         super().__init__()
-        self.ships = []
+        self.fleet = {}
 
     def create_field(self, width, height):
         for y in range(height):
@@ -62,10 +62,12 @@ class Sea(dict):
                     permissible.append(cell)
         return permissible
 
-    def add_ship(self, ship):
+    def add_ship(self, ship, name):
+        self.fleet[name] = ship
         for cell in ship:
             self[cell].ship_place = True
 
+    def update(self, ):
 
 
 class Ship(list):

@@ -4,10 +4,12 @@
 from sea import Cell, Sea, Ship
 
 
-ship = Ship((5, 5), Ship.Horizontal, 2)
+name = (3, 2)
 sea = Sea()
 sea.create_field(10, 10)
-sea.add_ship(ship)
+ship = Ship((5, 5), Ship.Horizontal, 2)
+sea.add_ship(ship, name)
+sea.update()
 
 
 
