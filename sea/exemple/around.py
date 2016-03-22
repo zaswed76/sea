@@ -8,7 +8,7 @@ name = (3, 2)
 sea = Sea()
 sea.create_field(10, 10)
 ship = Ship((5, 5), Ship.Horizontal, 2)
-sea.add_ship(ship, name)
+sea.update_cells(ship, name)
 sea.update()
 
 

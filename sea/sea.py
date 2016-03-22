@@ -62,12 +62,35 @@ class Sea(dict):
                     permissible.append(cell)
         return permissible
 
-    def add_ship(self, ship, name):
-        self.fleet[name] = ship
+    def _update_cells(self, ship):
+
+        """
+
+        :param ship: list < tuple
+        """
+        # клетка занята кораблём
         for cell in ship:
             self[cell].ship_place = True
 
-    def update(self, ):
+        # обновляем
+        for cell in ship.left_beacon:
+            for n in range(-4, 0):
+
+
+
+
+    def add_ship(self, ship, name):
+        self.fleet[name] = ship
+
+    def _update_distance_to_obstacles(self, left, top):
+        """
+        обновляет свойство distance_to_obstacles_x и
+        distance_to_obstacles_y клеток корабля.
+        крайние координаты корабля по левую сторону и нос:
+        :param left: list < tuple
+        :param top: list < tuple
+        """
+        pass
 
 
 class Ship(list):
