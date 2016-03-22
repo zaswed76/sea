@@ -35,16 +35,30 @@ class Cell:
         return 'Cell - ({}, {})'.format(self.x, self.y)
 
 
-class Fleet(list):
-    def __init__(self, names):
+class Fleet(dict):
+    def __init__(self):
         super().__init__()
-        self.extend(names)
+
+    def add_ship(self, name, ship):
+        self[name] = ship
+
+    def __contains__(self, item):
+        for ship in self.values():
+            if item in ship:
+                return True
+        else:
+            return False
+
+
 
 
 class Sea(dict):
     def __init__(self):
         super().__init__()
-        self.fleet = {}
+        self.fleet = None
+
+    def set_fleet(self, fleet):
+        self.fleet = fleet
 
     def create_field(self, width, height):
         for y in range(height):
@@ -62,7 +76,10 @@ class Sea(dict):
                     permissible.append(cell)
         return permissible
 
-    def _update_cells(self, ship):
+    def add_ship(self, name, ship):
+        self.fleet[name] = ship
+
+    def update_cells(self, ship):
 
         """
 
@@ -73,24 +90,20 @@ class Sea(dict):
             self[cell].ship_place = True
 
         # обновляем
-        for cell in ship.left_beacon:
-            for n in range(-4, 0):
+        for x, y in ship.left_beacon:
+            self._scan_to_left(x, y)
 
 
+    def _scan_to_left(self, x, y):
+        for n in range(-1, -5, -1):
+            nx = x + n
+            if nx < _min: # конец поля
+                return
+            if (nx, y) in self.fleet: # уткнулись в корабль
+                return
+            self[(nx, y)].distance_to_obstacles_x = x
 
 
-    def add_ship(self, ship, name):
-        self.fleet[name] = ship
-
-    def _update_distance_to_obstacles(self, left, top):
-        """
-        обновляет свойство distance_to_obstacles_x и
-        distance_to_obstacles_y клеток корабля.
-        крайние координаты корабля по левую сторону и нос:
-        :param left: list < tuple
-        :param top: list < tuple
-        """
-        pass
 
 
 class Ship(list):

@@ -1,24 +1,23 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import pprint
 
-from sea import Cell, Sea, Ship
+from sea.sea import Cell, Sea, Ship, Fleet
 
 
-name = (3, 2)
+
+
 sea = Sea()
 sea.create_field(10, 10)
+print(sea[(3, 4)].distance_to_obstacles_x)
+f = Fleet()
+sea.set_fleet(f)
 ship = Ship((5, 5), Ship.Horizontal, 2)
-sea.update_cells(ship, name)
-sea.update()
+sea.add_ship(0, ship)
+sea.update_cells(ship)
+print(sea[(3, 4)].distance_to_obstacles_x)
 
 
-
-# for x, y in left:
-#     for n in range(-4, 0):
-
-
-
-# print(list(range(-4, 0)))
 
 
 
