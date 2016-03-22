@@ -76,10 +76,10 @@ class Sea(dict):
         permissible = []
         for cell in self.values():
             if course == Ship.Horizontal:
-                if cell.distance_to_obstacles_x >= deck:
+                if cell.distance_to_obstacles_x >= deck and not cell.ship_place:
                     permissible.append(cell)
             else:
-                if cell.distance_to_obstacles_y >= deck:
+                if cell.distance_to_obstacles_y >= deck and not cell.ship_place:
                     permissible.append(cell)
         return permissible
 
