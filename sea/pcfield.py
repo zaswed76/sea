@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from sea import Cell, Sea, Ship
+from sea import Cell, Sea, Ship, Fleet
 import random
 
 class Pc:
@@ -9,20 +9,26 @@ class Pc:
         self.ship_names = ship_names
 
         self.sea = Sea()
+        self.fleet = Fleet()
+        self.sea.set_fleet(self.fleet)
         self.sea.create_field(10, 10)
 
     def add_fleet(self):
-        # for deck in self.ship_names:
-            deck = 4
+        for name, deck in enumerate(self.ship_names):
+            # направление
             course = random.choice([Ship.Vertical, Ship.Horizontal])
+
             perm = self.sea.permissible(course, deck)
-            print(course)
             bow = random.choice(perm)
             ship = Ship(bow, course, deck)
+            print('имя={}; палуб={}; курс={}'.format(name, deck, course))
             print(ship.corpus)
-            ship.to_display_location()
+            print('---------------------')
+            self.sea.add_ship(name, ship)
+            self.sea.update_cells(ship)
 
-            return
+
+
 
 
 

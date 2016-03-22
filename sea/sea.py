@@ -5,9 +5,16 @@
 _max = 9
 _min = 0
 
+class SeaError(Exception): pass
 
-class Cell:
+side_error_message = '''стороны могут быть:
+'left_beacon' ; Ship.Left_beacon
+'top_beacon' ; Ship.Top_beacon '''
+
+class Cell(list):
     def __init__(self, x, y):
+        super().__init__()
+        self.extend([x, y])
         self.y = y
         self.x = x
         self.shooting = False  # стреляли ли в эту клетку
@@ -86,22 +93,34 @@ class Sea(dict):
         :param ship: list < tuple
         """
         # клетка занята кораблём
+        back_seq = range(-1, -5, -1)
         for cell in ship:
             self[cell].ship_place = True
 
         # обновляем
         for x, y in ship.left_beacon:
-            self._scan_to_left(x, y)
+            self._scan_to_left(x, y, back_seq)
+        for x, y in ship.top_beacon:
+            self._scan_to_top(x, y, back_seq)
 
 
-    def _scan_to_left(self, x, y):
-        for n in range(-1, -5, -1):
-            nx = x + n
-            if nx < _min: # конец поля
-                return
-            if (nx, y) in self.fleet: # уткнулись в корабль
-                return
-            self[(nx, y)].distance_to_obstacles_x = x
+    def _scan_to_left(self, x, y, seq):
+            for n in seq:
+                nx = x + n
+                if nx < _min: # конец поля
+                    return
+                if (nx, y) in self.fleet: # уткнулись в корабль
+                    return
+                self[(nx, y)].distance_to_obstacles_x = x
+
+    def _scan_to_top(self, x, y, seq):
+            for n in seq:
+                ny = y + n
+                if ny < _min: # конец поля
+                    return
+                if (x, ny) in self.fleet: # уткнулись в корабль
+                    return
+                self[(x, ny)].distance_to_obstacles_y = y
 
 
 
@@ -109,6 +128,8 @@ class Sea(dict):
 class Ship(list):
     Vertical = 'vertical'
     Horizontal = 'horizontal'
+    Left_beacon = 'left_beacon'
+    Top_beacon = 'top_beacon'
 
     def __init__(self, bow, course, deck):
         super().__init__()
@@ -182,10 +203,6 @@ class Ship(list):
         tx = self.x - 1
         return [(x, y) for x, y in self if x == tx]
 
-
-    def to_display_location(self):
-        for cell in self.left_beacon:
-            print(cell)
 
 if __name__ == '__main__':
     s = Sea()

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import pprint
 
-from sea.sea import Cell, Sea, Ship, Fleet
+from sea import Cell, Sea, Ship, Fleet
 
 
 
@@ -16,6 +16,8 @@ ship = Ship((5, 5), Ship.Horizontal, 2)
 sea.add_ship(0, ship)
 sea.update_cells(ship)
 print(sea[(3, 4)].distance_to_obstacles_x)
+print(sea[(0, 4)].distance_to_obstacles_x)
+print(sea[(6, 2)].distance_to_obstacles_y)
 
 
 
