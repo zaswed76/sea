@@ -23,6 +23,7 @@ class Pc:
             ship = Ship(bow, course, deck)
             print('имя={}; палуб={}; курс={}'.format(name, deck, course))
             print(ship.corpus)
+            print(ship.top_beacon)
             print('---------------------')
             self.sea.add_ship(name, ship)
             self.sea.update_cells(ship)
