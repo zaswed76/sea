@@ -8,6 +8,7 @@ from PyQt5 import QtWidgets
 class Cell(QtWidgets.QLabel):
     def __init__(self, *__args):
         super().__init__(*__args)
+        self.setFixedSize(40, 40)
 
 
 class Sea(QtWidgets.QFrame):
@@ -21,7 +22,7 @@ class Sea(QtWidgets.QFrame):
     def create_grid(self, w, h):
         for x in range(w):
             for y in range(h):
-                self.box.addWidget(QtWidgets.QPushButton(str((x, y))), y, x)
+                self.box.addWidget(Cell(str((x, y))), y, x)
 
 
 
