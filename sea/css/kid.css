@@ -1,7 +1,57 @@
 
 
-QLabel {
-    color: #63ec00;
-    font-family: SansSerif;
+QLabel#label_gamer {
+    color: #737373;
+    font-family: "Century Schoolbook L";
     font-size: 22px;
+    margin-bottom: 15px;
+}
+
+QLabel#label_pc {
+    color: #737373;
+    font-family: Century Schoolbook L;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+Cell {
+    border-left: 1px solid #959595;
+    border-top: 1px solid #959595;
+    border-right: none;
+    border-bottom: none;
+}
+
+QFrame#frame_pc_Grid {
+    border-left: none;
+    border-top: none;
+    border-right: 1px solid dimgray;
+    border-bottom: 1px solid dimgray;
+}
+
+QFrame#frame_gamer_Grid {
+    border-left: none;
+    border-top: none;
+    border-right: 1px solid dimgray;
+    border-bottom: 1px solid dimgray;
+}
+
+QFrame#top_frame {
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+QFrame#centr_frame {
+    border-left: none;
+    border-top: 1px solid #c6c6c6;
+    border-right: none;
+    border-bottom: none;
+}
+
+QFrame#bottom_frame {
+    border-left: none;
+    border-top: 1px solid #c6c6c6;
+    border-right: none;
+    border-bottom: none;
 }

@@ -22,7 +22,7 @@ class Sea(QtWidgets.QFrame):
     def create_grid(self, w, h):
         for x in range(w):
             for y in range(h):
-                self.box.addWidget(Cell(str((x, y))), y, x)
+                self.box.addWidget(Cell(), y, x)
 
 
 
