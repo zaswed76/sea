@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from sea import Cell, Sea, Ship, Fleet
+from scr.sea import Cell, Sea, Ship, Fleet
 import random
 
 class Pc:

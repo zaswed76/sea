@@ -10,10 +10,12 @@ class Cell(QtWidgets.QLabel):
         super().__init__(*__args)
 
 
-class Sea(QtWidgets.QWidget):
+class Sea(QtWidgets.QFrame):
     def __init__(self):
         super().__init__()
         self.box = QtWidgets.QGridLayout(self)
+        self.box.setSpacing(0)
+        self.box.setContentsMargins(0, 0, 0, 0)
 
 
     def create_grid(self, w, h):
@@ -29,6 +31,6 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     # app.setStyleSheet(open('./etc/{0}.qss'.format('style'), "r").read())
     main = Sea()
-    main.create_grid(5, 10)
+    main.create_grid(10, 10)
     main.show()
     sys.exit(app.exec_())
