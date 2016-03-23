@@ -5,6 +5,7 @@
 import sys
 from PyQt5 import QtWidgets
 from gui.base_ui import Ui_Form
+from gui import sea
 
 class Widget(QtWidgets.QWidget):
     def __init__(self):
