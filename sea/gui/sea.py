@@ -17,14 +17,16 @@ class Sea(QtWidgets.QFrame):
         self.box = QtWidgets.QGridLayout(self)
         self.box.setSpacing(0)
         self.box.setContentsMargins(0, 0, 0, 0)
+        self.sea = {}
 
 
     def create_grid(self, w, h):
         for x in range(w):
             for y in range(h):
-                self.box.addWidget(Cell(), y, x)
+                self.sea[(x, y)] = Cell()
+                self.box.addWidget(self.sea[(x, y)], y, x)
 
-    def add_ship(self):
+    def add_ship(self, bow, course, deck):
         but = QtWidgets.QPushButton(self)
 
 
