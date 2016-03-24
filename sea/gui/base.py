@@ -36,6 +36,7 @@ class Widget(QtWidgets.QWidget):
         box = QtWidgets.QVBoxLayout(left)
         box.setContentsMargins(0,0,0,0)
         self.user_sea = sea.Sea()
+        self.user_sea.add_ship()
         self.user_sea.create_grid(10, 10)
         box.addWidget(self.user_sea)
 

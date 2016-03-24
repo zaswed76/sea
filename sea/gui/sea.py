@@ -24,6 +24,8 @@ class Sea(QtWidgets.QFrame):
             for y in range(h):
                 self.box.addWidget(Cell(), y, x)
 
+    def add_ship(self):
+        but = QtWidgets.QPushButton(self)
 
 
 
