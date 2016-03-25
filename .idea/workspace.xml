@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/sea/scr/sea.py" line="151" />
+    <bookmark url="file://$PROJECT_DIR$/sea/scr/sea.py" line="167" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d2b38aa-ecb8-4b30-966e-3da2886ffa00" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/sphinx/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/sphinx/source/conf.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/sphinx/source/index.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/scr/pcfield.py" afterPath="$PROJECT_DIR$/sea/scr/game.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sea.iml" afterPath="$PROJECT_DIR$/.idea/sea.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea/css/kid.css" afterPath="$PROJECT_DIR$/sea/css/kid.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea/gui/base.py" afterPath="$PROJECT_DIR$/sea/gui/base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea/gui/base_ui.py" afterPath="$PROJECT_DIR$/sea/gui/base_ui.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea/gui/main.py" afterPath="$PROJECT_DIR$/sea/gui/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea/gui/sea.py" afterPath="$PROJECT_DIR$/sea/gui/sea.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea/scr/sea.py" afterPath="$PROJECT_DIR$/sea/scr/sea.py" />
     </list>
     <ignored path="sea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +30,11 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/sea$base.coverage" NAME="base Coverage Results" MODIFIED="1458782382191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui" />
-    <SUITE FILE_PATH="coverage/sea$sea.coverage" NAME="sea Coverage Results" MODIFIED="1458770458664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui" />
     <SUITE FILE_PATH="coverage/sea$sdi.coverage" NAME="sdi Coverage Results" MODIFIED="1458728158550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Документы/Python/PyQt/examples/mainwindows/sdi" />
-    <SUITE FILE_PATH="coverage/sea$sea__1_.coverage" NAME="sea (1) Coverage Results" MODIFIED="1458734503343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/scr" />
+    <SUITE FILE_PATH="coverage/sea$sea.coverage" NAME="sea Coverage Results" MODIFIED="1458770458664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui" />
     <SUITE FILE_PATH="coverage/sea$videographicsitem.coverage" NAME="videographicsitem Coverage Results" MODIFIED="1458724709261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Документы/Python/PyQt/examples/multimediawidgets" />
-    <SUITE FILE_PATH="coverage/sea$main.coverage" NAME="main Coverage Results" MODIFIED="1458723623245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui" />
+    <SUITE FILE_PATH="coverage/sea$sea__1_.coverage" NAME="sea (1) Coverage Results" MODIFIED="1458734503343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/scr" />
+    <SUITE FILE_PATH="coverage/sea$main.coverage" NAME="main Coverage Results" MODIFIED="1458861137640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui" />
     <SUITE FILE_PATH="coverage/sea$stylesheet.coverage" NAME="stylesheet Coverage Results" MODIFIED="1458725041111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Документы/Python/PyQt/examples/widgets/stylesheet" />
     <SUITE FILE_PATH="coverage/sea$around.coverage" NAME="around Coverage Results" MODIFIED="1458719135342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/exemple" />
     <SUITE FILE_PATH="coverage/sea$stylesheeteditor.coverage" NAME="stylesheeteditor Coverage Results" MODIFIED="1458725001650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Документы/Python/PyQt/examples/widgets/stylesheet" />
@@ -43,29 +49,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sea.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sea/gui/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding>
-                <element signature="e#1599#1617#0" expanded="true" />
+                <element signature="e#47#57#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="sea.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sea/gui/sea.py">
+        <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+              <caret line="130" column="14" selection-start-line="130" selection-start-column="14" selection-end-line="130" selection-end-column="14" />
               <folding>
-                <element signature="e#48#58#0" expanded="true" />
-                <element signature="e#159#218#0" expanded="true" />
-                <element signature="e#282#426#0" expanded="true" />
-                <element signature="e#470#568#0" expanded="true" />
-                <element signature="e#602#635#0" expanded="true" />
+                <element signature="e#157#170#0" expanded="true" />
+                <element signature="e#378#708#0" expanded="true" />
+                <element signature="e#1333#1351#0" expanded="true" />
+                <element signature="e#1397#1414#0" expanded="true" />
+                <element signature="e#1458#1580#0" expanded="true" />
+                <element signature="e#1644#1728#0" expanded="true" />
+                <element signature="e#1766#1877#0" expanded="true" />
+                <element signature="e#1928#2318#0" expanded="true" />
+                <element signature="e#2364#2387#0" expanded="true" />
+                <element signature="e#2432#2808#0" expanded="true" />
+                <element signature="e#2858#3101#0" expanded="true" />
+                <element signature="e#3150#3393#0" expanded="true" />
+                <element signature="e#3431#3804#0" expanded="true" />
+                <element signature="e#3995#4297#0" expanded="true" />
+                <element signature="e#4438#4911#0" expanded="true" />
+                <element signature="e#4948#5444#0" expanded="true" />
+                <element signature="e#5478#6016#0" expanded="true" />
+                <element signature="e#6070#6137#0" expanded="true" />
+                <element signature="e#6192#6259#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,70 +94,16 @@
       <file leaf-file-name="base.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sea/gui/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.117647">
-              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.03846154">
+              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
               <folding>
                 <element signature="e#48#58#0" expanded="true" />
-                <element signature="e#273#544#0" expanded="true" />
-                <element signature="e#582#799#0" expanded="true" />
-                <element signature="e#1136#1162#0" expanded="true" />
-                <element signature="e#1213#1487#0" expanded="true" />
-                <element signature="e#1525#1612#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kid.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sea/css/kid.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.064516">
-              <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base_ui.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sea/gui/base_ui.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625">
-              <caret line="76" column="61" selection-start-line="76" selection-start-column="61" selection-end-line="76" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sea/css/base.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.548387">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pcfield.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sea/scr/pcfield.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-              <folding>
-                <element signature="e#159#319#0" expanded="true" />
-                <element signature="e#354#895#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sea/gui/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding>
-                <element signature="e#47#70#0" expanded="true" />
+                <element signature="e#811#844#0" expanded="true" />
+                <element signature="e#911#1182#0" expanded="true" />
+                <element signature="e#1226#1437#0" expanded="true" />
+                <element signature="e#1483#1703#0" expanded="true" />
+                <element signature="e#2130#2310#0" expanded="true" />
+                <element signature="e#2358#2369#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -162,13 +128,15 @@
       <list>
         <option value="$PROJECT_DIR$/sea/exemple/around.py" />
         <option value="$PROJECT_DIR$/sea/sea.py" />
-        <option value="$PROJECT_DIR$/sea/scr/pcfield.py" />
-        <option value="$PROJECT_DIR$/sea/gui/main.py" />
         <option value="$PROJECT_DIR$/sea/css/base.css" />
         <option value="$PROJECT_DIR$/sea/css/kid.css" />
         <option value="$PROJECT_DIR$/sea/gui/base_ui.py" />
+        <option value="$PROJECT_DIR$/sea/scr/pcfield.py" />
+        <option value="$PROJECT_DIR$/sea/scr/game.py" />
+        <option value="$PROJECT_DIR$/sea/scr/sea.py" />
         <option value="$PROJECT_DIR$/sea/gui/sea.py" />
         <option value="$PROJECT_DIR$/sea/gui/base.py" />
+        <option value="$PROJECT_DIR$/sea/gui/main.py" />
       </list>
     </option>
   </component>
@@ -208,9 +176,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="NBKnowledgePane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -257,7 +224,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="gui" />
+              <option name="myItemId" value="scr" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -275,12 +242,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="gui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,7 +267,7 @@
       <recent name="$PROJECT_DIR$/docs/schemes" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.base">
+  <component name="RunManager" selected="Python.main">
     <configuration default="false" name="base" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -318,24 +286,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="sdi" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Документы/Python/PyQt/examples/mainwindows/sdi" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="sea" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Документы/Python/PyQt/examples/mainwindows/sdi/sdi.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="pcfield" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -349,7 +299,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="sea" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/scr/pcfield.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/scr/game.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -386,6 +336,24 @@
       <module name="sea" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/scr/sea.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea/gui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sea" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/gui/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -596,18 +564,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.base" />
-      <item index="1" class="java.lang.String" itemvalue="Python.sdi" />
-      <item index="2" class="java.lang.String" itemvalue="Python.pcfield" />
-      <item index="3" class="java.lang.String" itemvalue="Python.sea" />
-      <item index="4" class="java.lang.String" itemvalue="Python.sea (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.pcfield" />
+      <item index="2" class="java.lang.String" itemvalue="Python.sea" />
+      <item index="3" class="java.lang.String" itemvalue="Python.sea (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.base" />
-        <item index="1" class="java.lang.String" itemvalue="Python.sea" />
-        <item index="2" class="java.lang.String" itemvalue="Python.pcfield" />
-        <item index="3" class="java.lang.String" itemvalue="Python.sea (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.sdi" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.base" />
+        <item index="2" class="java.lang.String" itemvalue="Python.sea" />
+        <item index="3" class="java.lang.String" itemvalue="Python.pcfield" />
+        <item index="4" class="java.lang.String" itemvalue="Python.sea (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -676,33 +644,39 @@
       <option name="project" value="LOCAL" />
       <updated>1458776568367</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="create sea">
+      <created>1458782817296</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1458782817296</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="730" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25458714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26987767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22171254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Copy/Paste" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26699835" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -722,9 +696,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26987767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -750,12 +724,84 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sea/gui/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="130" column="14" selection-start-line="130" selection-start-column="14" selection-end-line="130" selection-end-column="14" />
+          <folding>
+            <element signature="e#157#170#0" expanded="true" />
+            <element signature="e#378#708#0" expanded="true" />
+            <element signature="e#1333#1351#0" expanded="true" />
+            <element signature="e#1397#1414#0" expanded="true" />
+            <element signature="e#1458#1580#0" expanded="true" />
+            <element signature="e#1644#1728#0" expanded="true" />
+            <element signature="e#1766#1877#0" expanded="true" />
+            <element signature="e#1928#2318#0" expanded="true" />
+            <element signature="e#2364#2387#0" expanded="true" />
+            <element signature="e#2432#2808#0" expanded="true" />
+            <element signature="e#2858#3101#0" expanded="true" />
+            <element signature="e#3150#3393#0" expanded="true" />
+            <element signature="e#3431#3804#0" expanded="true" />
+            <element signature="e#3995#4297#0" expanded="true" />
+            <element signature="e#4438#4911#0" expanded="true" />
+            <element signature="e#4948#5444#0" expanded="true" />
+            <element signature="e#5478#6016#0" expanded="true" />
+            <element signature="e#6070#6137#0" expanded="true" />
+            <element signature="e#6192#6259#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sea/gui/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+          <folding>
+            <element signature="e#48#58#0" expanded="true" />
+            <element signature="e#811#844#0" expanded="true" />
+            <element signature="e#911#1182#0" expanded="true" />
+            <element signature="e#1226#1437#0" expanded="true" />
+            <element signature="e#1483#1703#0" expanded="true" />
+            <element signature="e#2130#2310#0" expanded="true" />
+            <element signature="e#2358#2369#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
           <folding>
-            <element signature="e#1599#1617#0" expanded="true" />
+            <element signature="e#157#170#0" expanded="true" />
+            <element signature="e#378#708#0" expanded="true" />
+            <element signature="e#1333#1351#0" expanded="true" />
+            <element signature="e#1397#1414#0" expanded="true" />
+            <element signature="e#1458#1580#0" expanded="true" />
+            <element signature="e#1644#1728#0" expanded="true" />
+            <element signature="e#1766#1877#0" expanded="true" />
+            <element signature="e#1928#2318#0" expanded="true" />
+            <element signature="e#2364#2387#0" expanded="true" />
+            <element signature="e#2432#2808#0" expanded="true" />
+            <element signature="e#2858#3101#0" expanded="true" />
+            <element signature="e#3150#3393#0" expanded="true" />
+            <element signature="e#3431#3804#0" expanded="true" />
+            <element signature="e#3995#4297#0" expanded="true" />
+            <element signature="e#4438#4911#0" expanded="true" />
+            <element signature="e#4948#5444#0" expanded="true" />
+            <element signature="e#5478#6016#0" expanded="true" />
+            <element signature="e#6070#6137#0" expanded="true" />
+            <element signature="e#6192#6259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -764,13 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#159#218#0" expanded="true" />
-            <element signature="e#282#426#0" expanded="true" />
-            <element signature="e#470#568#0" expanded="true" />
-            <element signature="e#602#635#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -780,11 +819,12 @@
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding>
             <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#273#544#0" expanded="true" />
-            <element signature="e#582#799#0" expanded="true" />
-            <element signature="e#1136#1162#0" expanded="true" />
-            <element signature="e#1213#1487#0" expanded="true" />
-            <element signature="e#1525#1612#0" expanded="true" />
+            <element signature="e#811#844#0" expanded="true" />
+            <element signature="e#911#1182#0" expanded="true" />
+            <element signature="e#1226#1437#0" expanded="true" />
+            <element signature="e#1483#1703#0" expanded="true" />
+            <element signature="e#2130#2310#0" expanded="true" />
+            <element signature="e#2358#2369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -793,13 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2038#2104#0" expanded="true" />
-            <element signature="e#2339#2983#0" expanded="true" />
-            <element signature="e#3062#3140#0" expanded="true" />
-            <element signature="e#3308#3344#0" expanded="true" />
-            <element signature="e#3737#4225#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -807,23 +840,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#2109#2183#0" expanded="true" />
-            <element signature="e#2357#2786#0" expanded="true" />
-            <element signature="e#2840#2915#0" expanded="true" />
-            <element signature="e#2965#3394#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/pcfield.py">
+    <entry file="file://$PROJECT_DIR$/sea/scr/game.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding>
-            <element signature="e#159#319#0" expanded="true" />
-            <element signature="e#354#895#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,7 +855,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#47#70#0" expanded="true" />
+            <element signature="e#47#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -841,7 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,7 +872,25 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
           <folding>
-            <element signature="e#1599#1617#0" expanded="true" />
+            <element signature="e#157#170#0" expanded="true" />
+            <element signature="e#378#708#0" expanded="true" />
+            <element signature="e#1333#1351#0" expanded="true" />
+            <element signature="e#1397#1414#0" expanded="true" />
+            <element signature="e#1458#1580#0" expanded="true" />
+            <element signature="e#1644#1728#0" expanded="true" />
+            <element signature="e#1766#1877#0" expanded="true" />
+            <element signature="e#1928#2318#0" expanded="true" />
+            <element signature="e#2364#2387#0" expanded="true" />
+            <element signature="e#2432#2808#0" expanded="true" />
+            <element signature="e#2858#3101#0" expanded="true" />
+            <element signature="e#3150#3393#0" expanded="true" />
+            <element signature="e#3431#3804#0" expanded="true" />
+            <element signature="e#3995#4297#0" expanded="true" />
+            <element signature="e#4438#4911#0" expanded="true" />
+            <element signature="e#4948#5444#0" expanded="true" />
+            <element signature="e#5478#6016#0" expanded="true" />
+            <element signature="e#6070#6137#0" expanded="true" />
+            <element signature="e#6192#6259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -859,13 +899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#159#218#0" expanded="true" />
-            <element signature="e#282#426#0" expanded="true" />
-            <element signature="e#470#568#0" expanded="true" />
-            <element signature="e#602#635#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -875,11 +908,12 @@
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding>
             <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#273#544#0" expanded="true" />
-            <element signature="e#582#799#0" expanded="true" />
-            <element signature="e#1136#1162#0" expanded="true" />
-            <element signature="e#1213#1487#0" expanded="true" />
-            <element signature="e#1525#1612#0" expanded="true" />
+            <element signature="e#811#844#0" expanded="true" />
+            <element signature="e#911#1182#0" expanded="true" />
+            <element signature="e#1226#1437#0" expanded="true" />
+            <element signature="e#1483#1703#0" expanded="true" />
+            <element signature="e#2130#2310#0" expanded="true" />
+            <element signature="e#2358#2369#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -888,13 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2038#2104#0" expanded="true" />
-            <element signature="e#2339#2983#0" expanded="true" />
-            <element signature="e#3062#3140#0" expanded="true" />
-            <element signature="e#3308#3344#0" expanded="true" />
-            <element signature="e#3737#4225#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -902,23 +929,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#2109#2183#0" expanded="true" />
-            <element signature="e#2357#2786#0" expanded="true" />
-            <element signature="e#2840#2915#0" expanded="true" />
-            <element signature="e#2965#3394#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/pcfield.py">
+    <entry file="file://$PROJECT_DIR$/sea/scr/game.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding>
-            <element signature="e#159#319#0" expanded="true" />
-            <element signature="e#354#895#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -927,7 +944,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#47#70#0" expanded="true" />
+            <element signature="e#47#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -936,7 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -945,7 +961,25 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1599#1617#0" expanded="true" />
+            <element signature="e#157#170#0" expanded="true" />
+            <element signature="e#378#708#0" expanded="true" />
+            <element signature="e#1333#1351#0" expanded="true" />
+            <element signature="e#1397#1414#0" expanded="true" />
+            <element signature="e#1458#1580#0" expanded="true" />
+            <element signature="e#1644#1728#0" expanded="true" />
+            <element signature="e#1766#1877#0" expanded="true" />
+            <element signature="e#1928#2318#0" expanded="true" />
+            <element signature="e#2364#2387#0" expanded="true" />
+            <element signature="e#2432#2808#0" expanded="true" />
+            <element signature="e#2858#3101#0" expanded="true" />
+            <element signature="e#3150#3393#0" expanded="true" />
+            <element signature="e#3431#3804#0" expanded="true" />
+            <element signature="e#3995#4297#0" expanded="true" />
+            <element signature="e#4438#4911#0" expanded="true" />
+            <element signature="e#4948#5444#0" expanded="true" />
+            <element signature="e#5478#6016#0" expanded="true" />
+            <element signature="e#6070#6137#0" expanded="true" />
+            <element signature="e#6192#6259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -954,13 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding>
-            <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#159#218#0" expanded="true" />
-            <element signature="e#282#426#0" expanded="true" />
-            <element signature="e#470#568#0" expanded="true" />
-            <element signature="e#602#635#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -969,7 +996,25 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1599#1617#0" expanded="true" />
+            <element signature="e#157#170#0" expanded="true" />
+            <element signature="e#378#708#0" expanded="true" />
+            <element signature="e#1333#1351#0" expanded="true" />
+            <element signature="e#1397#1414#0" expanded="true" />
+            <element signature="e#1458#1580#0" expanded="true" />
+            <element signature="e#1644#1728#0" expanded="true" />
+            <element signature="e#1766#1877#0" expanded="true" />
+            <element signature="e#1928#2318#0" expanded="true" />
+            <element signature="e#2364#2387#0" expanded="true" />
+            <element signature="e#2432#2808#0" expanded="true" />
+            <element signature="e#2858#3101#0" expanded="true" />
+            <element signature="e#3150#3393#0" expanded="true" />
+            <element signature="e#3431#3804#0" expanded="true" />
+            <element signature="e#3995#4297#0" expanded="true" />
+            <element signature="e#4438#4911#0" expanded="true" />
+            <element signature="e#4948#5444#0" expanded="true" />
+            <element signature="e#5478#6016#0" expanded="true" />
+            <element signature="e#6070#6137#0" expanded="true" />
+            <element signature="e#6192#6259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -978,7 +1023,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -987,7 +1031,25 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
           <folding>
-            <element signature="e#1599#1617#0" expanded="true" />
+            <element signature="e#157#170#0" expanded="true" />
+            <element signature="e#378#708#0" expanded="true" />
+            <element signature="e#1333#1351#0" expanded="true" />
+            <element signature="e#1397#1414#0" expanded="true" />
+            <element signature="e#1458#1580#0" expanded="true" />
+            <element signature="e#1644#1728#0" expanded="true" />
+            <element signature="e#1766#1877#0" expanded="true" />
+            <element signature="e#1928#2318#0" expanded="true" />
+            <element signature="e#2364#2387#0" expanded="true" />
+            <element signature="e#2432#2808#0" expanded="true" />
+            <element signature="e#2858#3101#0" expanded="true" />
+            <element signature="e#3150#3393#0" expanded="true" />
+            <element signature="e#3431#3804#0" expanded="true" />
+            <element signature="e#3995#4297#0" expanded="true" />
+            <element signature="e#4438#4911#0" expanded="true" />
+            <element signature="e#4948#5444#0" expanded="true" />
+            <element signature="e#5478#6016#0" expanded="true" />
+            <element signature="e#6070#6137#0" expanded="true" />
+            <element signature="e#6192#6259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -996,7 +1058,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,7 +1066,25 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1599#1617#0" expanded="true" />
+            <element signature="e#157#170#0" expanded="true" />
+            <element signature="e#378#708#0" expanded="true" />
+            <element signature="e#1333#1351#0" expanded="true" />
+            <element signature="e#1397#1414#0" expanded="true" />
+            <element signature="e#1458#1580#0" expanded="true" />
+            <element signature="e#1644#1728#0" expanded="true" />
+            <element signature="e#1766#1877#0" expanded="true" />
+            <element signature="e#1928#2318#0" expanded="true" />
+            <element signature="e#2364#2387#0" expanded="true" />
+            <element signature="e#2432#2808#0" expanded="true" />
+            <element signature="e#2858#3101#0" expanded="true" />
+            <element signature="e#3150#3393#0" expanded="true" />
+            <element signature="e#3431#3804#0" expanded="true" />
+            <element signature="e#3995#4297#0" expanded="true" />
+            <element signature="e#4438#4911#0" expanded="true" />
+            <element signature="e#4948#5444#0" expanded="true" />
+            <element signature="e#5478#6016#0" expanded="true" />
+            <element signature="e#6070#6137#0" expanded="true" />
+            <element signature="e#6192#6259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1015,7 +1094,25 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1599#1617#0" expanded="true" />
+            <element signature="e#157#170#0" expanded="true" />
+            <element signature="e#378#708#0" expanded="true" />
+            <element signature="e#1333#1351#0" expanded="true" />
+            <element signature="e#1397#1414#0" expanded="true" />
+            <element signature="e#1458#1580#0" expanded="true" />
+            <element signature="e#1644#1728#0" expanded="true" />
+            <element signature="e#1766#1877#0" expanded="true" />
+            <element signature="e#1928#2318#0" expanded="true" />
+            <element signature="e#2364#2387#0" expanded="true" />
+            <element signature="e#2432#2808#0" expanded="true" />
+            <element signature="e#2858#3101#0" expanded="true" />
+            <element signature="e#3150#3393#0" expanded="true" />
+            <element signature="e#3431#3804#0" expanded="true" />
+            <element signature="e#3995#4297#0" expanded="true" />
+            <element signature="e#4438#4911#0" expanded="true" />
+            <element signature="e#4948#5444#0" expanded="true" />
+            <element signature="e#5478#6016#0" expanded="true" />
+            <element signature="e#6070#6137#0" expanded="true" />
+            <element signature="e#6192#6259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1025,7 +1122,25 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1599#1617#0" expanded="true" />
+            <element signature="e#157#170#0" expanded="true" />
+            <element signature="e#378#708#0" expanded="true" />
+            <element signature="e#1333#1351#0" expanded="true" />
+            <element signature="e#1397#1414#0" expanded="true" />
+            <element signature="e#1458#1580#0" expanded="true" />
+            <element signature="e#1644#1728#0" expanded="true" />
+            <element signature="e#1766#1877#0" expanded="true" />
+            <element signature="e#1928#2318#0" expanded="true" />
+            <element signature="e#2364#2387#0" expanded="true" />
+            <element signature="e#2432#2808#0" expanded="true" />
+            <element signature="e#2858#3101#0" expanded="true" />
+            <element signature="e#3150#3393#0" expanded="true" />
+            <element signature="e#3431#3804#0" expanded="true" />
+            <element signature="e#3995#4297#0" expanded="true" />
+            <element signature="e#4438#4911#0" expanded="true" />
+            <element signature="e#4948#5444#0" expanded="true" />
+            <element signature="e#5478#6016#0" expanded="true" />
+            <element signature="e#6070#6137#0" expanded="true" />
+            <element signature="e#6192#6259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1035,7 +1150,25 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1599#1617#0" expanded="true" />
+            <element signature="e#157#170#0" expanded="true" />
+            <element signature="e#378#708#0" expanded="true" />
+            <element signature="e#1333#1351#0" expanded="true" />
+            <element signature="e#1397#1414#0" expanded="true" />
+            <element signature="e#1458#1580#0" expanded="true" />
+            <element signature="e#1644#1728#0" expanded="true" />
+            <element signature="e#1766#1877#0" expanded="true" />
+            <element signature="e#1928#2318#0" expanded="true" />
+            <element signature="e#2364#2387#0" expanded="true" />
+            <element signature="e#2432#2808#0" expanded="true" />
+            <element signature="e#2858#3101#0" expanded="true" />
+            <element signature="e#3150#3393#0" expanded="true" />
+            <element signature="e#3431#3804#0" expanded="true" />
+            <element signature="e#3995#4297#0" expanded="true" />
+            <element signature="e#4438#4911#0" expanded="true" />
+            <element signature="e#4948#5444#0" expanded="true" />
+            <element signature="e#5478#6016#0" expanded="true" />
+            <element signature="e#6070#6137#0" expanded="true" />
+            <element signature="e#6192#6259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1044,7 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,31 +1191,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="123" column="19" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="19" />
-          <folding>
-            <element signature="e#2443#2605#0" expanded="true" />
-            <element signature="e#4342#4723#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/pcfield.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding>
-            <element signature="e#159#319#0" expanded="true" />
-            <element signature="e#354#895#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea/gui/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#47#70#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1101,9 +1208,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.70212764">
           <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-          <folding>
-            <element signature="e#387#4159#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1111,7 +1215,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-58.040424">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,23 +1222,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.04680851">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="66" />
-          <folding>
-            <element signature="e#2038#2104#0" expanded="true" />
-            <element signature="e#2339#2983#0" expanded="true" />
-            <element signature="e#3062#3140#0" expanded="true" />
-            <element signature="e#3308#3344#0" expanded="true" />
-            <element signature="e#3737#4225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
-          <folding>
-            <element signature="e#1599#1617#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1143,20 +1229,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.513986">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#2109#2183#0" expanded="true" />
-            <element signature="e#2357#2786#0" expanded="true" />
-            <element signature="e#2840#2915#0" expanded="true" />
-            <element signature="e#2965#3394#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.548387">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,10 +1236,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33216783">
           <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
-          <folding>
-            <element signature="e#1404#1495#0" expanded="true" />
-            <element signature="e#3259#3358#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1175,7 +1243,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.064516">
           <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/sphinx/source/index.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sea/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.548387">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1183,35 +1271,73 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625">
           <caret line="76" column="61" selection-start-line="76" selection-start-column="61" selection-end-line="76" selection-end-column="61" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sea/scr/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5294118">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="130" column="14" selection-start-line="130" selection-start-column="14" selection-end-line="130" selection-end-column="14" />
+          <folding>
+            <element signature="e#157#170#0" expanded="true" />
+            <element signature="e#378#708#0" expanded="true" />
+            <element signature="e#1333#1351#0" expanded="true" />
+            <element signature="e#1397#1414#0" expanded="true" />
+            <element signature="e#1458#1580#0" expanded="true" />
+            <element signature="e#1644#1728#0" expanded="true" />
+            <element signature="e#1766#1877#0" expanded="true" />
+            <element signature="e#1928#2318#0" expanded="true" />
+            <element signature="e#2364#2387#0" expanded="true" />
+            <element signature="e#2432#2808#0" expanded="true" />
+            <element signature="e#2858#3101#0" expanded="true" />
+            <element signature="e#3150#3393#0" expanded="true" />
+            <element signature="e#3431#3804#0" expanded="true" />
+            <element signature="e#3995#4297#0" expanded="true" />
+            <element signature="e#4438#4911#0" expanded="true" />
+            <element signature="e#4948#5444#0" expanded="true" />
+            <element signature="e#5478#6016#0" expanded="true" />
+            <element signature="e#6070#6137#0" expanded="true" />
+            <element signature="e#6192#6259#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sea/gui/sea.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37469587">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sea/gui/main.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding>
-            <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#159#218#0" expanded="true" />
-            <element signature="e#282#426#0" expanded="true" />
-            <element signature="e#470#568#0" expanded="true" />
-            <element signature="e#602#635#0" expanded="true" />
+            <element signature="e#47#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sea/gui/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.117647">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.03846154">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
           <folding>
             <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#273#544#0" expanded="true" />
-            <element signature="e#582#799#0" expanded="true" />
-            <element signature="e#1136#1162#0" expanded="true" />
-            <element signature="e#1213#1487#0" expanded="true" />
-            <element signature="e#1525#1612#0" expanded="true" />
+            <element signature="e#811#844#0" expanded="true" />
+            <element signature="e#911#1182#0" expanded="true" />
+            <element signature="e#1226#1437#0" expanded="true" />
+            <element signature="e#1483#1703#0" expanded="true" />
+            <element signature="e#2130#2310#0" expanded="true" />
+            <element signature="e#2358#2369#0" expanded="true" />
           </folding>
         </state>
       </provider>

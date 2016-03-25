@@ -1,15 +1,26 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import random
 
 
-_max = 9
-_min = 0
+
+class Config:
+    size = 10
+    max = size - 1
+    min = 0
+
+    def set_size(self, s):
+       self.size = s
+
+
 
 class SeaError(Exception): pass
+
 
 side_error_message = '''стороны могут быть:
 'left_beacon' ; Ship.Left_beacon
 'top_beacon' ; Ship.Top_beacon '''
+
 
 class Cell(list):
     def __init__(self, x, y):
@@ -19,8 +30,8 @@ class Cell(list):
         self.x = x
         self.shooting = False  # стреляли ли в эту клетку
         self.ship_place = False  # размещает ли корабль
-        self._distance_to_obstacles_x = _max - (self.x - 1)
-        self._distance_to_obstacles_y = _max - (self.y - 1)
+        self._distance_to_obstacles_x = Config.max - (self.x - 1)
+        self._distance_to_obstacles_y = Config.max - (self.y - 1)
 
     @property
     def distance_to_obstacles_x(self):
@@ -57,19 +68,15 @@ class Fleet(dict):
             return False
 
 
-
-
 class Sea(dict):
-    def __init__(self):
+    def __init__(self, ship_names):
         super().__init__()
-        self.fleet = None
+        self.ship_names = ship_names
+        self.fleet = Fleet()
 
-    def set_fleet(self, fleet):
-        self.fleet = fleet
-
-    def create_field(self, width, height):
-        for y in range(height):
-            for x in range(width):
+    def create_field(self):
+        for y in range(Config.size):
+            for x in range(Config.size):
                 self[(x, y)] = Cell(x, y)
 
     def permissible(self, course, deck):
@@ -103,26 +110,35 @@ class Sea(dict):
         for x, y in ship.top_beacon:
             self._scan_to_top(x, y, back_seq)
 
-
     def _scan_to_left(self, x, y, seq):
-            for n in seq:
-                nx = x + n
-                if nx < _min: # конец поля
-                    return
-                if (nx, y) in self.fleet: # уткнулись в корабль
-                    return
-                self[(nx, y)].distance_to_obstacles_x = x
+        for n in seq:
+            nx = x + n
+            if nx < Config.min:  # конец поля
+                return
+            if (nx, y) in self.fleet:  # уткнулись в корабль
+                return
+            self[(nx, y)].distance_to_obstacles_x = x
 
     def _scan_to_top(self, x, y, seq):
-            for n in seq:
-                ny = y + n
-                if ny < _min: # конец поля
-                    return
-                if (x, ny) in self.fleet: # уткнулись в корабль
-                    return
-                self[(x, ny)].distance_to_obstacles_y = y
+        for n in seq:
+            ny = y + n
+            if ny < Config.min:  # конец поля
+                return
+            if (x, ny) in self.fleet:  # уткнулись в корабль
+                return
+            self[(x, ny)].distance_to_obstacles_y = y
 
+    def create_fleet(self):
+        self.fleet.clear()
+        for name, deck in enumerate(self.ship_names):
+            # направление
+            course = random.choice([Ship.Vertical, Ship.Horizontal])
 
+            perm = self.permissible(course, deck)
+            bow = random.choice(perm)
+            ship = Ship(bow, course, deck)
+            self.add_ship(name, ship)
+            self.update_cells(ship)
 
 
 class Ship(list):
@@ -133,8 +149,8 @@ class Ship(list):
 
     def __init__(self, bow, course, deck):
         super().__init__()
-        self.max = _max + 1
-        self.min = _min - 1
+        self.max = Config.max + 1
+        self.min = Config.min - 1
         self.x, self.y = bow
         self.course = course
         self.deck = deck
@@ -206,6 +222,4 @@ class Ship(list):
 
 if __name__ == '__main__':
     s = Sea()
-    s.create_field(10, 10)
-    s.set_permissible(Ship.Horizontal, 4)
-    print(s.permissible)
+

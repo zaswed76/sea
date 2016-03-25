@@ -5,29 +5,7 @@
 import sys
 from PyQt5 import QtWidgets
 
-class Cell(QtWidgets.QLabel):
-    def __init__(self, *__args):
-        super().__init__(*__args)
-        self.setFixedSize(40, 40)
 
-
-class Sea(QtWidgets.QFrame):
-    def __init__(self):
-        super().__init__()
-        self.box = QtWidgets.QGridLayout(self)
-        self.box.setSpacing(0)
-        self.box.setContentsMargins(0, 0, 0, 0)
-        self.sea = {}
-
-
-    def create_grid(self, w, h):
-        for x in range(w):
-            for y in range(h):
-                self.sea[(x, y)] = Cell()
-                self.box.addWidget(self.sea[(x, y)], y, x)
-
-    def add_ship(self, bow, course, deck):
-        but = QtWidgets.QPushButton(self)
 
 
 
