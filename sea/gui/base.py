@@ -26,7 +26,7 @@ class Cell(QtWidgets.QPushButton):
     def __init__(self, *__args):
         super().__init__(*__args)
         self.setCheckable(True)
-        self.setFixedSize(80, 80)
+        self.setFixedSize(50, 50)
         # self.setIconSize(QtCore.QSize(40, 40))
         # self.setAlignment(Qt.AlignCenter)
         # self.setScaledContents(True)
