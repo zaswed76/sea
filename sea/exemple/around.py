@@ -22,15 +22,10 @@
 
 
 
-from collections import UserDict
+def f():
+    lst = []
+    for y in range(1, 9):
+        lst.extend([(x, y) for x in range(1, 9)])
+    return lst
 
-class Widget(UserDict):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-
-
-w = Widget()
-w[1] = 1
-
-print(w)
-
+print(f())

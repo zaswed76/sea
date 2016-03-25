@@ -3,18 +3,25 @@
 import random
 
 
-
 class Config:
     size = 10
     max = size - 1
     min = 0
-    complexity = 28
+    complexity = 0
 
     def set_size(self, s):
-       self.size = s
+        self.size = s
 
     def set_complexity(self, c):
-       self.complexity = c
+        self.complexity = c
+
+    def lock_cells(self):
+        lst = []
+        for y in range(1, 9):
+            lst.extend(
+                [(x, y) for x in range(self.min + 1, self.max - 1)])
+        return lst
+
 
 class SeaError(Exception): pass
 
@@ -31,7 +38,6 @@ class Cell(list):
         self.y = y
         self.x = x
         self.reset()
-
 
     @property
     def distance_to_obstacles_x(self):
@@ -50,6 +56,7 @@ class Cell(list):
         self._distance_to_obstacles_y = obstacles - self.y
 
     def reset(self):
+        self.lock = False
         self.shooting = False  # стреляли ли в эту клетку
         self.ship_place = False  # размещает ли корабль
         self._distance_to_obstacles_x = Config.max - (self.x - 1)
@@ -71,6 +78,7 @@ class Fleet(dict):
         for ship in self.values():
             lst.append(ship.corpus)
         return lst
+
     def __contains__(self, item):
         for ship in self.values():
             if item in ship:
@@ -89,6 +97,8 @@ class Sea(dict):
         for y in range(Config.size):
             for x in range(Config.size):
                 self[(x, y)] = Cell(x, y)
+                if (x, y) in Config.lock_cells(Config):
+                    self[(x, y)].lock = True
 
     def reset(self):
         for cell in self.values():
@@ -98,15 +108,26 @@ class Sea(dict):
     def empty(self):
         return [c for c in self.values() if not c.ship_place]
 
+    def _reg_horizontal(self, cell, deck):
+        if deck in [2, 3, 4]:
+            if cell.lock: return False
+        if cell.distance_to_obstacles_x >= deck and not cell.ship_place:
+            return True
+
+    def _reg_vertical(self, cell, deck):
+        if deck in [2, 3, 4]:
+            if cell.lock: return False
+        if cell.distance_to_obstacles_y >= deck and not cell.ship_place:
+            return True
 
     def permissible(self, course, deck):
         permissible = []
         for cell in self.values():
             if course == Ship.Horizontal:
-                if cell.distance_to_obstacles_x >= deck and not cell.ship_place:
+                if self._reg_horizontal(cell, deck):
                     permissible.append(cell)
             else:
-                if cell.distance_to_obstacles_y >= deck and not cell.ship_place:
+                if self._reg_vertical(cell, deck):
                     permissible.append(cell)
         return permissible
 
@@ -154,7 +175,8 @@ class Sea(dict):
             self.reset()
             for name, deck in enumerate(self.ship_names):
                 # направление
-                course = random.choice([Ship.Vertical, Ship.Horizontal])
+                course = random.choice(
+                    [Ship.Vertical, Ship.Horizontal])
 
                 perm = self.permissible(course, deck)
                 bow = random.choice(perm)
@@ -164,7 +186,6 @@ class Sea(dict):
 
             if len(self.empty) > Config.complexity:
                 break
-
 
 
 class Ship(list):
@@ -248,4 +269,3 @@ class Ship(list):
 
 if __name__ == '__main__':
     s = Sea()
-
