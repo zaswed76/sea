@@ -8,11 +8,13 @@ class Config:
     size = 10
     max = size - 1
     min = 0
+    complexity = 28
 
     def set_size(self, s):
        self.size = s
 
-
+    def set_complexity(self, c):
+       self.complexity = c
 
 class SeaError(Exception): pass
 
@@ -28,10 +30,8 @@ class Cell(list):
         self.extend([x, y])
         self.y = y
         self.x = x
-        self.shooting = False  # стреляли ли в эту клетку
-        self.ship_place = False  # размещает ли корабль
-        self._distance_to_obstacles_x = Config.max - (self.x - 1)
-        self._distance_to_obstacles_y = Config.max - (self.y - 1)
+        self.reset()
+
 
     @property
     def distance_to_obstacles_x(self):
@@ -49,6 +49,12 @@ class Cell(list):
     def distance_to_obstacles_y(self, obstacles):
         self._distance_to_obstacles_y = obstacles - self.y
 
+    def reset(self):
+        self.shooting = False  # стреляли ли в эту клетку
+        self.ship_place = False  # размещает ли корабль
+        self._distance_to_obstacles_x = Config.max - (self.x - 1)
+        self._distance_to_obstacles_y = Config.max - (self.y - 1)
+
     def __repr__(self):
         return 'Cell - ({}, {})'.format(self.x, self.y)
 
@@ -60,6 +66,11 @@ class Fleet(dict):
     def add_ship(self, name, ship):
         self[name] = ship
 
+    def ships_coord(self):
+        lst = []
+        for ship in self.values():
+            lst.append(ship.corpus)
+        return lst
     def __contains__(self, item):
         for ship in self.values():
             if item in ship:
@@ -78,6 +89,15 @@ class Sea(dict):
         for y in range(Config.size):
             for x in range(Config.size):
                 self[(x, y)] = Cell(x, y)
+
+    def reset(self):
+        for cell in self.values():
+            cell.reset()
+
+    @property
+    def empty(self):
+        return [c for c in self.values() if not c.ship_place]
+
 
     def permissible(self, course, deck):
         permissible = []
@@ -129,16 +149,22 @@ class Sea(dict):
             self[(x, ny)].distance_to_obstacles_y = y
 
     def create_fleet(self):
-        self.fleet.clear()
-        for name, deck in enumerate(self.ship_names):
-            # направление
-            course = random.choice([Ship.Vertical, Ship.Horizontal])
+        while True:
+            self.fleet.clear()
+            self.reset()
+            for name, deck in enumerate(self.ship_names):
+                # направление
+                course = random.choice([Ship.Vertical, Ship.Horizontal])
 
-            perm = self.permissible(course, deck)
-            bow = random.choice(perm)
-            ship = Ship(bow, course, deck)
-            self.add_ship(name, ship)
-            self.update_cells(ship)
+                perm = self.permissible(course, deck)
+                bow = random.choice(perm)
+                ship = Ship(bow, course, deck)
+                self.add_ship(name, ship)
+                self.update_cells(ship)
+
+            if len(self.empty) > Config.complexity:
+                break
+
 
 
 class Ship(list):

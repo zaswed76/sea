@@ -3,21 +3,42 @@
 
 
 import sys
-from functools import partial
+import os
 
-from PyQt5 import QtWidgets
+from collections import UserDict
+from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import QFile, Qt
 
 from gui.base_ui import Ui_Form
 
 
+from PyQt5.QtCore import pyqtWrapperType
+from abc import ABCMeta
+
+
+texture_ship = '../resource/textures/ship.png'
+texture_wounded = '../resource/textures/wounded.png'
+
+class FinalMeta(pyqtWrapperType, ABCMeta):
+    pass
+
 class Cell(QtWidgets.QLabel):
     def __init__(self, *__args):
         super().__init__(*__args)
         self.setFixedSize(40, 40)
+        self.setAlignment(Qt.AlignCenter)
+        self.setScaledContents(True)
+
+    def add_ship(self):
+        self.setPixmap(QtGui.QPixmap(texture_ship))
+
+    def reset(self):
+        self.clear()
 
 
-class Sea(QtWidgets.QFrame):
+
+
+class Sea(QtWidgets.QFrame, UserDict, metaclass=FinalMeta):
     def __init__(self):
         super().__init__()
         self.box = QtWidgets.QGridLayout(self)
@@ -25,13 +46,17 @@ class Sea(QtWidgets.QFrame):
         self.box.setContentsMargins(0, 0, 0, 0)
         self.sea = {}
 
+    def reset(self):
+        for cell in self.values():
+            cell.reset()
+
 
     def create_grid(self, size):
         lst = range(size)
         for x in lst:
             for y in lst:
-                self.sea[(x, y)] = Cell()
-                self.box.addWidget(self.sea[(x, y)], y, x)
+                self[(x, y)] = Cell()
+                self.box.addWidget(self[(x, y)], y, x)
 
     def add_ship(self, bow, course, deck):
         but = QtWidgets.QPushButton(self)
@@ -74,15 +99,11 @@ class Widget(QtWidgets.QWidget):
         styleSheet = str(styleSheet, encoding='utf8')
         QtWidgets.QApplication.instance().setStyleSheet(styleSheet)
 
-    def init_actions(self):
-        self.ui.settings_btn.clicked.connect(
-            partial(self.loadStyleSheet, 'base'))
 
-        self.ui.auto_btn.clicked.connect(
-            partial(self.auto_create_user_fleet))
 
-    def auto_create_user_fleet(self):
-        print('!!')
+    def add_ship(self, sea, ship):
+        for cell in ship:
+            sea[cell].add_ship()
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)

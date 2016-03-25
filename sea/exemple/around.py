@@ -22,4 +22,15 @@
 
 
 
-print(True and False)
+from collections import UserDict
+
+class Widget(UserDict):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+
+w = Widget()
+w[1] = 1
+
+print(w)
+
