@@ -6,7 +6,7 @@ import sys
 import os
 
 from collections import UserDict
-from PyQt5 import QtWidgets, QtGui
+from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtCore import QFile, Qt
 
 from gui.base_ui import Ui_Form
@@ -26,7 +26,8 @@ class Cell(QtWidgets.QPushButton):
     def __init__(self, *__args):
         super().__init__(*__args)
         self.setCheckable(True)
-        self.setFixedSize(40, 40)
+        self.setFixedSize(80, 80)
+        # self.setIconSize(QtCore.QSize(40, 40))
         # self.setAlignment(Qt.AlignCenter)
         # self.setScaledContents(True)
 
