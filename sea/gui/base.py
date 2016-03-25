@@ -22,18 +22,19 @@ texture_wounded = '../resource/textures/wounded.png'
 class FinalMeta(pyqtWrapperType, ABCMeta):
     pass
 
-class Cell(QtWidgets.QLabel):
+class Cell(QtWidgets.QPushButton):
     def __init__(self, *__args):
         super().__init__(*__args)
+        self.setCheckable(True)
         self.setFixedSize(40, 40)
-        self.setAlignment(Qt.AlignCenter)
-        self.setScaledContents(True)
+        # self.setAlignment(Qt.AlignCenter)
+        # self.setScaledContents(True)
 
     def add_ship(self):
-        self.setPixmap(QtGui.QPixmap(texture_ship))
+        self.setChecked(True)
 
     def reset(self):
-        self.clear()
+        self.setChecked(False)
 
 
 

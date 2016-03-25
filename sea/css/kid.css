@@ -21,6 +21,14 @@ Cell {
     border-bottom: none;
 }
 
+Cell:checked {
+    border-left: 1px solid #959595;
+    border-top: 1px solid #959595;
+    border-right: none;
+    border-bottom: none;
+    background: cornflowerblue;
+}
+
 QFrame#frame_pc_Grid {
     border-left: none;
     border-top: none;
