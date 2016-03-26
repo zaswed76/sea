@@ -22,10 +22,5 @@
 
 
 
-def f():
-    lst = []
-    for y in range(1, 9):
-        lst.extend([(x, y) for x in range(1, 9)])
-    return lst
-
-print(f())
+a = [3, 7, 2]
+print(sorted(a))

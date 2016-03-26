@@ -15,7 +15,7 @@ QLabel#label_pc {
 }
 
 Cell {
-    border-left: 1px solid #959595;
+    border-left: 3px solid #cb2b10;
     border-top: 1px solid #959595;
     border-right: none;
     border-bottom: none;
@@ -23,11 +23,17 @@ Cell {
 
 Cell:checked {
     border-image: url(../resource/textures/ship2.png);
-    /*border-left: 1px solid #959595;*/
-    /*border-top: 1px solid #959595;*/
-    /*border-right: none;*/
-    /*border-bottom: none;*/
-    /*background: cornflowerblue;*/
+}
+
+CellPc {
+    border-left: 1px solid #959595;
+    border-top: 1px solid #959595;
+    border-right: none;
+    border-bottom: none;
+}
+
+CellPc:checked {
+    border-image: url(../resource/textures/shoot.png);
 }
 
 QFrame#frame_pc_Grid {

@@ -22,22 +22,26 @@ texture_wounded = '../resource/textures/wounded.png'
 class FinalMeta(pyqtWrapperType, ABCMeta):
     pass
 
-class Cell(QtWidgets.QPushButton):
+class AbsCell(QtWidgets.QPushButton):
     def __init__(self, *__args):
         super().__init__(*__args)
         self.setCheckable(True)
-        self.setFixedSize(50, 50)
-        # self.setIconSize(QtCore.QSize(40, 40))
-        # self.setAlignment(Qt.AlignCenter)
-        # self.setScaledContents(True)
-
+        self.setFixedSize(40, 40)
     def add_ship(self):
         self.setChecked(True)
-
     def reset(self):
         self.setChecked(False)
 
+class Cell(AbsCell):
+    def __init__(self, *__args):
+        super().__init__(*__args)
 
+
+
+class CellPc(AbsCell):
+    def __init__(self, *__args):
+        super().__init__(*__args)
+        # self.setDown(1)
 
 
 class Sea(QtWidgets.QFrame, UserDict, metaclass=FinalMeta):
@@ -53,11 +57,11 @@ class Sea(QtWidgets.QFrame, UserDict, metaclass=FinalMeta):
             cell.reset()
 
 
-    def create_grid(self, size):
+    def create_grid(self, size, cell_cls):
         lst = range(size)
         for x in lst:
             for y in lst:
-                self[(x, y)] = Cell()
+                self[(x, y)] = cell_cls()
                 self.box.addWidget(self[(x, y)], y, x)
 
     def add_ship(self, bow, course, deck):
@@ -79,7 +83,7 @@ class Widget(QtWidgets.QWidget):
         box = QtWidgets.QVBoxLayout(left)
         box.setContentsMargins(0,0,0,0)
         self.pc_sea = Sea()
-        self.pc_sea.create_grid(size)
+        self.pc_sea.create_grid(size, CellPc)
         box.addWidget(self.pc_sea)
 
     def set_greed_user(self, size):
@@ -87,7 +91,7 @@ class Widget(QtWidgets.QWidget):
         box = QtWidgets.QVBoxLayout(left)
         box.setContentsMargins(0,0,0,0)
         self.user_sea = Sea()
-        self.user_sea.create_grid(size)
+        self.user_sea.create_grid(size, Cell)
         box.addWidget(self.user_sea)
 
     def init_setting(self):
