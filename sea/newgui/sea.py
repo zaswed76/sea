@@ -5,6 +5,7 @@
 import sys
 from PyQt5 import QtWidgets, QtCore, QtGui
 
+
 class Widget(QtWidgets.QLabel):
     def __init__(self):
         super().__init__()
@@ -19,6 +20,7 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     # app.setStyleSheet(open('./etc/{0}.qss'.format('style'), "r").read())
     main = Widget()
-    main.set_image('/home/vostro/project/SEA/sea/sea/resource/textures/back.png')
+    main.set_image(
+        r'../resource/textures/back2.png')
     main.show()
     sys.exit(app.exec_())
