@@ -10,7 +10,7 @@ from newgui import sea
 class Main(sea.Sea):
     def __init__(self):
         super().__init__()
-
+        # self.create_ship('pc', 1)
 
 
 

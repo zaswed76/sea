@@ -3,6 +3,15 @@
 
 class Config:
     def __init__(self):
+        self.default_style = 'kid'
+        self.ext_img = '.png'
+        self.ship_names = {(4, 'vertical'): '4_v',
+                           (4, 'horizontal'): '4_h',
+                           (3, 'vertical'): '3_v',
+                           (3, 'horizontal'): '3_h',
+                           (2, 'vertical'): '2_v',
+                           (2, 'horizontal'): '2_h',
+                           (1, 'vertical'): '1_v'}
         self.size = 10
         self.user_field_coord = (90, 144)
         self.pc_field_coord = (455, 144)

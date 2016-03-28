@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 
 
+import os
 import sys
 
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import QFile
-from PyQt5.QtGui import QPixmap, QPalette, QBrush
 
 from etc import config
 
@@ -53,9 +53,24 @@ class Field:
         ly = self.size_cell * y + self.ly
         return lx, ly
 
+
 class Ship(QtWidgets.QLabel):
-    def __init__(self, *__args):
-        super().__init__(*__args)
+    def __init__(self, parent, deck, course):
+        super().__init__()
+        self.course = course
+        self.deck = deck
+        self.setParent(parent)
+        self.init()
+
+    def _pixmap(self, path):
+        return QtGui.QPixmap(path)
+
+    def init(self):
+        image_name = cfg.ship_names[
+                         (self.deck, self.course)] + cfg.ext_img
+        path = os.path.join('../resource/textures', cfg.default_style,
+                            image_name)
+        self.setPixmap(self._pixmap(path))
 
 
 class Sea(QtWidgets.QFrame):
@@ -76,7 +91,6 @@ class Sea(QtWidgets.QFrame):
         styleSheet = str(styleSheet, encoding='utf8')
         QtWidgets.QApplication.instance().setStyleSheet(styleSheet)
 
-
     def resizeEvent(self, e):
         pass
 
@@ -91,8 +105,17 @@ class Sea(QtWidgets.QFrame):
         except KeyError:
             print(x, y)
 
-    def create_ship(self, field, ship):
-        pass
+    def create_ship(self, gamer, bow, deck, course):
+        """
+
+        :param gamer: str < pc or user
+        :param bow: tuple < int
+        :param deck: int << {4, 3, 2, 1}
+        :param course: str << {'vertical', 'horizontal'}
+        """
+        coord = self.gamers[gamer].cell_to_coord(bow)
+        ship = Ship(self, deck, course)
+        ship.move(*coord)
 
 
 if __name__ == '__main__':
