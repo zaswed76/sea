@@ -12,6 +12,10 @@ class Config:
                            (2, 'vertical'): '2_v',
                            (2, 'horizontal'): '2_h',
                            (1, 'vertical'): '1_v'}
+
+        self.shot_item_name = 'shot'
+        self.wounded_item_name = 'wounded'
+
         self.size = 10
         self.user_field_coord = (90, 144)
         self.pc_field_coord = (455, 144)

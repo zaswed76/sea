@@ -54,16 +54,22 @@ class Field:
         return lx, ly
 
 
-class Ship(QtWidgets.QLabel):
-    def __init__(self, parent, deck, course):
+class Item(QtWidgets.QLabel):
+    def __init__(self, parent):
         super().__init__()
-        self.course = course
-        self.deck = deck
         self.setParent(parent)
-        self.init()
 
     def _pixmap(self, path):
         return QtGui.QPixmap(path)
+
+
+class Ship(Item):
+    def __init__(self, parent, deck, course):
+        super().__init__(parent)
+        self.course = course
+        self.deck = deck
+
+        self.init()
 
     def init(self):
         image_name = cfg.ship_names[
@@ -72,6 +78,27 @@ class Ship(QtWidgets.QLabel):
                             image_name)
         self.setPixmap(self._pixmap(path))
 
+class Wounded(Item):
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.init()
+
+    def init(self):
+        image_name = cfg.wounded_item_name + cfg.ext_img
+        path = os.path.join('../resource/textures', cfg.default_style,
+                            image_name)
+        self.setPixmap(self._pixmap(path))
+
+class Shot(Item):
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.init()
+
+    def init(self):
+        image_name = cfg.shot_item_name + cfg.ext_img
+        path = os.path.join('../resource/textures', cfg.default_style,
+                            image_name)
+        self.setPixmap(self._pixmap(path))
 
 class Sea(QtWidgets.QFrame):
     def __init__(self):
@@ -105,6 +132,12 @@ class Sea(QtWidgets.QFrame):
         except KeyError:
             print(x, y)
 
+    def _coord(self, gamer, coord):
+        x, y = self.gamers[gamer].cell_to_coord(coord)
+        x_correct = x + cfg.correction[(gamer, 'x')]
+        y_correct = y + cfg.correction[(gamer, 'y')]
+        return x_correct, y_correct
+
     def create_ship(self, gamer, bow, deck, course):
         """
 
@@ -113,12 +146,21 @@ class Sea(QtWidgets.QFrame):
         :param deck: int << {4, 3, 2, 1}
         :param course: str << {'vertical', 'horizontal'}
         """
-        x, y = self.gamers[gamer].cell_to_coord(bow)
-        x_correct = x + cfg.correction[(gamer, 'x')]
-        y_correct = y + cfg.correction[(gamer, 'y')]
+        x_correct, y_correct = self._coord(gamer, bow)
         ship = Ship(self, deck, course)
         ship.move(x_correct, y_correct)
 
+    def create_item(self, gamer, bow, name, ):
+        """
+
+        :param gamer: str < pc or user
+        :param bow: tuple < int
+        :param deck: int << {4, 3, 2, 1}
+        :param course: str << {'vertical', 'horizontal'}
+        """
+        x_correct, y_correct = self._coord(gamer, bow)
+        item = getattr(sys.modules[__name__], name)(self)
+        item.move(x_correct, y_correct)
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
