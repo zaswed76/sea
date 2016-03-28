@@ -10,8 +10,10 @@ from newgui import sea
 class Main(sea.Sea):
     def __init__(self):
         super().__init__()
-        # self.create_ship('pc', 1)
-
+        self.create_ship('pc', (5, 8), 3, 'horizontal')
+        self.create_ship('user', (2, 2), 3, 'vertical')
+        self.create_ship('pc', (3, 3), 3, 'vertical')
+        self.create_ship('user', (5, 5), 3, 'horizontal')
 
 
 if __name__ == '__main__':

@@ -113,9 +113,11 @@ class Sea(QtWidgets.QFrame):
         :param deck: int << {4, 3, 2, 1}
         :param course: str << {'vertical', 'horizontal'}
         """
-        coord = self.gamers[gamer].cell_to_coord(bow)
+        x, y = self.gamers[gamer].cell_to_coord(bow)
+        x_correct = x + cfg.correction[(gamer, 'x')]
+        y_correct = y + cfg.correction[(gamer, 'y')]
         ship = Ship(self, deck, course)
-        ship.move(*coord)
+        ship.move(x_correct, y_correct)
 
 
 if __name__ == '__main__':

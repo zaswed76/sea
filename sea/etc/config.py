@@ -17,3 +17,8 @@ class Config:
         self.pc_field_coord = (455, 144)
         self.size_cell = 28
         self.window_size = (802, 503)
+
+        self.correction = {('pc', 'y'): -2,
+                           ('pc', 'x'): 0,
+                           ('user', 'y'): 0,
+                           ('user', 'x'): 0}
