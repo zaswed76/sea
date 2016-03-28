@@ -26,7 +26,7 @@ class AbsCell(QtWidgets.QPushButton):
     def __init__(self, *__args):
         super().__init__(*__args)
         self.setCheckable(True)
-        self.setFixedSize(40, 40)
+        self.setFixedSize(28, 28)
     def add_ship(self):
         self.setChecked(True)
     def reset(self):
@@ -45,8 +45,9 @@ class CellPc(AbsCell):
 
 
 class Sea(QtWidgets.QFrame, UserDict, metaclass=FinalMeta):
-    def __init__(self):
+    def __init__(self, parent):
         super().__init__()
+        self.setParent(parent)
         self.box = QtWidgets.QGridLayout(self)
         self.box.setSpacing(0)
         self.box.setContentsMargins(0, 0, 0, 0)

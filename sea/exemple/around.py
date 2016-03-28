@@ -1,26 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# import pprint
-#
-# from sea import Cell, Sea, Ship, Fleet
-#
-#
-#
-#
-# sea = Sea()
-# sea.create_field(10, 10)
-# print(sea[(3, 4)].distance_to_obstacles_x)
-# f = Fleet()
-# sea.set_fleet(f)
-# ship = Ship((5, 5), Ship.Horizontal, 2)
-# sea.add_ship(0, ship)
-# sea.update_cells(ship)
-# print(sea[(3, 4)].distance_to_obstacles_x)
-# print(sea[(0, 4)].distance_to_obstacles_x)
-# print(sea[(6, 2)].distance_to_obstacles_y)
 
+size = 10
+lx = 90; ly = 140
+rx = 370
 
+size_cell = 28
 
+coord = (1, 1)
 
-a = [3, 7, 2]
-print(sorted(a))
+def xc(x):
+    return
+
+def yc(y):
+    return
+
+def cell(x, y):
+   x = (x - lx) // size_cell
+   y = (y - ly) // size_cell
+   return (x, y)
