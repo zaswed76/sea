@@ -109,6 +109,7 @@ class Sea(QtWidgets.QFrame):
         self.user_field = Field(size, size_cell, *user_field_coord)
         self.pc_field = Field(size, size_cell, *pc_field_coord)
         self.gamers = dict(user=self.user_field, pc=self.pc_field)
+        self.ships = {}
 
     def loadStyleSheet(self, sheetName):
         file_name = sheetName + '.css'
@@ -147,8 +148,13 @@ class Sea(QtWidgets.QFrame):
         :param course: str << {'vertical', 'horizontal'}
         """
         x_correct, y_correct = self._coord(gamer, bow)
-        ship = Ship(self, deck, course)
-        ship.move(x_correct, y_correct)
+        self.ships[bow] = Ship(self, deck, course)
+
+        self.ships[bow].move(x_correct, y_correct)
+
+    def clears(self):
+        for s in self.ships.values():
+            self.close()
 
     def create_item(self, gamer, bow, name, ):
         """
