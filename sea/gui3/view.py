@@ -16,7 +16,7 @@ class View(QtWidgets.QGraphicsView):
 class Scene(QtWidgets.QGraphicsScene):
     def __init__(self, *__args):
         super().__init__(*__args)
-
+        self.setSceneRect(0, 0, 300, 300)
     def mousePressEvent(self, e):
         pass
         x = e.x()
