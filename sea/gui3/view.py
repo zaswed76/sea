@@ -30,7 +30,7 @@ class FieldConvert:
 class Item(QtWidgets.QGraphicsPixmapItem):
     def __init__(self, *__args):
         super().__init__(*__args)
-        self.setRotation(90.0)
+        # self.setRotation(90.0)
 
 
 class SeaModel(QtWidgets.QGraphicsScene):
@@ -45,7 +45,7 @@ class SeaModel(QtWidgets.QGraphicsScene):
     def add_ship(self, x, y):
         cell = self.field_conv.coord_to_cell(x, y)
         x, y = self.field_conv.cell_to_coord(cell)
-        p = '../resource/textures/new/4_h.png'
+        p = '../resource/textures/new/2_h.png'
         pxm = QtGui.QPixmap(p)
         self.ships[cell] = Item(pxm)
         self.ships[cell].setPos(x, y)
