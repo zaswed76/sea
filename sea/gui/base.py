@@ -83,7 +83,7 @@ class Widget(QtWidgets.QWidget):
         left = self.ui.frame_pc_Grid
         box = QtWidgets.QVBoxLayout(left)
         box.setContentsMargins(0,0,0,0)
-        self.pc_sea = Sea()
+        self.pc_sea = Sea(self)
         self.pc_sea.create_grid(size, CellPc)
         box.addWidget(self.pc_sea)
 
@@ -91,7 +91,7 @@ class Widget(QtWidgets.QWidget):
         left = self.ui.frame_gamer_Grid
         box = QtWidgets.QVBoxLayout(left)
         box.setContentsMargins(0,0,0,0)
-        self.user_sea = Sea()
+        self.user_sea = Sea(self)
         self.user_sea.create_grid(size, Cell)
         box.addWidget(self.user_sea)
 

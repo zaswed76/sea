@@ -2,26 +2,77 @@
 # -*- coding: utf-8 -*-
 
 import sys
+from gui3 import config
 
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import QFile
+
+cfg = config.Config()
+
+class FieldConvert:
+    def __init__(self, size, size_cell, lx, ly):
+        self.size = size
+        self.lx = lx
+        self.ly = ly
+        self.size_cell = size_cell
+
+    def coord_to_cell(self, x, y):
+        x = (x - self.lx) // (self.size_cell)
+        y = (y - self.ly) // (self.size_cell)
+        return (x, y)
+
+    def cell_to_coord(self, cell):
+        x, y = cell
+        lx = self.size_cell * x + self.lx
+        ly = self.size_cell * y + self.ly
+        return lx, ly
+
+class Item(QtWidgets.QGraphicsPixmapItem):
+    def __init__(self, *__args):
+        super().__init__(*__args)
+        self.setRotation(90.0)
+
+
+class SeaModel(QtWidgets.QGraphicsScene):
+    def __init__(self, *__args):
+        super().__init__(*__args)
+        size = cfg.cell_size * cfg.count_cell
+        self.setSceneRect(0, 0, size, size)
+
+        self.ships = {}
+        self.field_conv = FieldConvert(320, 32, 0, 0)
+
+    def add_ship(self, x, y):
+        cell = self.field_conv.coord_to_cell(x, y)
+        x, y = self.field_conv.cell_to_coord(cell)
+        p = '../resource/textures/new/4_h.png'
+        pxm = QtGui.QPixmap(p)
+        self.ships[cell] = Item(pxm)
+        self.ships[cell].setPos(x, y)
+
+        self.addItem(self.ships[cell])
+
 
 
 class View(QtWidgets.QGraphicsView):
     def __init__(self, *__args):
         super().__init__(*__args)
-        self.setFixedSize(300, 300)
+        size = cfg.cell_size * cfg.count_cell + 2
+        self.setFixedSize(size, size)
+        self.scene, self.parent = __args
 
-
-class Scene(QtWidgets.QGraphicsScene):
-    def __init__(self, *__args):
-        super().__init__(*__args)
-        self.setSceneRect(0, 0, 300, 300)
-    def mousePressEvent(self, e):
-        pass
-        x = e.x()
-        y = e.y()
+    def mousePressEvent(self, QMouseEvent):
+        x = QMouseEvent.pos().x()
+        y = QMouseEvent.pos().y()
         # print(x, y)
+        print(self.scene.add_ship(x, y))
+
+
+
+
+
+
+
 
 
 class Sea(QtWidgets.QFrame):
@@ -30,10 +81,11 @@ class Sea(QtWidgets.QFrame):
         # self.setFixedSize(802, 503)
         self.loadStyleSheet('kid')
 
-        self.main = View(self)
+        self.scene = SeaModel()
+        self.main = View(self.scene, self)
         self.main.move(89, 114)
-        self.scene = Scene()
-        self.main.setScene(self.scene)
+
+
 
     def loadStyleSheet(self, sheetName):
         file_name = sheetName + '.css'
@@ -43,16 +95,21 @@ class Sea(QtWidgets.QFrame):
         styleSheet = str(styleSheet, encoding='utf8')
         QtWidgets.QApplication.instance().setStyleSheet(styleSheet)
 
-        # def mousePressEvent(self, e):
-        #     x = e.x()
-        #     y = e.y()
-        #     print(x, y)
+
+    def add_ship(self):
+        p = '../resource/textures/new/4_h.png'
+        pxm = QtGui.QPixmap(p)
+        ship = Item(pxm)
+        ship.setPos(33, 33)
+        self.scene.addItem(ship)
+
 
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     # app.setStyleSheet(open('./etc/{0}.qss'.format('style'), "r").read())
     main = Sea()
+    main.add_ship()
 
     main.show()
     sys.exit(app.exec_())

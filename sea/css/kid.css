@@ -1,8 +1,8 @@
 Sea {
-    background-image: url("../resource/textures/kid/main.png");
+    /*background-image: url("../resource/textures/kid/field.png");*/
 }
 
 View {
-    background-image: url("../resource/textures/kid/sea.png");
+    background-image: url("../resource/textures/kid/field.png");
     border: none;
 }
