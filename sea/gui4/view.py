@@ -72,19 +72,28 @@ class SeaModel(QtWidgets.QGraphicsScene):
 
         cell = self.field_conv.coord_to_cell(x, y)
         shot_res, status, name = self.model.fleet.shot(cell)
+        x, y = self.field_conv.coord_to_cell_coord(x, y)
         if shot_res:
             self.add_item(x, y, 'wounded')
         else:
             self.add_item(x, y, 'shot')
         if status == 'kill':
             self.draw_ship(name)
+            self.draw_items(name, 'shot')
+
+    def draw_items(self, ship_name, item_name):
+        for cell in self.model.fleet[ship_name].around:
+            x, y = self.field_conv.cell_to_coord(cell)
+            self.add_item(x, y, item_name)
+
+
 
     def draw_ship(self, name):
         self.add_ship(self.model.fleet[name])
 
     def add_item(self, x, y, item_name):
         name = '{}.{}'.format(item_name, cfg.ext)
-        x, y = self.field_conv.coord_to_cell_coord(x, y)
+        # x, y = self.field_conv.coord_to_cell_coord(x, y)
         path = os.path.join('../resource/textures',
                             cfg.default_style, name)
         self.draw_item((x, y), path, x, y)
