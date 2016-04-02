@@ -50,11 +50,12 @@ class SeaModel(QtWidgets.QGraphicsScene):
         self._items = {}
         self.field_conv = FieldConvert(320, 32, 0, 0)
 
-    def add_fleet(self):
+    def add_fleet(self, display=False):
         self.clear()
         self.model.create_fleet()
-        for ship in self.model.fleet.values():
-            self.add_ship(ship)
+        if display:
+            for ship in self.model.fleet.values():
+                self.add_ship(ship)
 
     def on_click_cell(self, x, y):
         if self.name_model == 'user':
@@ -68,9 +69,10 @@ class SeaModel(QtWidgets.QGraphicsScene):
     def pc_click(self, x, y):
         # print(x, y)
         cell = self.field_conv.coord_to_cell(x, y)
-        print(self.model[cell].ship_place)
-        # print(cell)
-        # self.add_item(x, y, 'shot')
+        if self.model.fleet.shot(cell):
+             self.add_item(x, y, 'wounded')
+        else:
+            self.add_item(x, y, 'shot')
 
     def add_item(self, x, y, item_name):
         name = '{}.{}'.format(item_name, cfg.ext)

@@ -49,10 +49,10 @@ class Widget(QtWidgets.QWidget):
         self.ui.new_game_btn.clicked.connect(self.create_pc_fleet)
 
     def auto_user_fleet(self):
-        self.user_sea.add_fleet()
+        self.user_sea.add_fleet(display=True)
 
     def create_pc_fleet(self):
-        self.pc_sea.add_fleet()
+        self.pc_sea.add_fleet(display=False)
 
 
 if __name__ == '__main__':

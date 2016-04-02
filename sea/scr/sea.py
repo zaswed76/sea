@@ -64,7 +64,7 @@ class Cell(list):
         self.horizontal_lock = False
         self.vertical_lock = False
         self.shooting = False  # стреляли ли в эту клетку
-        self.ship_place = False  # размещает ли корабль
+        self.ship_place = False  # размещает ли корабль весь
         self._distance_to_obstacles_x = Config.max - (self.x - 1)
         self._distance_to_obstacles_y = Config.max - (self.y - 1)
 
@@ -84,6 +84,18 @@ class Fleet(dict):
         for ship in self.values():
             lst.append(ship.corpus)
         return lst
+
+    def shot(self, item):
+        for name in self:
+            ship = self[name]
+            if item in ship.corpus:
+                ship.corpus.remove(item)
+                return True
+        else:
+            return False
+
+
+
 
     def __contains__(self, item):
         for ship in self.values():
