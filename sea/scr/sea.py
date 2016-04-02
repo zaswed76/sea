@@ -205,7 +205,7 @@ class Ship(list):
 
     def __init__(self, bow, course, deck):
         super().__init__()
-
+        self.bow = bow
         self.max = Config.max + 1
         self.min = Config.min - 1
         self.x, self.y = bow

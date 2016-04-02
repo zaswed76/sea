@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
-from gui3 import config
+from gui4 import config
 
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import QFile
@@ -46,18 +46,19 @@ class SeaModel(QtWidgets.QGraphicsScene):
 
     def add_fleet(self):
         self.model.create_fleet()
-        return self.model.fleet
+        for ship in self.model.fleet.values():
+            self.add_ship(ship.bow, ship.course, ship.deck)
 
 
-    def add_ship(self, x, y):
-        cell = self.field_conv.coord_to_cell(x, y)
-        x, y = self.field_conv.cell_to_coord(cell)
-        p = '../resource/textures/new/2_h.png'
-        pxm = QtGui.QPixmap(p)
-        self.ships[cell] = Item(pxm)
-        self.ships[cell].setPos(x, y)
+    def add_ship(self, bow, course, deck):
+        x, y = self.field_conv.cell_to_coord(bow)
+        print(x, y)
+        # p = '../resource/textures/new/2_h.png'
+        # pxm = QtGui.QPixmap(p)
+        # self.ships[cell] = Item(pxm)
+        # self.ships[cell].setPos(x, y)
 
-        self.addItem(self.ships[cell])
+        # self.addItem(self.ships[cell])
 
 
 

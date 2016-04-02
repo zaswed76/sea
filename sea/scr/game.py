@@ -5,14 +5,8 @@ import scr.sea
 import random
 
 
+sea = scr.sea.Sea([4, 3])
 
-class Field:
-    def __init__(self, size_field, ship_names):
-        self.ship_names = ship_names
-        self.sea = scr.sea.Sea()
-        self.fleet = scr.sea.Fleet()
-        self.sea.set_fleet(self.fleet)
-        self.sea.create_field(size_field, size_field)
 
 
 
