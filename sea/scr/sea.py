@@ -188,8 +188,11 @@ class Sea(dict):
                     [Ship.Vertical, Ship.Horizontal])
 
                 perm = self.permissible(course, deck)
-                bow = random.choice(perm)
-                ship = Ship(bow, course, deck)
+                try:
+                    bow = random.choice(perm)
+                except IndexError:
+                    continue
+                ship = Ship(bow, course, deck, name)
                 self.add_ship(name, ship)
                 self.update_cells(ship)
 
@@ -203,8 +206,9 @@ class Ship(list):
     Left_beacon = 'left_beacon'
     Top_beacon = 'top_beacon'
 
-    def __init__(self, bow, course, deck):
+    def __init__(self, bow, course, deck, name):
         super().__init__()
+        self.name = name
         self.bow = bow
         self.max = Config.max + 1
         self.min = Config.min - 1
