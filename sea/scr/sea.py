@@ -17,14 +17,15 @@ class Config:
 
     def horizontal_lock(self):
         lst = []
-        for y in range(self.min+1, self.max):
+        for y in range(self.min + 1, self.max):
             lst.extend([(x, y) for x in range(self.min, self.size)])
         return lst
 
     def vertical_lock(self):
         lst = []
         for y in range(self.min, self.size):
-            lst.extend([(x, y) for x in range(self.min+1, self.max)])
+            lst.extend(
+                    [(x, y) for x in range(self.min + 1, self.max)])
         return lst
 
 
@@ -71,6 +72,106 @@ class Cell(list):
     def __repr__(self):
         return 'Cell - ({}, {})'.format(self.x, self.y)
 
+class Ship(list):
+    Vertical = 'vertical'
+    Horizontal = 'horizontal'
+    Left_beacon = 'left_beacon'
+    Top_beacon = 'top_beacon'
+    StatusFull = 'full'
+    StatusWounded = 'wounded'
+    StatusKill = 'kill'
+
+    def __init__(self, bow, course, deck, name):
+        super().__init__()
+        self.name = name
+        self.bow = bow
+        self.max = Config.max + 1
+        self.min = Config.min - 1
+        self.x, self.y = bow
+        self.course = course
+        self.deck = deck
+        self._status = Ship.StatusFull
+        self.corpus = []
+        self.around = []
+        self.top_beacon = []
+        self.left_beacon = []
+        self.set_ship()
+
+    def wound(self, value):
+        self.corpus.remove(value)
+        self.update_status()
+
+    @property
+    def status(self):
+        return self._status
+
+    def update_status(self):
+        if not self.corpus:
+            self._status = Ship.StatusKill
+        elif len(self.corpus) < self.deck:
+            self._status = Ship.StatusWounded
+        else:
+            self._status = Ship.StatusFull
+
+    def _border_filter(self, x, y):
+        return self.min < x < self.max and self.min < y < self.max
+
+    def _around_hor(self):
+        res = []
+        top_y = self.y - 1
+        bottom_y = self.y + 1
+        left = (self.x - 1, self.y)
+        right = (self.x + self.deck, self.y)
+        top = [(self.x + n, top_y) for n in range(-1, self.deck + 1)]
+        bot = [(self.x + n, bottom_y) for n in
+               range(-1, self.deck + 1)]
+
+        res.append(left)
+        res.append(right)
+        res.extend(top)
+        res.extend(bot)
+        return [(x, y) for x, y in res if self._border_filter(x, y)]
+
+    def _around_ver(self):
+        res = []
+        left_x = self.x - 1
+        right_x = self.x + 1
+        top = (self.x, self.y - 1)
+        bottom = (self.x, self.y + self.deck)
+        left = [(left_x, self.y + n) for n in
+                range(-1, self.deck + 1)]
+        right = [(right_x, self.y + n) for n in
+                 range(-1, self.deck + 1)]
+        res.append(top)
+        res.append(bottom)
+        res.extend(left)
+        res.extend(right)
+        return [(x, y) for x, y in res if self._border_filter(x, y)]
+
+    def set_ship(self):
+        if self.course == self.Horizontal:
+            self.corpus = [(self.x + n, self.y) for n in
+                           range(self.deck)]
+            self.around = self._around_hor()
+            self.extend(self.corpus + self.around)
+        else:
+            self.corpus = [(self.x, self.y + n) for n in
+                           range(self.deck)]
+            self.around = self._around_ver()
+            self.extend(self.corpus + self.around)
+        self.top_beacon = self.set_top_beacon
+        self.left_beacon = self.set_left_beacon
+
+    @property
+    def set_top_beacon(self):
+        ty = self.y - 1
+        return [(x, y) for x, y in self if y == ty]
+
+    @property
+    def set_left_beacon(self):
+        tx = self.x - 1
+        return [(x, y) for x, y in self if x == tx]
+
 
 class Fleet(dict):
     def __init__(self):
@@ -89,13 +190,11 @@ class Fleet(dict):
         for name in self:
             ship = self[name]
             if item in ship.corpus:
-                ship.corpus.remove(item)
-                return True
+                ship.wound(item)
+
+                return (True, ship.status, ship.name)
         else:
-            return False
-
-
-
+            return (False, None, None)
 
     def __contains__(self, item):
         for ship in self.values():
@@ -116,8 +215,6 @@ class Sea(dict):
             for x in range(Config.size):
                 self[(x, y)] = Cell(x, y)
 
-
-
     def reset(self):
         for cell in self.values():
             cell.reset()
@@ -125,6 +222,7 @@ class Sea(dict):
                 cell.horizontal_lock = True
             if (cell.x, cell.y) in Config.vertical_lock(Config):
                 cell.vertical_lock = True
+
     @property
     def empty(self):
         return [c for c in self.values() if not c.ship_place]
@@ -197,7 +295,7 @@ class Sea(dict):
             for name, deck in enumerate(self.ship_names):
                 # направление
                 course = random.choice(
-                    [Ship.Vertical, Ship.Horizontal])
+                        [Ship.Vertical, Ship.Horizontal])
 
                 perm = self.permissible(course, deck)
                 try:
@@ -212,85 +310,6 @@ class Sea(dict):
                 break
 
 
-class Ship(list):
-    Vertical = 'vertical'
-    Horizontal = 'horizontal'
-    Left_beacon = 'left_beacon'
-    Top_beacon = 'top_beacon'
-
-    def __init__(self, bow, course, deck, name):
-        super().__init__()
-        self.name = name
-        self.bow = bow
-        self.max = Config.max + 1
-        self.min = Config.min - 1
-        self.x, self.y = bow
-        self.course = course
-        self.deck = deck
-        self.corpus = []
-        self.around = []
-        self.top_beacon = []
-        self.left_beacon = []
-        self.set_ship()
-
-    def _border_filter(self, x, y):
-        return self.min < x < self.max and self.min < y < self.max
-
-    def _around_hor(self):
-        res = []
-        top_y = self.y - 1
-        bottom_y = self.y + 1
-        left = (self.x - 1, self.y)
-        right = (self.x + self.deck, self.y)
-        top = [(self.x + n, top_y) for n in range(-1, self.deck + 1)]
-        bot = [(self.x + n, bottom_y) for n in
-               range(-1, self.deck + 1)]
-
-        res.append(left)
-        res.append(right)
-        res.extend(top)
-        res.extend(bot)
-        return [(x, y) for x, y in res if self._border_filter(x, y)]
-
-    def _around_ver(self):
-        res = []
-        left_x = self.x - 1
-        right_x = self.x + 1
-        top = (self.x, self.y - 1)
-        bottom = (self.x, self.y + self.deck)
-        left = [(left_x, self.y + n) for n in
-                range(-1, self.deck + 1)]
-        right = [(right_x, self.y + n) for n in
-                 range(-1, self.deck + 1)]
-        res.append(top)
-        res.append(bottom)
-        res.extend(left)
-        res.extend(right)
-        return [(x, y) for x, y in res if self._border_filter(x, y)]
-
-    def set_ship(self):
-        if self.course == self.Horizontal:
-            self.corpus = [(self.x + n, self.y) for n in
-                           range(self.deck)]
-            self.around = self._around_hor()
-            self.extend(self.corpus + self.around)
-        else:
-            self.corpus = [(self.x, self.y + n) for n in
-                           range(self.deck)]
-            self.around = self._around_ver()
-            self.extend(self.corpus + self.around)
-        self.top_beacon = self.set_top_beacon
-        self.left_beacon = self.set_left_beacon
-
-    @property
-    def set_top_beacon(self):
-        ty = self.y - 1
-        return [(x, y) for x, y in self if y == ty]
-
-    @property
-    def set_left_beacon(self):
-        tx = self.x - 1
-        return [(x, y) for x, y in self if x == tx]
 
 
 if __name__ == '__main__':

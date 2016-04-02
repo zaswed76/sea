@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
 import os
-from gui4 import config
+import sys
 
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import QFile
 
+from gui4 import config
+
 cfg = config.Config()
+
 
 class FieldConvert:
     def __init__(self, size, size_cell, lx, ly):
@@ -67,12 +69,18 @@ class SeaModel(QtWidgets.QGraphicsScene):
         print('user', x, y)
 
     def pc_click(self, x, y):
-        # print(x, y)
+
         cell = self.field_conv.coord_to_cell(x, y)
-        if self.model.fleet.shot(cell):
-             self.add_item(x, y, 'wounded')
+        shot_res, status, name = self.model.fleet.shot(cell)
+        if shot_res:
+            self.add_item(x, y, 'wounded')
         else:
             self.add_item(x, y, 'shot')
+        if status == 'kill':
+            self.draw_ship(name)
+
+    def draw_ship(self, name):
+        self.add_ship(self.model.fleet[name])
 
     def add_item(self, x, y, item_name):
         name = '{}.{}'.format(item_name, cfg.ext)
@@ -80,7 +88,6 @@ class SeaModel(QtWidgets.QGraphicsScene):
         path = os.path.join('../resource/textures',
                             cfg.default_style, name)
         self.draw_item((x, y), path, x, y)
-
 
     def draw_item(self, name, path, x, y):
         pxm = QtGui.QPixmap(path)
@@ -97,9 +104,10 @@ class SeaModel(QtWidgets.QGraphicsScene):
         pxm = QtGui.QPixmap(path)
         self._items[ship.name] = Item(pxm)
         self._items[ship.name].setPos(x, y)
+        self._items[ship.name].setFlag(
+            QtWidgets.QGraphicsItem.ItemStacksBehindParent, True)
 
         self.addItem(self._items[ship.name])
-
 
 
 class View(QtWidgets.QGraphicsView):
@@ -115,13 +123,6 @@ class View(QtWidgets.QGraphicsView):
         self.scene.on_click_cell(x, y)
 
 
-
-
-
-
-
-
-
 class Sea(QtWidgets.QFrame):
     def __init__(self):
         super().__init__()
@@ -132,8 +133,6 @@ class Sea(QtWidgets.QFrame):
         self.main = View(self.scene, self)
         self.main.move(89, 114)
 
-
-
     def loadStyleSheet(self, sheetName):
         file_name = sheetName + '.css'
         file = QFile('../css/{}'.format(file_name))
@@ -142,14 +141,12 @@ class Sea(QtWidgets.QFrame):
         styleSheet = str(styleSheet, encoding='utf8')
         QtWidgets.QApplication.instance().setStyleSheet(styleSheet)
 
-
     def add_ship(self):
         p = '../resource/textures/new/4_h.png'
         pxm = QtGui.QPixmap(p)
         ship = Item(pxm)
         ship.setPos(33, 33)
         self.scene.addItem(ship)
-
 
 
 if __name__ == '__main__':
