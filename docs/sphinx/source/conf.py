@@ -242,7 +242,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'sea', 'sea Documentation',
-   'Serg', 'sea', 'One line description of project.',
+   'Serg', 'sea', 'One _line description of project.',
    'Miscellaneous'),
 ]
 
