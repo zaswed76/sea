@@ -5,7 +5,7 @@
 import numpy as np
 
 
-class Matr:
+class Matrix:
     def __init__(self, pattern):
         self._pattern = np.array(pattern)
         self._matrix = None
@@ -51,11 +51,11 @@ if __name__ == '__main__':
     lst2 = [[0, 1, 2, 3],
             [2, 3, 0, 1]]
 
-    mtr = Matr(lst1)
+    mtr = Matrix(lst1)
     mtr.create_matrix()
     print(mtr.matrix)
     print('------------------------')
 
-    mtr2 = Matr(lst2)
+    mtr2 = Matrix(lst2)
     mtr2.create_matrix()
     print(mtr2.matrix)

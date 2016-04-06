@@ -6,7 +6,8 @@ import sys
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import QFile
 from gui4 import config
-from scr import sea
+from gui4 import service
+from scr import sea, pcshots
 from gui4 import view as gui
 from gui.base_ui import Ui_Form
 
@@ -47,6 +48,7 @@ class Widget(QtWidgets.QWidget):
         self.ui.close_btn.clicked.connect(self.close)
         self.ui.auto_btn.clicked.connect(self.auto_user_fleet)
         self.ui.new_game_btn.clicked.connect(self.create_pc_fleet)
+        self.ui.settings_btn.clicked.connect(self.open_service)
 
     def auto_user_fleet(self):
         self.user_sea.add_fleet(display=True)
@@ -54,7 +56,26 @@ class Widget(QtWidgets.QWidget):
     def create_pc_fleet(self):
         self.pc_sea.add_fleet(display=False)
 
+    def open_service(self):
+        self.service = service.Service(self)
+        self.service.show()
 
+    def clear_field(self):
+        self.user_sea.clear()
+
+    def search4(self):
+        shots = pcshots.Shots()
+        mc = shots.search_4_deck(pattern_index=0)
+        coord = shots.convert_matrix_to_coordinate(mc)
+        coord = shots.random(coord)
+        self.user_sea.draw_items('shot', coord)
+
+    def search4_2(self):
+        shots = pcshots.Shots()
+        mc = shots.search_4_deck(pattern_index=1)
+        coord = shots.convert_matrix_to_coordinate(mc)
+        coord = shots.random(coord)
+        self.user_sea.draw_items('shot', coord)
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
 

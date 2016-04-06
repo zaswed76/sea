@@ -3,6 +3,7 @@
 
 import os
 import sys
+import time
 
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import QFile
@@ -79,13 +80,19 @@ class SeaModel(QtWidgets.QGraphicsScene):
             self.add_item(x, y, 'shot')
         if status == 'kill':
             self.draw_ship(name)
-            self.draw_items(name, 'shot')
+            self.draw_items_around(name, 'shot')
 
-    def draw_items(self, ship_name, item_name):
+    def draw_items_around(self, ship_name, item_name):
         for cell in self.model.fleet[ship_name].around:
             x, y = self.field_conv.cell_to_coord(cell)
             self.add_item(x, y, item_name)
 
+    def draw_items(self, item_name, coordinates):
+        for cell in coordinates:
+            x, y = self.field_conv.cell_to_coord(cell)
+            self.add_item(x, y, item_name)
+            QtWidgets.qApp.processEvents()
+            time.sleep(0.2)
 
 
     def draw_ship(self, name):
@@ -93,7 +100,6 @@ class SeaModel(QtWidgets.QGraphicsScene):
 
     def add_item(self, x, y, item_name):
         name = '{}.{}'.format(item_name, cfg.ext)
-        # x, y = self.field_conv.coord_to_cell_coord(x, y)
         path = os.path.join('../resource/textures',
                             cfg.default_style, name)
         self.draw_item((x, y), path, x, y)
@@ -101,6 +107,7 @@ class SeaModel(QtWidgets.QGraphicsScene):
     def draw_item(self, name, path, x, y):
         pxm = QtGui.QPixmap(path)
         self._items[name] = Item(pxm)
+        print(x, y)
         self._items[name].setPos(x, y)
         self.addItem(self._items[name])
 

@@ -8,7 +8,7 @@ import numpy as np
 #
 # b = np.array(m)
 # print(b)
-# r = np.rot90(b, 1)
+r = np.rot90(b, 1)
 # print(r)
 
 y1 = [0, 1, 2, 3]
