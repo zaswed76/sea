@@ -18,7 +18,8 @@ class Main(mainwidget.MainWidget):
         self.tool = mainwidget.Tool(self, cfg.tool_height, self.tool_actions(cfg.actions_names))
         self.init_tool_bar(self.tool)
 
-
+    def action_method(self, name_action):
+        print(name_action)
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)

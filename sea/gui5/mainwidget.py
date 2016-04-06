@@ -4,6 +4,7 @@
 
 import sys
 import os
+from functools import partial
 
 from PyQt5 import QtWidgets, QtGui, QtCore
 
@@ -39,8 +40,11 @@ class MainWidget(QtWidgets.QMainWindow):
     def tool_actions(self, names):
         actions = []
         for name in names:
+            name_not_ext =  os.path.splitext(name)[0]
             icon = QtGui.QIcon(os.path.join(icon_dir, name))
-            actions.append(Action(icon, os.path.splitext(name)[0], self))
+            act = Action(icon, name_not_ext, self)
+            act.triggered.connect(partial(self.action_method, name_not_ext))
+            actions.append(act)
         return actions
 
 
