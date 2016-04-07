@@ -11,6 +11,11 @@ from PyQt5.QtCore import QFile
 
 icon_dir = '../resource/icons'
 
+class Status(QtWidgets.QStatusBar):
+    def __init__(self, parent, height):
+        super().__init__(parent)
+        self.setFixedHeight(height)
+
 
 class Action(QtWidgets.QAction):
     def __init__(self, icon, name, parent):
@@ -49,6 +54,10 @@ class MainWidget(QtWidgets.QMainWindow):
         self.center.setObjectName('center_frame')
         self.setCentralWidget(self.center)
         self.center_box = QtWidgets.QHBoxLayout(self.center)
+        self.center_box.setSpacing(40)
+        self.center_box.setContentsMargins(40, 30, 40, 30)
+
+
 
 
     def add_gui_sea(self, model_sea):
@@ -56,6 +65,9 @@ class MainWidget(QtWidgets.QMainWindow):
 
     def init_tool_bar(self, tool_bar):
         self.addToolBar(tool_bar)
+
+    def init_status(self, status):
+        self.setStatusBar(status)
 
     def tool_actions(self, names):
         actions = []

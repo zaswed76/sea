@@ -5,19 +5,12 @@ import scr.sea
 import random
 
 
-sea = scr.sea.Sea([4, 3])
+class Player_turn:
+    def __init__(self):
+        self.message = 'ход игрока'
 
 
+class Game:
+    status = {'Player_turn': Player_turn, 'Pc_turn': 'Pc turn',
+              'Game_over': 'Game_over'}
 
-
-
-
-
-
-
-
-
-if __name__ == '__main__':
-    names = [4, 3, 3, 2, 2, 2, 1, 1, 1, 1]
-    pc = Field(names)
-    pc.new_fleet()

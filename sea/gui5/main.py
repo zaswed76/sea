@@ -15,10 +15,13 @@ cfg = config.Config()
 class Main(mainwidget.MainWidget):
     def __init__(self):
         super().__init__()
-        self.resize(500, 500)
+
         self.load_style_sheet(cfg.default_style)
         self.tool = mainwidget.Tool(self, cfg.tool_height, self.tool_actions(cfg.actions_names))
         self.init_tool_bar(self.tool)
+
+        self.status = mainwidget.Status(self, cfg.status_height)
+        self.init_status(self.status)
 
 
         self.model_user = view.SeaModel(sea.Sea(cfg.ship_names), 'user')
@@ -35,6 +38,10 @@ class Main(mainwidget.MainWidget):
 
     def close_scr(self):
         self.close()
+
+
+    def auto(self):
+        self.model_user.add_fleet(display=True)
 
     def settings(self):
         print('settings')

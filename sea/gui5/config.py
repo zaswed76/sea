@@ -19,6 +19,7 @@ cfg = read_cfg(cfg_path)
 class Config:
     _config = {}
     _config['tool_height'] = cfg['tool_height']
+    _config['status_height'] = cfg['status_height']
     _config['ext'] = cfg['ext']
     _config['ext_icon'] = cfg['ext_icon']
     _config['default_style'] = cfg['default_style']

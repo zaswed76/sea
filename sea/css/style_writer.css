@@ -9,9 +9,15 @@ View {
 
 QFrame#center_frame {
     border: none;
+    background-image: url("../resource/textures/wrirter/more.jpg");
 }
 
 Tool {
     background: #89dbff;
+    border: none;
+}
+
+Status {
+    background: #89DBFF;
     border: none;
 }
