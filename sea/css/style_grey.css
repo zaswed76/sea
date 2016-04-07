@@ -1,0 +1,18 @@
+
+View {
+    background-image: url("../resource/textures/graphics/field.png");
+    border-right: none;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: none;
+}
+
+QFrame#center_frame {
+    border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+Tool {
+    /*noinspection CssInvalidFunction*/
+    background:  qlineargradient(spread:reflect, x1:0.499591, y1:1, x2:0.5, y2:0, stop:0 rgba(95, 95, 95, 151), stop:1 rgba(230, 255, 255, 118));
+    border: none;
+}

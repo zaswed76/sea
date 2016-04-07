@@ -67,7 +67,7 @@ class Widget(QtWidgets.QWidget):
         shots = pcshots.Shots()
         mc = shots.search_4_deck(pattern_index=0)
         coord = shots.convert_matrix_to_coordinate(mc)
-        coord = shots.random(coord)
+        # coord = shots.random(coord)
         self.user_sea.draw_items('shot', coord)
 
     def search4_2(self):

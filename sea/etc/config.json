@@ -1,0 +1,28 @@
+{
+    "actions_names": [
+        "new_game.png",
+        "settings.png",
+        "SPACER",
+        "style_grey.png",
+        "style_writer.png",
+        "close_scr.png"
+    ],
+    "default_style": "style_writer",
+    "ship_names": [
+        4,
+        3,
+        3,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+    ],
+    "count_cell": 10,
+    "ext_icon": "png",
+    "tool_height": 50,
+    "ext": "png",
+    "cell_size": 32
+}
