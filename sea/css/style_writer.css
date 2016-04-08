@@ -20,4 +20,8 @@ Tool {
 Status {
     background: #89DBFF;
     border: none;
+    color: #0505e7;
+    font-family: "Century Gothic";
+    font-size: 14pt;
+    font-weight: 500;
 }

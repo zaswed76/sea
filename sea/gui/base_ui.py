@@ -97,7 +97,7 @@ class Ui_Form(object):
         self.close_btn.setText(_translate("Form", "close"))
         self.label_gamer.setText(_translate("Form", "Игрок"))
         self.label_pc.setText(_translate("Form", "Компьютер"))
-        self.auto_btn.setText(_translate("Form", "auto"))
+        self.auto_btn.setText(_translate("Form", "auto_fleet_user"))
         self.new_game_btn.setText(_translate("Form", "new"))
         self.settings_btn.setText(_translate("Form", "set"))
 

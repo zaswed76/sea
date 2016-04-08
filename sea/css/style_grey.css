@@ -22,4 +22,8 @@ Status {
 
     background: #cecece;
     border: none;
+    color: #4d4a4c;
+    font-family: "DejaVu Sans Mono";
+    font-size: 14pt;
+    font-weight: 400;
 }

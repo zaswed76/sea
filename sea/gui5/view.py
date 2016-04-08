@@ -62,25 +62,37 @@ class SeaModel(QtWidgets.QGraphicsScene):
 
     def on_click_cell(self, x, y):
         if self.name_model == 'user':
-            self.user_click(x, y)
+            return self.user_click(x, y)
         else:
-            self.pc_click(x, y)
+            return self.pc_click(x, y)
 
     def user_click(self, x, y):
         print('user', x, y)
 
     def pc_click(self, x, y):
 
+        """
+         клик на поле pc
+         координаты сцены
+        :param x: int
+        :param y: int
+        """
+        # координаты в измерении модели (0, 1) < tuple(x, y)
         cell = self.field_conv.coord_to_cell(x, y)
+
         shot_res, status, name = self.model.fleet.shot(cell)
         x, y = self.field_conv.coord_to_cell_coord(x, y)
         if shot_res:
             self.add_item(x, y, 'wounded')
+            # return 'wounded'
         else:
             self.add_item(x, y, 'shot')
+            # return 'shot'
         if status == 'kill':
             self.draw_ship(name)
             self.draw_items_around(name, 'shot')
+            # return 'kill'
+        return self.name_model, shot_res, status
 
     def draw_items_around(self, ship_name, item_name):
         for cell in self.model.fleet[ship_name].around:
@@ -136,7 +148,8 @@ class View(QtWidgets.QGraphicsView):
     def mousePressEvent(self, QMouseEvent):
         x = QMouseEvent.pos().x()
         y = QMouseEvent.pos().y()
-        self.scene.on_click_cell(x, y)
+        self.parent.click_on_cell(self.scene, x, y)
+        # self.scene.on_click_cell(x, y)
 
 
 class Sea(QtWidgets.QFrame):

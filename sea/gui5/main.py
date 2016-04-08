@@ -40,14 +40,22 @@ class Main(mainwidget.MainWidget):
         self.close()
 
 
-    def auto(self):
-        self.model_user.add_fleet(display=True)
+
 
     def settings(self):
         print('settings')
 
+
+
     def new_game(self):
-        self.model_pc.add_fleet(display=False)
+        self.auto_fleet_pc()
+        if not self.model_pc.model.fleet:
+            self.status.showMessage('вражеские корабли не готовы к бою')
+        elif not self.model_user.model.fleet:
+            self.status.showMessage('ваши корабли не готовы к бою')
+        else:
+            self.game()
+
 
     def style_grey(self):
         cfg.set_config('default_style', 'style_grey')
@@ -60,12 +68,29 @@ class Main(mainwidget.MainWidget):
     def closeEvent(self, *args, **kwargs):
         config.write_cfg(config.cfg_path, cfg.config)
 
-    def start(self):
-        pass
+    def auto_fleet_user(self):
+        self.model_user.add_fleet(display=True)
+
+
+    def auto_fleet_pc(self):
+        self.model_pc.add_fleet(display=False)
+
+    def click_on_cell(self, scene, x, y):
+        res = scene.on_click_cell(x, y)
+        self.game(result_shot = res)
+
+    def game(self, result_shot=None):
+        if result_shot is None:
+            self.status.showMessage('ваш ход')
+        elif result_shot:
+            print(result_shot)
+
+
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     main = Main()
-    main.start()
+
     main.show()
     sys.exit(app.exec_())

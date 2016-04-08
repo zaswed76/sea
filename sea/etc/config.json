@@ -1,4 +1,17 @@
 {
+    "count_cell": 10,
+    "ext_icon": "png",
+    "actions_names": [
+        "new_game.png",
+        "auto_fleet_user.png",
+        "settings.png",
+        "SPACER",
+        "style_grey.png",
+        "style_writer.png",
+        "close_scr.png"
+    ],
+    "tool_height": 50,
+    "ext": "png",
     "ship_names": [
         4,
         3,
@@ -11,20 +24,7 @@
         1,
         1
     ],
-    "ext": "png",
-    "tool_height": 50,
-    "ext_icon": "png",
-    "status_height": 30,
-    "default_style": "style_writer",
-    "actions_names": [
-        "new_game.png",
-        "auto.png",
-        "settings.png",
-        "SPACER",
-        "style_grey.png",
-        "style_writer.png",
-        "close_scr.png"
-    ],
     "cell_size": 32,
-    "count_cell": 10
+    "status_height": 30,
+    "default_style": "style_grey"
 }
