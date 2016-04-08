@@ -6,7 +6,7 @@ import sys
 from PyQt5 import QtWidgets
 
 from gui5 import config
-from scr import sea, pcshots
+from scr import sea, gameprocess
 from gui5 import mainwidget, view
 
 cfg = config.Config()
@@ -23,6 +23,7 @@ class Main(mainwidget.MainWidget):
         self.status = mainwidget.Status(self, cfg.status_height)
         self.init_status(self.status)
 
+        self.game_process = gameprocess.GameProcess()
 
         self.model_user = view.SeaModel(sea.Sea(cfg.ship_names), 'user')
         self.add_gui_sea(view.View(self.model_user, self))
@@ -82,10 +83,19 @@ class Main(mainwidget.MainWidget):
     def game(self, result_shot=None):
         if result_shot is None:
             self.status.showMessage('ваш ход')
-        elif result_shot:
-            print(result_shot)
+        elif result_shot[0] == 'user':
+            self.shot_on_user(*result_shot[1:])
+        else: # result_shot[0] == 'pc'
+            self.shot_on_pc(*result_shot[1:])
 
 
+    def shot_on_pc(self, result, message):
+        print('# мы стреляем по врагу')# мы стреляем по врагу
+        print(result, message)
+
+    def shot_on_user(self, result, message):
+        print('# по нам стреляют')# по нам стреляют
+        print(result, message)
 
 
 if __name__ == '__main__':

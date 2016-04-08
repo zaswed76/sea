@@ -10,7 +10,7 @@ class Player_turn:
         self.message = 'ход игрока'
 
 
-class Game:
+class GameProcess:
     status = {'Player_turn': Player_turn, 'Pc_turn': 'Pc turn',
               'Game_over': 'Game_over'}
 
@@ -24,5 +24,8 @@ class Game:
     def game(self):
         while True:
             pass
+
+    def shot(self, result_shot):
+        print(result_shot)
 
 
