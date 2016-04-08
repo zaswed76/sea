@@ -47,7 +47,7 @@ class Main(mainwidget.MainWidget):
         print('settings')
 
     def new_game(self):
-        print('new_game')
+        self.model_pc.add_fleet(display=False)
 
     def style_grey(self):
         cfg.set_config('default_style', 'style_grey')
@@ -60,8 +60,12 @@ class Main(mainwidget.MainWidget):
     def closeEvent(self, *args, **kwargs):
         config.write_cfg(config.cfg_path, cfg.config)
 
+    def start(self):
+        pass
+
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     main = Main()
+    main.start()
     main.show()
     sys.exit(app.exec_())
