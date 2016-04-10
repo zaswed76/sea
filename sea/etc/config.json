@@ -11,13 +11,13 @@
         1,
         1
     ],
-    "cell_size": 32,
-    "count_cell": 10,
     "ext": "png",
     "default_style": "style_grey",
-    "status_height": 30,
     "ext_icon": "png",
+    "count_cell": 10,
     "tool_height": 50,
+    "cell_size": 32,
+    "status_height": 30,
     "actions_names": [
         "new_game.png",
         "auto_fleet_user.png",

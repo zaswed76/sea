@@ -34,7 +34,20 @@ class Shots:
         random.shuffle(coord)
         return coord
 
+
+class ShellingTactics:
+    def __init__(self):
+        self.cursor = 0
+        self.shots = Shots()
+        self.seq = self.shots.convert_matrix_to_coordinate(
+            self.shots.random(self.shots.search_4_deck()))
+
+    def next(self):
+        cell = self.seq[self.cursor]
+        self.cursor += 1
+        return cell
+
+
 if __name__ == '__main__':
-    shots = Shots()
-    mc = shots.search_4_deck()
-    print(shots.convert_matrix_to_coordinate(mc))
+    shots = ShellingTactics()
+    print(shots.next())
