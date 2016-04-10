@@ -77,15 +77,14 @@ class Main(mainwidget.MainWidget):
         self.model_pc.add_fleet(display=False)
 
     def click_on_cell(self, scene, x, y):
+        # print(x, y, '11')
         res = scene.on_click_cell(x, y)
         self.game(result_shot = res)
 
     def game(self, result_shot=None):
         if result_shot is None:
             self.status.showMessage('ваш ход')
-        # elif result_shot[0] == 'user':
-        #     self.shot_on_user(*result_shot[1:])
-        # else: # result_shot[0] == 'pc'
+
         self.shot_on_pc(*result_shot[1:])
 
 
@@ -99,7 +98,11 @@ class Main(mainwidget.MainWidget):
 
     def shot_on_user(self):
         print('# по нам стреляют')# по нам стреляют
-        print(self.pcshots.next())
+        cell = self.pcshots.next()
+
+        self.model_user.auto_shot(cell)
+        # self.click_on_cell(self.model_user, *cell)
+
 
 
 if __name__ == '__main__':

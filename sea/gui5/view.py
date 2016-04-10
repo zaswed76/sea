@@ -66,6 +66,11 @@ class SeaModel(QtWidgets.QGraphicsScene):
         else:
             return self.pc_click(x, y)
 
+    def auto_shot(self, cell):
+        x, y = self.field_conv.cell_to_coord(cell)
+        self.add_item(x, y, 'shot')
+        # print(coord)
+
     def user_click(self, x, y):
         print('user', x, y)
 

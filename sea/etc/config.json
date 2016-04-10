@@ -1,4 +1,5 @@
 {
+    "count_cell": 10,
     "ship_names": [
         4,
         3,
@@ -11,13 +12,8 @@
         1,
         1
     ],
-    "ext": "png",
-    "default_style": "style_grey",
     "ext_icon": "png",
-    "count_cell": 10,
-    "tool_height": 50,
     "cell_size": 32,
-    "status_height": 30,
     "actions_names": [
         "new_game.png",
         "auto_fleet_user.png",
@@ -26,5 +22,9 @@
         "style_grey.png",
         "style_writer.png",
         "close_scr.png"
-    ]
+    ],
+    "status_height": 30,
+    "ext": "png",
+    "tool_height": 50,
+    "default_style": "style_grey"
 }
