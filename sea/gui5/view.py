@@ -68,7 +68,10 @@ class SeaModel(QtWidgets.QGraphicsScene):
 
     def auto_shot(self, cell):
         x, y = self.field_conv.cell_to_coord(cell)
-        self.add_item(x, y, 'shot')
+        shot_res, status, name = self.model.fleet.shot(cell)
+        # print(shot_res, status, name)
+        return self.display_shot(shot_res, x, y, status, name)
+
         # print(coord)
 
     def user_click(self, x, y):
@@ -87,6 +90,10 @@ class SeaModel(QtWidgets.QGraphicsScene):
 
         shot_res, status, name = self.model.fleet.shot(cell)
         x, y = self.field_conv.coord_to_cell_coord(x, y)
+        return self.display_shot(shot_res, x, y, status, name)
+
+
+    def display_shot(self, shot_res, x, y, status, name):
         if shot_res:
             self.add_item(x, y, 'wounded')
             # return 'wounded'

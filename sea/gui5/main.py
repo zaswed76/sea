@@ -100,7 +100,8 @@ class Main(mainwidget.MainWidget):
         print('# по нам стреляют')# по нам стреляют
         cell = self.pcshots.next()
 
-        self.model_user.auto_shot(cell)
+        res = self.model_user.auto_shot(cell)
+        print(res)
         # self.click_on_cell(self.model_user, *cell)
 
 

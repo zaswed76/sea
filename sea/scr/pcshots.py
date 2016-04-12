@@ -40,7 +40,8 @@ class ShellingTactics:
         self.cursor = 0
         self.shots = Shots()
         self.seq = self.shots.convert_matrix_to_coordinate(
-            self.shots.random(self.shots.search_4_deck()))
+            self.shots.random(self.shots.search_4_deck(random=True)))
+        print(self.seq)
 
     def next(self):
         cell = self.seq[self.cursor]
