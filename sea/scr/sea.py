@@ -9,6 +9,7 @@ class Config:
     min = 0
     complexity = 0
 
+
     def set_size(self, s):
         self.size = s
 
@@ -204,7 +205,7 @@ class Fleet(dict):
 
 
 class Sea(dict):
-    def __init__(self, ship_names):
+    def __init__(self, ship_names=None):
         super().__init__()
         self.ship_names = ship_names
         self.fleet = Fleet()

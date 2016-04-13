@@ -28,7 +28,7 @@ class Shots:
         return m.matrix
 
     def convert_matrix_to_coordinate(self, matrix):
-        return list(zip(matrix[0], matrix[1]))
+        return list(zip(matrix[1], matrix[0]))
 
     def random(self, coord):
         random.shuffle(coord)

@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d2b38aa-ecb8-4b30-966e-3da2886ffa00" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sea/exemple/my_mattrix.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sea/scr/shot_sea.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/schemes/обстрел 4 палубных кораблей.docx" afterPath="$PROJECT_DIR$/docs/schemes/обстрел 4 палубных кораблей.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea/etc/config.json" afterPath="$PROJECT_DIR$/sea/etc/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea/gui5/main.py" afterPath="$PROJECT_DIR$/sea/gui5/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea/gui5/view.py" afterPath="$PROJECT_DIR$/sea/gui5/view.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea/scr/pcshots.py" afterPath="$PROJECT_DIR$/sea/scr/pcshots.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea/scr/sea.py" afterPath="$PROJECT_DIR$/sea/scr/sea.py" />
     </list>
     <ignored path="sea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,16 +23,18 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/sea$main.coverage" NAME="main Coverage Results" MODIFIED="1459509611262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui" />
-    <SUITE FILE_PATH="coverage/sea$base.coverage" NAME="base Coverage Results" MODIFIED="1460029268481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui4" />
-    <SUITE FILE_PATH="coverage/sea$matrix2.coverage" NAME="matrix2 Coverage Results" MODIFIED="1459800780995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/exemple" />
-    <SUITE FILE_PATH="coverage/sea$around.coverage" NAME="around Coverage Results" MODIFIED="1460043287468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/exemple" />
+    <SUITE FILE_PATH="coverage/sea$matrix2.coverage" NAME="matrix2 Coverage Results" MODIFIED="1460467277455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/scr" />
     <SUITE FILE_PATH="coverage/sea$config.coverage" NAME="config Coverage Results" MODIFIED="1460043581641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui5" />
+    <SUITE FILE_PATH="coverage/sea$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1460481005560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui5" />
+    <SUITE FILE_PATH="coverage/sea$sea.coverage" NAME="sea Coverage Results" MODIFIED="1458494109235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea" />
+    <SUITE FILE_PATH="coverage/sea$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1459967955883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui4" />
+    <SUITE FILE_PATH="coverage/sea$base.coverage" NAME="base Coverage Results" MODIFIED="1460029268481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui4" />
+    <SUITE FILE_PATH="coverage/sea$shot_sea.coverage" NAME="shot_sea Coverage Results" MODIFIED="1460552135983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/scr" />
+    <SUITE FILE_PATH="coverage/sea$around.coverage" NAME="around Coverage Results" MODIFIED="1460043287468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/exemple" />
     <SUITE FILE_PATH="coverage/sea$view.coverage" NAME="view Coverage Results" MODIFIED="1459498808996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui3" />
     <SUITE FILE_PATH="coverage/sea$matrix.coverage" NAME="matrix Coverage Results" MODIFIED="1459749523078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/exemple" />
-    <SUITE FILE_PATH="coverage/sea$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1460309316183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui5" />
-    <SUITE FILE_PATH="coverage/sea$sea.coverage" NAME="sea Coverage Results" MODIFIED="1458494109235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea" />
+    <SUITE FILE_PATH="coverage/sea$my_mattrix.coverage" NAME="my_mattrix Coverage Results" MODIFIED="1460523529397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/exemple" />
     <SUITE FILE_PATH="coverage/sea$pcshots.coverage" NAME="pcshots Coverage Results" MODIFIED="1460280620146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/scr" />
-    <SUITE FILE_PATH="coverage/sea$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1459967955883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui4" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -44,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/sea/gui5/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="21" />
               <folding>
                 <element signature="e#48#58#0" expanded="true" />
                 <element signature="e#280#897#0" expanded="true" />
@@ -60,25 +65,27 @@
                 <element signature="e#2037#2133#0" expanded="true" />
                 <element signature="e#2181#2294#0" expanded="true" />
                 <element signature="e#2348#2538#0" expanded="true" />
+                <element signature="e#2576#2773#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="view.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sea/gui5/view.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5935919">
-              <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
               <folding>
                 <element signature="e#47#56#0" expanded="true" />
                 <element signature="e#730#801#0" expanded="true" />
                 <element signature="e#1575#1698#0" expanded="true" />
-                <element signature="e#1739#1840#0" expanded="true" />
-                <element signature="e#1882#1901#0" expanded="true" />
-                <element signature="e#4257#4411#0" expanded="true" />
-                <element signature="e#4465#4617#0" expanded="true" />
-                <element signature="e#4681#4880#0" expanded="true" />
+                <element signature="e#1739#1969#0" expanded="true" />
+                <element signature="e#2011#2030#0" expanded="true" />
+                <element signature="e#2544#2900#0" expanded="true" />
+                <element signature="e#4509#4663#0" expanded="true" />
+                <element signature="e#4717#4869#0" expanded="true" />
+                <element signature="e#4933#5132#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,16 +112,44 @@
         <entry file="file://$PROJECT_DIR$/sea/scr/pcshots.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
+              <caret line="7" column="20" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="29" />
               <folding>
                 <element signature="e#47#60#0" expanded="true" />
-                <element signature="e#252#256#0" expanded="true" />
-                <element signature="e#310#344#0" expanded="true" />
-                <element signature="e#414#614#0" expanded="true" />
                 <element signature="e#676#714#0" expanded="true" />
-                <element signature="e#753#795#0" expanded="true" />
-                <element signature="e#853#1016#0" expanded="true" />
-                <element signature="e#1046#1119#0" expanded="true" />
+                <element signature="e#1081#1154#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="matrix2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sea/scr/matrix2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding>
+                <element signature="e#124#185#0" expanded="true" />
+                <element signature="e#232#252#0" expanded="true" />
+                <element signature="e#298#317#0" expanded="true" />
+                <element signature="e#366#409#0" expanded="true" />
+                <element signature="e#459#502#0" expanded="true" />
+                <element signature="e#544#677#0" expanded="true" />
+                <element signature="e#717#950#0" expanded="true" />
+                <element signature="e#989#1104#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_mattrix.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sea/exemple/my_mattrix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="e#553#573#0" expanded="true" />
+                <element signature="e#617#703#0" expanded="true" />
+                <element signature="e#739#772#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,10 +159,43 @@
         <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+              <caret line="207" column="38" selection-start-line="207" selection-start-column="38" selection-end-line="207" selection-end-column="38" />
               <folding>
-                <element signature="e#2142#2531#0" expanded="true" />
+                <element signature="e#2143#2532#0" expanded="true" />
+                <element signature="e#5662#5746#0" expanded="true" />
+                <element signature="e#5784#5895#0" expanded="true" />
+                <element signature="e#5926#6195#0" expanded="true" />
+                <element signature="e#6240#6293#0" expanded="true" />
+                <element signature="e#7210#7586#0" expanded="true" />
+                <element signature="e#7636#7879#0" expanded="true" />
+                <element signature="e#7928#8171#0" expanded="true" />
+                <element signature="e#8209#8858#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shot_sea.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sea/scr/shot_sea.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7405765">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="e#47#70#0" expanded="true" />
+                <element signature="e#229#247#0" expanded="true" />
+                <element signature="e#296#479#0" expanded="true" />
+                <element signature="e#516#651#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sea/gui5/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,8 +228,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -174,7 +242,6 @@
       <list>
         <option value="$PROJECT_DIR$/sea/sea.py" />
         <option value="$PROJECT_DIR$/sea/gui/main.py" />
-        <option value="$PROJECT_DIR$/sea/scr/sea.py" />
         <option value="$PROJECT_DIR$/sea/gui3/config.py" />
         <option value="$PROJECT_DIR$/sea/gui/base.py" />
         <option value="$PROJECT_DIR$/sea/gui3/view.py" />
@@ -192,9 +259,12 @@
         <option value="$PROJECT_DIR$/sea/gui5/mainwidget.py" />
         <option value="$PROJECT_DIR$/sea/scr/game.py" />
         <option value="$PROJECT_DIR$/sea/etc/config.json" />
-        <option value="$PROJECT_DIR$/sea/scr/pcshots.py" />
         <option value="$PROJECT_DIR$/sea/gui5/main.py" />
         <option value="$PROJECT_DIR$/sea/gui5/view.py" />
+        <option value="$PROJECT_DIR$/sea/scr/pcshots.py" />
+        <option value="$PROJECT_DIR$/sea/exemple/my_mattrix.py" />
+        <option value="$PROJECT_DIR$/sea/scr/sea.py" />
+        <option value="$PROJECT_DIR$/sea/scr/shot_sea.py" />
       </list>
     </option>
   </component>
@@ -299,7 +369,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resource" />
+              <option name="myItemId" value="gui5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exemple" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="schemes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -327,25 +447,7 @@
       <recent name="D:\0SYNC\python_projects\sea\sea\resource\textures\kid" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (2)">
-    <configuration default="false" name="base" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea/gui4" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="sea" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/gui4/base.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.shot_sea">
     <configuration default="false" name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -364,42 +466,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="config" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea/gui5" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="sea" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/gui5/config.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="around" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea/exemple" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="sea" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/exemple/around.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="pcshots" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -414,6 +480,60 @@
       <module name="sea" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/scr/pcshots.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="matrix2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea/scr" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sea" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/scr/matrix2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="my_mattrix" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea/exemple" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sea" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/exemple/my_mattrix.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="shot_sea" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea/scr" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sea" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/scr/shot_sea.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -623,19 +743,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.base" />
-      <item index="1" class="java.lang.String" itemvalue="Python.main (2)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.config" />
-      <item index="3" class="java.lang.String" itemvalue="Python.around" />
-      <item index="4" class="java.lang.String" itemvalue="Python.pcshots" />
+      <item index="0" class="java.lang.String" itemvalue="Python.main (2)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.pcshots" />
+      <item index="2" class="java.lang.String" itemvalue="Python.matrix2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.my_mattrix" />
+      <item index="4" class="java.lang.String" itemvalue="Python.shot_sea" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main (2)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.pcshots" />
-        <item index="2" class="java.lang.String" itemvalue="Python.config" />
-        <item index="3" class="java.lang.String" itemvalue="Python.around" />
-        <item index="4" class="java.lang.String" itemvalue="Python.base" />
+        <item index="0" class="java.lang.String" itemvalue="Python.shot_sea" />
+        <item index="1" class="java.lang.String" itemvalue="Python.my_mattrix" />
+        <item index="2" class="java.lang.String" itemvalue="Python.main (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.matrix2" />
+        <item index="4" class="java.lang.String" itemvalue="Python.pcshots" />
       </list>
     </recent_temporary>
   </component>
@@ -746,33 +866,39 @@
       <option name="project" value="LOCAL" />
       <updated>1460281508607</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="create sea">
+      <created>1460313414736</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1460313414736</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33529413" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3566845" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Copy/Paste" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16021505" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29032257" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30967742" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -798,54 +924,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sea/scr/pcshots.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-          <folding>
-            <element signature="e#47#60#0" expanded="true" />
-            <element signature="e#252#256#0" expanded="true" />
-            <element signature="e#310#344#0" expanded="true" />
-            <element signature="e#414#614#0" expanded="true" />
-            <element signature="e#676#714#0" expanded="true" />
-            <element signature="e#753#795#0" expanded="true" />
-            <element signature="e#853#1016#0" expanded="true" />
-            <element signature="e#1046#1119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
-          <folding>
-            <element signature="e#2142#2531#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea/gui5/mainwidget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <element signature="e#48#57#0" expanded="true" />
-            <element signature="e#291#351#0" expanded="true" />
-            <element signature="e#439#475#0" expanded="true" />
-            <element signature="e#549#745#0" expanded="true" />
-            <element signature="e#860#1010#0" expanded="true" />
-            <element signature="e#1057#1235#0" expanded="true" />
-            <element signature="e#1311#1622#0" expanded="true" />
-            <element signature="e#1673#1709#0" expanded="true" />
-            <element signature="e#1758#1783#0" expanded="true" />
-            <element signature="e#1828#1853#0" expanded="true" />
-            <element signature="e#1898#2406#0" expanded="true" />
-            <element signature="e#2459#2733#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sea/gui5/view.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -854,11 +932,12 @@
             <element signature="e#47#56#0" expanded="true" />
             <element signature="e#730#801#0" expanded="true" />
             <element signature="e#1575#1698#0" expanded="true" />
-            <element signature="e#1739#1840#0" expanded="true" />
-            <element signature="e#1882#1901#0" expanded="true" />
-            <element signature="e#4257#4411#0" expanded="true" />
-            <element signature="e#4465#4617#0" expanded="true" />
-            <element signature="e#4681#4880#0" expanded="true" />
+            <element signature="e#1739#1969#0" expanded="true" />
+            <element signature="e#2011#2030#0" expanded="true" />
+            <element signature="e#2544#2900#0" expanded="true" />
+            <element signature="e#4509#4663#0" expanded="true" />
+            <element signature="e#4717#4869#0" expanded="true" />
+            <element signature="e#4933#5132#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1124,49 +1203,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/gui5/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03497615">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sea/gui4/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03497615">
           <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/gameprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#47#61#0" expanded="true" />
-            <element signature="e#129#156#0" expanded="true" />
-            <element signature="e#318#329#0" expanded="true" />
-            <element signature="e#363#374#0" expanded="true" />
-            <element signature="e#404#432#0" expanded="true" />
-            <element signature="e#475#493#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/pcshots.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-          <folding>
-            <element signature="e#47#60#0" expanded="true" />
-            <element signature="e#252#256#0" expanded="true" />
-            <element signature="e#310#344#0" expanded="true" />
-            <element signature="e#414#614#0" expanded="true" />
-            <element signature="e#676#714#0" expanded="true" />
-            <element signature="e#753#795#0" expanded="true" />
-            <element signature="e#853#1016#0" expanded="true" />
-            <element signature="e#1046#1119#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1191,12 +1231,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
+    <entry file="file://$PROJECT_DIR$/sea/scr/gameprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#2142#2531#0" expanded="true" />
+            <element signature="e#47#61#0" expanded="true" />
+            <element signature="e#129#156#0" expanded="true" />
+            <element signature="e#318#329#0" expanded="true" />
+            <element signature="e#363#374#0" expanded="true" />
+            <element signature="e#404#432#0" expanded="true" />
+            <element signature="e#475#493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sea/exemple/my_mattrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#553#573#0" expanded="true" />
+            <element signature="e#617#703#0" expanded="true" />
+            <element signature="e#739#772#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sea/scr/matrix2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="e#124#185#0" expanded="true" />
+            <element signature="e#232#252#0" expanded="true" />
+            <element signature="e#298#317#0" expanded="true" />
+            <element signature="e#366#409#0" expanded="true" />
+            <element signature="e#459#502#0" expanded="true" />
+            <element signature="e#544#677#0" expanded="true" />
+            <element signature="e#717#950#0" expanded="true" />
+            <element signature="e#989#1104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sea/gui5/view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+          <folding>
+            <element signature="e#47#56#0" expanded="true" />
+            <element signature="e#730#801#0" expanded="true" />
+            <element signature="e#1575#1698#0" expanded="true" />
+            <element signature="e#1739#1969#0" expanded="true" />
+            <element signature="e#2011#2030#0" expanded="true" />
+            <element signature="e#2544#2900#0" expanded="true" />
+            <element signature="e#4509#4663#0" expanded="true" />
+            <element signature="e#4717#4869#0" expanded="true" />
+            <element signature="e#4933#5132#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1204,7 +1296,7 @@
     <entry file="file://$PROJECT_DIR$/sea/gui5/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="21" />
           <folding>
             <element signature="e#48#58#0" expanded="true" />
             <element signature="e#280#897#0" expanded="true" />
@@ -1220,23 +1312,58 @@
             <element signature="e#2037#2133#0" expanded="true" />
             <element signature="e#2181#2294#0" expanded="true" />
             <element signature="e#2348#2538#0" expanded="true" />
+            <element signature="e#2576#2773#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/gui5/view.py">
+    <entry file="file://$PROJECT_DIR$/sea/scr/pcshots.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5935919">
-          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="29" />
           <folding>
-            <element signature="e#47#56#0" expanded="true" />
-            <element signature="e#730#801#0" expanded="true" />
-            <element signature="e#1575#1698#0" expanded="true" />
-            <element signature="e#1739#1840#0" expanded="true" />
-            <element signature="e#1882#1901#0" expanded="true" />
-            <element signature="e#4257#4411#0" expanded="true" />
-            <element signature="e#4465#4617#0" expanded="true" />
-            <element signature="e#4681#4880#0" expanded="true" />
+            <element signature="e#47#60#0" expanded="true" />
+            <element signature="e#676#714#0" expanded="true" />
+            <element signature="e#1081#1154#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sea/gui5/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="207" column="38" selection-start-line="207" selection-start-column="38" selection-end-line="207" selection-end-column="38" />
+          <folding>
+            <element signature="e#2143#2532#0" expanded="true" />
+            <element signature="e#5662#5746#0" expanded="true" />
+            <element signature="e#5784#5895#0" expanded="true" />
+            <element signature="e#5926#6195#0" expanded="true" />
+            <element signature="e#6240#6293#0" expanded="true" />
+            <element signature="e#7210#7586#0" expanded="true" />
+            <element signature="e#7636#7879#0" expanded="true" />
+            <element signature="e#7928#8171#0" expanded="true" />
+            <element signature="e#8209#8858#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sea/scr/shot_sea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7405765">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#70#0" expanded="true" />
+            <element signature="e#229#247#0" expanded="true" />
+            <element signature="e#296#479#0" expanded="true" />
+            <element signature="e#516#651#0" expanded="true" />
           </folding>
         </state>
       </provider>
