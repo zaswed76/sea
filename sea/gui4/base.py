@@ -57,6 +57,7 @@ class Widget(QtWidgets.QWidget):
         self.pc_sea.add_fleet(display=False)
 
     def open_service(self):
+        print('1111111')
         self.service = service.Service(self)
         self.service.show()
 
@@ -68,6 +69,7 @@ class Widget(QtWidgets.QWidget):
         mc = shots.search_4_deck(pattern_index=0)
         coord = shots.convert_matrix_to_coordinate(mc)
         # coord = shots.random(coord)
+        print(coord)
         self.user_sea.draw_items('shot', coord)
 
     def search4_2(self):

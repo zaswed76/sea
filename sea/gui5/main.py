@@ -4,7 +4,7 @@
 
 import sys
 from PyQt5 import QtWidgets
-
+from gui4 import service
 from gui5 import config
 from scr import sea, gameprocess, pcshots
 from gui5 import mainwidget, view
@@ -44,9 +44,20 @@ class Main(mainwidget.MainWidget):
 
 
     def settings(self):
-        print('settings')
+        self.service = service.Service(self)
+        self.service.show()
 
+    def clear_field(self):
+        self.user_sea.clear()
 
+    def search4(self):
+        coord = self.pcshots.m.search_4
+        print(coord)
+        # self.user_sea.draw_items('shot', coord)
+
+    def search4_2(self):
+        coord = self.pcshots.m.search_4
+        self.user_sea.draw_items('shot', coord)
 
     def new_game(self):
         self.auto_fleet_pc()

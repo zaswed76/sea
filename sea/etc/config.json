@@ -1,8 +1,4 @@
 {
-    "default_style": "style_writer",
-    "tool_height": 50,
-    "count_cell": 10,
-    "ext": "png",
     "actions_names": [
         "new_game.png",
         "auto_fleet_user.png",
@@ -12,6 +8,11 @@
         "style_writer.png",
         "close_scr.png"
     ],
+    "ext": "png",
+    "ext_icon": "png",
+    "default_style": "style_writer",
+    "count_cell": 10,
+    "cell_size": 32,
     "status_height": 30,
     "ship_names": [
         4,
@@ -25,6 +26,5 @@
         1,
         1
     ],
-    "cell_size": 32,
-    "ext_icon": "png"
+    "tool_height": 50
 }

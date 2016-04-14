@@ -3,12 +3,15 @@
 
 import random
 
-from scr import matrix2
+from scr import shot_sea
+#
+# patterns_4 = [[[0, 1, 2, 3],
+#                [3, 2, 1, 0]],
+#               [[0, 1, 2, 3],
+#                [2, 3, 0, 1]]]
 
-patterns_4 = [[[0, 1, 2, 3],
-               [3, 2, 1, 0]],
-              [[0, 1, 2, 3],
-               [2, 3, 0, 1]]]
+patterns_4 = [(3, 0), (2, 1), (1, 2), (0, 3)]
+patterns_4_2 = [(3, 0), (2, 1), (0, 2), (1, 3)]
 
 
 class Shots:
@@ -23,9 +26,10 @@ class Shots:
             pat = self.random_pattern(patterns_4)
         else:
             pat = patterns_4[pattern_index]
-        m = matrix2.Matrix(pat)
-        m.create_matrix()
-        return m.matrix
+        m = shot_sea.Sea()
+        m.create_field()
+        m.create_shots(pat, 4)
+        return m.search_4
 
     def convert_matrix_to_coordinate(self, matrix):
         return list(zip(matrix[1], matrix[0]))
@@ -38,13 +42,12 @@ class Shots:
 class ShellingTactics:
     def __init__(self):
         self.cursor = 0
-        self.shots = Shots()
-        self.seq = self.shots.convert_matrix_to_coordinate(
-            self.shots.random(self.shots.search_4_deck(random=True)))
-        print(self.seq)
+        self.m = shot_sea.Sea()
+        self.m.create_field()
+        self.m.create_shots(patterns_4_2, 4)
 
     def next(self):
-        cell = self.seq[self.cursor]
+        cell = self.m.search_4[self.cursor]
         self.cursor += 1
         return cell
 

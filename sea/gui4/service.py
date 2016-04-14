@@ -10,7 +10,7 @@ class Service(QtWidgets.QWidget):
         super().__init__()
         self.parent = parent
         self.box = QtWidgets.QVBoxLayout(self)
-        self.clear_field()
+        # self.clear_field()
         self.search4()
         self.search4_2()
 
