@@ -5,25 +5,32 @@ import numpy
 
 
 class Cell:
-    Status_name = {'empty': 0, 'ship': 1, 'wounded': 2, 'shot': 3}
+    StatusEmpty = 'empty'
+    StatusShip = 'ship'
+    StatusHurt = 'hurt'
+    StatusShot = 'shot'
+    StatusNames = ['empty', 'ship', 'hurt', 'shot']
 
     def __init__(self, y, x):
         super().__init__()
         self.x = x
         self.y = y
         self.coord = [self.y, self.x]
-        self._status = self.Status_name['empty']
+        self._status = Cell.StatusEmpty
 
     @property
     def status(self):
-        return self.Status_name[self._status]
+        return self._status
 
     @status.setter
     def status(self, stat):
-        self._status = self.Status_name[stat]
+        if stat in Cell.StatusNames:
+            self._status = stat
+        else:
+            raise Exception('not_name status')
 
     def __repr__(self):
-        return str(self.Status_name[self.status])
+        return str(Cell.StatusNames.index(self.status))
 
 
 class Sea:
@@ -52,4 +59,5 @@ if __name__ == '__main__':
     sea = Sea()
     sea.init_matrix()
 
+    sea[0][0].status = Cell.StatusShip
     print(sea)
