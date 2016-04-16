@@ -51,9 +51,11 @@ class Main(mainwidget.MainWidget):
         self.user_sea.clear()
 
     def search4(self):
-        coord = self.pcshots.m.search_4
-        print(coord)
-        # self.user_sea.draw_items('shot', coord)
+        coord = self.pcshots.current
+        coord = self.pcshots.convert(coord)
+        # coord.sort()
+        # print(type(coord))
+        self.model_user.draw_items('shot', coord)
 
     def search4_2(self):
         coord = self.pcshots.m.search_4

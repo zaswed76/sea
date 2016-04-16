@@ -41,10 +41,19 @@ class Shots:
 
 class ShellingTactics:
     def __init__(self):
+        self._current = []
         self.cursor = 0
         self.m = shot_sea.Sea()
         self.m.create_field()
         self.m.create_shots(patterns_4_2, 4)
+
+    @property
+    def current(self):
+        return self.m.search_4
+
+
+    def convert(self, coords):
+         return [(y, x) for x, y in coords]
 
     def next(self):
         cell = self.m.search_4[self.cursor]

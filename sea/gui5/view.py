@@ -116,7 +116,7 @@ class SeaModel(QtWidgets.QGraphicsScene):
             x, y = self.field_conv.cell_to_coord(cell)
             self.add_item(x, y, item_name)
             QtWidgets.qApp.processEvents()
-            time.sleep(0.2)
+            time.sleep(0.1)
 
 
     def draw_ship(self, name):

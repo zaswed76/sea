@@ -55,10 +55,7 @@ class Sea(sea.Sea):
 
 
 
-s = Sea()
-s.create_field()
-s.create_shots(patterns_4, 4)
-print(s.search_4)
+
 
 
 

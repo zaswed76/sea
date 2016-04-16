@@ -39,9 +39,9 @@ side_error_message = '''стороны могут быть:
 
 
 class Cell(list):
-    def __init__(self, x, y):
+    def __init__(self, y, x):
         super().__init__()
-        self.extend([x, y])
+        self.extend([y, x])
         self.y = y
         self.x = x
         self.reset()
@@ -71,7 +71,7 @@ class Cell(list):
         self._distance_to_obstacles_y = Config.max - (self.y - 1)
 
     def __repr__(self):
-        return 'Cell - ({}, {})'.format(self.x, self.y)
+        return 'Cell - ({}, {})'.format(self.y, self.x)
 
 class Ship(list):
     Vertical = 'vertical'
@@ -207,13 +207,14 @@ class Fleet(dict):
 class Sea(dict):
     def __init__(self, ship_names=None):
         super().__init__()
+
         self.ship_names = ship_names
         self.fleet = Fleet()
 
     def create_field(self):
         for y in range(Config.size):
             for x in range(Config.size):
-                self[(x, y)] = Cell(x, y)
+                self[(y, x)] = Cell(y, x)
 
     def reset(self):
         for cell in self.values():
@@ -262,15 +263,16 @@ class Sea(dict):
         # клетка занята кораблём
         back_seq = range(-1, -5, -1)
         for cell in ship:
+            print(cell)
             self[cell].ship_place = True
 
         # обновляем
-        for x, y in ship.left_beacon:
-            self._scan_to_left(x, y, back_seq)
-        for x, y in ship.top_beacon:
-            self._scan_to_top(x, y, back_seq)
+        for y, x in ship.left_beacon:
+            self._scan_to_left(y, x, back_seq)
+        for y, x in ship.top_beacon:
+            self._scan_to_top(y, x, back_seq)
 
-    def _scan_to_left(self, x, y, seq):
+    def _scan_to_left(self, y, x, seq):
         for n in seq:
             nx = x + n
             if nx < Config.min:  # конец поля
@@ -279,7 +281,7 @@ class Sea(dict):
                 return
             self[(nx, y)].distance_to_obstacles_x = x
 
-    def _scan_to_top(self, x, y, seq):
+    def _scan_to_top(self, y, x, seq):
         for n in seq:
             ny = y + n
             if ny < Config.min:  # конец поля
@@ -313,4 +315,9 @@ class Sea(dict):
 
 
 if __name__ == '__main__':
-    s = Sea()
+    from gui5 import config
+    cfg = config.Config()
+    s = Sea(cfg.ship_names)
+    s.create_field()
+    s.create_fleet()
+    print(s)
