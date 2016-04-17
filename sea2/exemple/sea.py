@@ -19,6 +19,7 @@ class Item(QtWidgets.QGraphicsPixmapItem):
 class SeaModel(QtWidgets.QGraphicsScene, seamodel.Sea):
     def __init__(self, *__args):
         super().__init__(*__args)
+        self.name = 'SEA'
 
 
 
@@ -27,6 +28,13 @@ class View(QtWidgets.QGraphicsView):
     def __init__(self, *__args, size=None):
         super().__init__(*__args)
         self.setFixedSize(size, size)
+        self.parent = __args[1]
+
+    def mousePressEvent(self, QMouseEvent):
+        x = QMouseEvent.pos().x()
+        y = QMouseEvent.pos().y()
+        print(x, y, self.scene().name)
+        # self.parent.click_on_cell(self.scene, x, y)
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)

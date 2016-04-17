@@ -79,6 +79,9 @@ class Main(mainwidget.MainWidget):
     def auto_fleet_pc(self):
         print('auto_pc')
 
+    def click_on_cell(self):
+        print('111')
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
