@@ -1,0 +1,15 @@
+Sea {
+    /*background-image: url("../resource/textures/kid/field.png");*/
+}
+
+View {
+    background-image: url("../resource/textures/kid/field.png");
+    border-right: none;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: none;
+}
+
+QFrame {
+    /*border: none;*/
+}
