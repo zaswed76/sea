@@ -56,10 +56,10 @@ class Game:
     def auto_fleet_pc(self):
         print('auto_pc')
 
-    def click_on_sea(self, scene, y, x):
+    def click_on_sea(self, scene, cell):
         m = 'click_on_sea_'
         method = '{}{}'.format(m, scene.name)
-        getattr(self, method)(y, x)
+        getattr(self, method)(cell[0], cell[1])
 
     def click_on_sea_pc(self, y, x):
         print(y, x, 'pc')
