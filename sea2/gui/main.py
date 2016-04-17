@@ -27,18 +27,20 @@ class Main(mainwidget.MainWidget):
         self.status = mainwidget.Status(self, cfg['status_height'])
         self.init_status(self.status)
 
+        self.model_sea = {}
+
         # --- USER SEA ------
-        self.user_sea = sea.SeaModel(0, 0, cfg['field_size'],
-                                     cfg['field_size'], self)
+        self.model_sea['user'] = sea.SeaModel(0, 0, cfg['field_size'],
+                                     cfg['field_size'], self, name='user')
         self.add_gui_sea(
-            sea.View(self.user_sea, self, size=cfg['view_size']))
+            sea.View(self.model_sea['user'], self, size=cfg['view_size']))
 
         # --- PC SEA ------
 
-        self.pc_sea = sea.SeaModel(0, 0, cfg['field_size'],
-                                     cfg['field_size'], self)
+        self.model_sea['pc'] = sea.SeaModel(0, 0, cfg['field_size'],
+                                     cfg['field_size'], self, name='pc')
         self.add_gui_sea(
-            sea.View(self.pc_sea, self, size=cfg['view_size']))
+            sea.View(self.model_sea['pc'], self, size=cfg['view_size']))
 
     def action_method(self, name_action):
         getattr(self, name_action)()
@@ -79,9 +81,16 @@ class Main(mainwidget.MainWidget):
     def auto_fleet_pc(self):
         print('auto_pc')
 
-    def click_on_cell(self):
-        print('111')
+    def click_on_sea(self, scene, y, x):
+        m = 'click_on_sea_'
+        method = '{}{}'.format(m, scene.name)
+        getattr(self, method)(y, x)
 
+    def click_on_sea_pc(self, y, x):
+        print(y, x, 'pc')
+
+    def click_on_sea_user(self, y, x):
+        print(y, x, 'user')
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
