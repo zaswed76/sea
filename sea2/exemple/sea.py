@@ -3,13 +3,18 @@
 
 
 import sys
-from exemple import seamodel
+
 from PyQt5 import QtWidgets, QtGui
 
+from exemple import seamodel
 
 
+def coord_to_cell(size_cell, y, x):
+    return (y // size_cell, x // size_cell)
 
 
+def cell_to_coord(size_cell, cell):
+    return (size_cell * cell[0], size_cell * cell[1])
 
 
 class Item(QtWidgets.QGraphicsPixmapItem):
@@ -17,13 +22,13 @@ class Item(QtWidgets.QGraphicsPixmapItem):
         super().__init__(*__args)
 
 
-
 class SeaModel(QtWidgets.QGraphicsScene, seamodel.Sea):
     def __init__(self, *__args, name=None):
         super().__init__(*__args)
         if name is not None:
             self.name = name
-        else: raise Exception('надо назначить имя сцене')
+        else:
+            raise Exception('надо назначить имя сцене')
 
         self.x, self.y, self.width, self.height, self.parent = __args
         self.init_matrix()
@@ -31,16 +36,6 @@ class SeaModel(QtWidgets.QGraphicsScene, seamodel.Sea):
             self.size_cell = self.width // len(self.matrix)
         except ZeroDivisionError:
             raise Exception('необходимо создать матрицу - поле')
-
-
-    @staticmethod
-    def coord_to_cell(size_cell, y, x):
-        return (y // size_cell, x // size_cell)
-
-    @staticmethod
-    def cell_to_coord(size_cell, cell):
-        return (size_cell * cell[0], size_cell * cell[1])
-
 
 
 class View(QtWidgets.QGraphicsView):
@@ -53,8 +48,9 @@ class View(QtWidgets.QGraphicsView):
     def mousePressEvent(self, QMouseEvent):
         x = QMouseEvent.pos().x()
         y = QMouseEvent.pos().y()
-        cell = self.scene().coord_to_cell(self.scene().size_cell, y, x)
+        cell = coord_to_cell(self.scene().size_cell, y, x)
         self.parent.click_on_sea(self.scene(), cell)
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)

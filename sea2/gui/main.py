@@ -6,21 +6,25 @@ import sys
 
 from PyQt5 import QtWidgets
 
-from exemple import sea
+from exemple import sea, core
 from gui import mainwidget
 from libs import config
 
 cfg_path = '../etc/config.json'
 cfg = config.read_cfg(cfg_path)
 
-class Game:
+class Controller:
     def __init__(self):
-        pass
+        """
+        метдоды обработки сигналов действий пользователя
+
+        """
+        self.game = core.Game()
 
     def action_method(self, name_action):
         getattr(self, name_action)()
 
-    # ---- метдоды обработки сигналов действий пользователя ------
+    # ----  ------
 
     def close_scr(self):
         self.close()
@@ -62,13 +66,14 @@ class Game:
         getattr(self, method)(cell[0], cell[1])
 
     def click_on_sea_pc(self, y, x):
-        print(y, x, 'pc')
+        if self.game.game_started:
+            print(y, x, 'pc')
 
     def click_on_sea_user(self, y, x):
         print(y, x, 'user')
 
 
-class Main(mainwidget.MainWidget, Game):
+class Main(mainwidget.MainWidget, Controller):
     def __init__(self):
         super().__init__()
 
@@ -95,6 +100,8 @@ class Main(mainwidget.MainWidget, Game):
                                      cfg['field_size'], self, name='pc')
         self.add_gui_sea(
             sea.View(self.model_sea['pc'], self, size=cfg['view_size']))
+
+
 
 
 if __name__ == '__main__':
