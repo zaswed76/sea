@@ -13,12 +13,37 @@ from libs import config
 cfg_path = '../etc/config.json'
 cfg = config.read_cfg(cfg_path)
 
-class Controller:
-    def __init__(self):
-        """
-        метдоды обработки сигналов действий пользователя
 
-        """
+
+
+class Main(mainwidget.MainWidget):
+    def __init__(self):
+        super().__init__()
+
+        self.load_style_sheet(cfg['default_style'])
+        self.tool = mainwidget.Tool(self, cfg['tool_height'],
+                                    self.tool_actions(
+                                            cfg['actions_names']))
+        self.init_tool_bar(self.tool)
+
+        self.status = mainwidget.Status(self, cfg['status_height'])
+        self.init_status(self.status)
+
+        self.model_sea = {}
+
+        # --- USER SEA ------
+        self.model_sea['user'] = sea.SeaModel(0, 0, cfg['field_size'],
+                                     cfg['field_size'], self, name='user')
+        self.add_gui_sea(
+            sea.View(self.model_sea['user'], self, size=cfg['view_size']))
+
+        # --- PC SEA ------
+
+        self.model_sea['pc'] = sea.SeaModel(0, 0, cfg['field_size'],
+                                     cfg['field_size'], self, name='pc')
+        self.add_gui_sea(
+            sea.View(self.model_sea['pc'], self, size=cfg['view_size']))
+
         self.game = core.Game()
 
     def action_method(self, name_action):
@@ -63,45 +88,15 @@ class Controller:
     def click_on_sea(self, scene, cell):
         m = 'click_on_sea_'
         method = '{}{}'.format(m, scene.name)
-        getattr(self, method)(cell[0], cell[1])
+        getattr(self, method)(cell)
 
-    def click_on_sea_pc(self, y, x):
-        if self.game.game_started:
-            print(y, x, 'pc')
+    def click_on_sea_pc(self, cell):
+        if self.game.game_started: self.model_sea['pc'].fire(cell)
+        else: self.model_sea['pc'].do_nothing()
 
-    def click_on_sea_user(self, y, x):
-        print(y, x, 'user')
-
-
-class Main(mainwidget.MainWidget, Controller):
-    def __init__(self):
-        super().__init__()
-
-        self.load_style_sheet(cfg['default_style'])
-        self.tool = mainwidget.Tool(self, cfg['tool_height'],
-                                    self.tool_actions(
-                                            cfg['actions_names']))
-        self.init_tool_bar(self.tool)
-
-        self.status = mainwidget.Status(self, cfg['status_height'])
-        self.init_status(self.status)
-
-        self.model_sea = {}
-
-        # --- USER SEA ------
-        self.model_sea['user'] = sea.SeaModel(0, 0, cfg['field_size'],
-                                     cfg['field_size'], self, name='user')
-        self.add_gui_sea(
-            sea.View(self.model_sea['user'], self, size=cfg['view_size']))
-
-        # --- PC SEA ------
-
-        self.model_sea['pc'] = sea.SeaModel(0, 0, cfg['field_size'],
-                                     cfg['field_size'], self, name='pc')
-        self.add_gui_sea(
-            sea.View(self.model_sea['pc'], self, size=cfg['view_size']))
-
-
+    def click_on_sea_user(self, cell):
+        if self.game.game_started: self.model_sea['user'].do_nothing()
+        else: self.model_sea['user'].build_ship(cell)
 
 
 if __name__ == '__main__':

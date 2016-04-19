@@ -6,7 +6,7 @@ import sys
 
 from PyQt5 import QtWidgets, QtGui
 
-from exemple import seamodel
+from exemple import seamodel as md
 
 
 def coord_to_cell(size_cell, y, x):
@@ -22,20 +22,44 @@ class Item(QtWidgets.QGraphicsPixmapItem):
         super().__init__(*__args)
 
 
-class SeaModel(QtWidgets.QGraphicsScene, seamodel.Sea):
+class SeaModel(QtWidgets.QGraphicsScene):
     def __init__(self, *__args, name=None):
         super().__init__(*__args)
+        self.model = md.Sea()
         if name is not None:
             self.name = name
         else:
             raise Exception('надо назначить имя сцене')
 
         self.x, self.y, self.width, self.height, self.parent = __args
-        self.init_matrix()
+        self.model.init_matrix()
         try:
-            self.size_cell = self.width // len(self.matrix)
+            self.size_cell = self.width // len(self.model.matrix)
         except ZeroDivisionError:
             raise Exception('необходимо создать матрицу - поле')
+
+
+
+
+    def fire(self, cell):
+        print('выстрелить по клетке')
+
+    def do_nothing(self):
+        print('нет действия')
+
+    def build_ship(self, cell):
+        print('построить корабль')
+        y, x = cell
+        self.model.matrix[y][x].status = md.Cell.StatusShip
+        self.update_sea()
+
+
+
+    def update_sea(self):
+        for line in self.model.matrix:
+            for cell in line:
+                if cell.status == md.Cell.StatusShip:
+                    print(cell.coord)
 
 
 class View(QtWidgets.QGraphicsView):
@@ -48,6 +72,7 @@ class View(QtWidgets.QGraphicsView):
     def mousePressEvent(self, QMouseEvent):
         x = QMouseEvent.pos().x()
         y = QMouseEvent.pos().y()
+        # координаты сцены преобразоваются в координаты модели
         cell = coord_to_cell(self.scene().size_cell, y, x)
         self.parent.click_on_sea(self.scene(), cell)
 
