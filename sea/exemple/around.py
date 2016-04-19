@@ -15,7 +15,7 @@ class Scene:
         self.s = self.model.x
 
 
-
+a = 1
 
 
 
