@@ -39,6 +39,8 @@ class SeaModel(QtWidgets.QGraphicsScene):
             raise Exception('необходимо создать матрицу - поле')
 
 
+    def __draw_ship(self, cell):
+        print('рисуем корабль')
 
 
     def fire(self, cell):

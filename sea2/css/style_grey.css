@@ -9,7 +9,7 @@ View {
 
 QFrame#center_frame {
     border: 1px solid rgba(0, 0, 0, 0.35);
-    background-image: url("../resource/textures/grey/karta.jpg");
+    background-image: url("../resource/textures/grey/bg.jpg");
 }
 
 Tool {

@@ -6,6 +6,7 @@ class Model:
     def __init__(self):
         self.x = 1
 
+
 class Scene:
     def __init__(self, model):
         self.model = model
@@ -15,11 +16,13 @@ class Scene:
         self.s = self.model.x
 
 
-a = 1
-
+class Controller:
+    def __init__(self):
+        pass
 
 
 class Main:
     def __init__(self):
+        self.a = 0
         self.model = Model()
         self.scene = Scene(self.model)
