@@ -15,7 +15,7 @@ class Cell:
         super().__init__()
         self.x = x
         self.y = y
-        self.coord = [self.y, self.x]
+        self.coord = (self.y, self.x)
         self._status = Cell.StatusEmpty
 
     @property

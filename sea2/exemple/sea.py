@@ -5,7 +5,7 @@
 import sys
 
 from PyQt5 import QtWidgets, QtGui
-
+from exemple import seamodel as md
 
 
 
@@ -14,7 +14,7 @@ def coord_to_cell(size_cell, y, x):
 
 
 def cell_to_coord(size_cell, cell):
-    return (size_cell * cell[0], size_cell * cell[1])
+    return (size_cell * cell[1] + 0.5, size_cell * cell[0] + 0.5)
 
 
 class Item(QtWidgets.QGraphicsPixmapItem):
@@ -23,15 +23,18 @@ class Item(QtWidgets.QGraphicsPixmapItem):
 
 
 class SeaModel(QtWidgets.QGraphicsScene):
-    def __init__(self, *__args, name=None, model=None):
+    def __init__(self, *__args, name=None, style=None):
         super().__init__(*__args)
-        self.model = model
+        self.ships = {}
+        self.style = style
+        self.model = md.Sea()
         if name is not None:
             self.name = name
         else:
             raise Exception('надо назначить имя сцене')
 
         self.x, self.y, self.width, self.height, self.parent = __args
+
         self.model.init_matrix()
         try:
             self.size_cell = self.width // len(self.model.matrix)
@@ -40,7 +43,10 @@ class SeaModel(QtWidgets.QGraphicsScene):
 
 
     def __draw_ship(self, cell):
-        print('рисуем корабль')
+        if not cell in self.ships:
+            self.ships[cell] = Item(QtGui.QPixmap(self.style.ship))
+            self.ships[cell].setPos(*cell_to_coord(self.size_cell, cell))
+            self.addItem(self.ships[cell])
 
 
     def fire(self, cell):
@@ -61,7 +67,7 @@ class SeaModel(QtWidgets.QGraphicsScene):
         for line in self.model.matrix:
             for cell in line:
                 if cell.status == md.Cell.StatusShip:
-                    print(cell.coord)
+                    self.__draw_ship(cell.coord)
 
 
 class View(QtWidgets.QGraphicsView):

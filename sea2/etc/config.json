@@ -11,7 +11,7 @@
     ],
     "ext": "png",
     "status_height": 30,
-    "default_style": "style_grey",
+    "default_style": "grey",
     "tool_height": 50,
     "ext_icon": "png",
     "cell_size": 32,
