@@ -7,6 +7,7 @@ import sys
 from PyQt5 import QtWidgets
 
 from exemple import sea, core
+from exemple import seamodel as md
 from gui import mainwidget
 from libs import config
 
@@ -29,20 +30,25 @@ class Main(mainwidget.MainWidget):
         self.status = mainwidget.Status(self, cfg['status_height'])
         self.init_status(self.status)
 
-        self.model_sea = {}
+        self.sea = {}
 
         # --- USER SEA ------
-        self.model_sea['user'] = sea.SeaModel(0, 0, cfg['field_size'],
-                                     cfg['field_size'], self, name='user')
+        self.sea['user'] = sea.SeaModel(0, 0, cfg['field_size'],
+                                        cfg['field_size'], self,
+                                        name='user',
+                                        model=md.Sea())
         self.add_gui_sea(
-            sea.View(self.model_sea['user'], self, size=cfg['view_size']))
+            sea.View(self.sea['user'], self, size=cfg['view_size']))
 
         # --- PC SEA ------
 
-        self.model_sea['pc'] = sea.SeaModel(0, 0, cfg['field_size'],
-                                     cfg['field_size'], self, name='pc')
+        self.sea['pc'] = sea.SeaModel(0, 0, cfg['field_size'],
+                                      cfg['field_size'],
+                                      self,
+                                      name='pc',
+                                      model=md.Sea())
         self.add_gui_sea(
-            sea.View(self.model_sea['pc'], self, size=cfg['view_size']))
+            sea.View(self.sea['pc'], self, size=cfg['view_size']))
 
         self.game = core.Game()
 
@@ -91,12 +97,12 @@ class Main(mainwidget.MainWidget):
         getattr(self, method)(cell)
 
     def click_on_sea_pc(self, cell):
-        if self.game.game_started: self.model_sea['pc'].fire(cell)
-        else: self.model_sea['pc'].do_nothing()
+        if self.game.game_started: self.sea['pc'].fire(cell)
+        else: self.sea['pc'].do_nothing()
 
     def click_on_sea_user(self, cell):
-        if self.game.game_started: self.model_sea['user'].do_nothing()
-        else: self.model_sea['user'].build_ship(cell)
+        if self.game.game_started: self.sea['user'].do_nothing()
+        else: self.sea['user'].build_ship(cell)
 
 
 if __name__ == '__main__':

@@ -6,7 +6,7 @@ import sys
 
 from PyQt5 import QtWidgets, QtGui
 
-from exemple import seamodel as md
+
 
 
 def coord_to_cell(size_cell, y, x):
@@ -23,9 +23,9 @@ class Item(QtWidgets.QGraphicsPixmapItem):
 
 
 class SeaModel(QtWidgets.QGraphicsScene):
-    def __init__(self, *__args, name=None):
+    def __init__(self, *__args, name=None, model=None):
         super().__init__(*__args)
-        self.model = md.Sea()
+        self.model = model
         if name is not None:
             self.name = name
         else:
