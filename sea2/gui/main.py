@@ -64,7 +64,7 @@ class Main(mainwidget.MainWidget):
             arg = name_action.split('_')[1]
             getattr(self, 'set_' + name)(arg)
         else:
-            getattr(self, name)()
+            getattr(self, name_action)()
 
     # ----  ------
 
@@ -84,6 +84,9 @@ class Main(mainwidget.MainWidget):
 
     def clear_field(self):
         self.user_sea.clear()
+
+    def finish_game(self):
+        print('finish_game')
 
     def new_game(self):
         print('new_game')

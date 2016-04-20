@@ -37,8 +37,9 @@ class Tool(QtWidgets.QToolBar):
 
     def __init__(self, parent, height, actions):
         super().__init__(parent)
-        self.setFixedHeight(height)
-        self.setIconSize(QtCore.QSize(height, height))
+        print(height)
+        # self.setFixedHeight(height)
+        self.setIconSize(QtCore.QSize(38, 38))
         self.init_actions(actions)
 
     def init_actions(self, actions):
