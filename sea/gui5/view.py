@@ -158,7 +158,7 @@ class View(QtWidgets.QGraphicsView):
         self.scene, self.parent = __args
 
     def mousePressEvent(self, QMouseEvent):
-        x = QMouseEvent.pos().x()
+        x = QMouseEvent.pos().x
         y = QMouseEvent.pos().y()
         self.parent.click_on_cell(self.scene, x, y)
         # self.scene.on_click_cell(x, y)

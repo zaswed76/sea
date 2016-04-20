@@ -11,6 +11,9 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   user_style
+   modules
+
 
 
 Indices and tables

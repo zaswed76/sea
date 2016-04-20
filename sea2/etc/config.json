@@ -1,22 +1,22 @@
 {
+    "field_size": 320,
+    "ext_icon": "png",
+    "status_height": 30,
+    "view_size": 322,
+    "cell_size": 32,
     "count_cell": 10,
     "actions_names": [
         "new_game.png",
         "auto_fleet_user.png",
+        "eraser.png",
         "settings.png",
         "SPACER",
         "style_grey.png",
-        "style_writer.png",
+        "style_cyan.png",
+        "style_green.png",
         "close_scr.png"
     ],
-    "ext": "png",
-    "status_height": 30,
-    "default_style": "grey",
     "tool_height": 50,
-    "ext_icon": "png",
-    "cell_size": 32,
-    "field_size": 320,
-    "view_size": 322,
     "ship_names": [
         4,
         3,
@@ -28,5 +28,7 @@
         1,
         1,
         1
-    ]
+    ],
+    "default_style": "cyan",
+    "ext": "png"
 }

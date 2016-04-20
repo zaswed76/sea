@@ -69,7 +69,7 @@ class View(QtWidgets.QGraphicsView):
         self.scene, self.parent = __args
 
     def mousePressEvent(self, QMouseEvent):
-        x = QMouseEvent.pos().x()
+        x = QMouseEvent.pos().x
         y = QMouseEvent.pos().y()
         # print(x, y)
         print(self.scene.add_ship(x, y))

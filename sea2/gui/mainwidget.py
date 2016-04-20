@@ -10,6 +10,8 @@ from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtCore import QFile
 
 icon_dir = '../resource/icons'
+texture_path = '../resource/textures'
+
 
 class Status(QtWidgets.QStatusBar):
     def __init__(self, parent, height):
@@ -47,9 +49,33 @@ class Tool(QtWidgets.QToolBar):
                 self.addWidget(item)
 
 
+class Style:
+    Ship = 'ship.png'
+
+    def __init__(self, default_style):
+        self.default_style = default_style
+
+    @property
+    def texture_dir(self):
+        return os.path.join(texture_path, self.default_style)
+
+    @property
+    def icon_dir(self):
+        return os.path.join(icon_dir, self.default_style)
+
+    @property
+    def ship(self):
+        pth = os.path.join(self.texture_dir, self.Ship)
+        return pth
+
+    def __str__(self):
+        return " = ".join(('class', Style.__name__, self.default_style))
+
+
 class MainWidget(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
+        self._user_style = None
         self.center = QtWidgets.QFrame()
         self.center.setObjectName('center_frame')
         self.setCentralWidget(self.center)
@@ -58,7 +84,13 @@ class MainWidget(QtWidgets.QMainWindow):
         self.center_box.setContentsMargins(40, 30, 40, 30)
 
 
+    @property
+    def user_style(self):
+        return self._style
 
+    @user_style.setter
+    def user_style(self, style_name):
+        self._style = style_name
 
     def add_gui_sea(self, model_sea):
         self.center_box.addWidget(model_sea)
@@ -69,7 +101,7 @@ class MainWidget(QtWidgets.QMainWindow):
     def init_status(self, status):
         self.setStatusBar(status)
 
-    def tool_actions(self, names):
+    def tool_actions(self, icon_dir, names):
         actions = []
         for name in names:
             if name == Tool.SPACER:
@@ -77,14 +109,21 @@ class MainWidget(QtWidgets.QMainWindow):
                 actions.append(spacer)
             else:
                 name_not_ext = os.path.splitext(name)[0]
-                icon = QtGui.QIcon(os.path.join(icon_dir, name))
+                pth = os.path.join(icon_dir, name)
+                if not os.path.isfile(pth):
+                    print('иконка с именем - {} не найдена'.format(pth))
+                icon = QtGui.QIcon(pth)
                 act = Action(icon, name_not_ext, self)
                 act.triggered.connect(
-                    partial(self.action_method, name_not_ext))
+                        partial(self.action_method, name_not_ext))
                 actions.append(act)
         return actions
 
     def load_style_sheet(self, sheetName):
+        """
+
+        :param sheetName: str имя стиля
+        """
         file_name = sheetName + '.css'
         file = QFile('../css/{}'.format(file_name))
         file.open(QFile.ReadOnly)

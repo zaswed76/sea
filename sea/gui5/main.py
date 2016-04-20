@@ -76,8 +76,8 @@ class Main(mainwidget.MainWidget):
         self.load_style_sheet('style_grey')
 
     def style_writer(self):
-        cfg.set_config('default_style', 'style_writer')
-        self.load_style_sheet('style_writer')
+        cfg.set_config('default_style', 'style_cyan')
+        self.load_style_sheet('style_cyan')
 
     def closeEvent(self, *args, **kwargs):
         config.write_cfg(config.cfg_path, cfg.config)

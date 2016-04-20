@@ -123,7 +123,7 @@ class Sea(QtWidgets.QFrame):
         pass
 
     def mousePressEvent(self, e):
-        x = e.x()
+        x = e.x
         y = e.y()
         field = gamer_detect(x, y)
         try:

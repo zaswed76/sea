@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 
-import os
 import sys
 
 from PyQt5 import QtWidgets
@@ -12,67 +11,68 @@ from gui import mainwidget
 from libs import config
 
 cfg_path = '../etc/config.json'
-texture_path = '../resource/textures'
 
 cfg = config.read_cfg(cfg_path)
-
-
-class Style:
-    Ship = 'ship.png'
-
-    def __init__(self, default_style):
-        self.default_style = default_style
-
-    @property
-    def texture_dir(self):
-        return os.path.join(texture_path, self.default_style)
-
-    @property
-    def ship(self):
-        pth = os.path.join(self.texture_dir, self.Ship)
-        print(pth)
-        return pth
 
 
 class Main(mainwidget.MainWidget):
     def __init__(self):
         super().__init__()
 
-        self.style = Style(cfg['default_style'])
+        self.user_style = mainwidget.Style(cfg['default_style'])
+        self.load_style_sheet(self.user_style.default_style)
 
-        self.load_style_sheet(self.style.default_style)
+        # TOOL ------------------------------------------------------
+
+        tool_actions = self.tool_actions(self.user_style.icon_dir,
+                                         cfg['actions_names'])
         self.tool = mainwidget.Tool(self, cfg['tool_height'],
-                                    self.tool_actions(
-                                        cfg['actions_names']))
+                                    tool_actions)
         self.init_tool_bar(self.tool)
+
+        # STATUS ----------------------------------------------------
 
         self.status = mainwidget.Status(self, cfg['status_height'])
         self.init_status(self.status)
 
-        self.sea = {}
 
-        # --- USER SEA ------
+
+        # GAME ------
+
+        self.sea = {}
         self.sea['user'] = sea.SeaModel(0, 0, cfg['field_size'],
                                         cfg['field_size'], self,
-                                        name='user', style=self.style)
+                                        name='user', style=self.user_style)
         self.add_gui_sea(
-            sea.View(self.sea['user'], self, size=cfg['view_size']))
+                sea.View(self.sea['user'], self,
+                         size=cfg['view_size']))
 
         # --- PC SEA ------
 
         self.sea['pc'] = sea.SeaModel(0, 0, cfg['field_size'],
                                       cfg['field_size'],
                                       self,
-                                      name='pc', style=self.style)
+                                      name='pc', style=self.user_style)
         self.add_gui_sea(
-            sea.View(self.sea['pc'], self, size=cfg['view_size']))
+                sea.View(self.sea['pc'], self, size=cfg['view_size']))
 
         self.game = core.Game()
 
     def action_method(self, name_action):
-        getattr(self, name_action)()
+        name = name_action.split('_')[0]
+        if name == 'style':
+            arg = name_action.split('_')[1]
+            getattr(self, 'set_' + name)(arg)
+        else:
+            getattr(self, name)()
 
     # ----  ------
+
+    def set_style(self, style):
+        self.user_style = mainwidget.Style(style)
+        cfg['default_style'] = style
+        self.load_style_sheet(style)
+        self._set_sea_style(self.user_style)
 
     def close_scr(self):
         self.close()
@@ -88,18 +88,11 @@ class Main(mainwidget.MainWidget):
     def new_game(self):
         print('new_game')
 
-    def style_grey(self):
-        print('load style')
-        # cfg.set_config('default_style', 'style_grey')
-        # self.load_style_sheet('style_grey')
-
-    def style_writer(self):
-        print('load style')
-        # cfg.set_config('default_style', 'style_writer')
-        # self.load_style_sheet('style_writer')
+    def eraser(self):
+        self.sea['user'].the_clear()
 
     def closeEvent(self, *args, **kwargs):
-        print('close')
+        config.write_cfg(cfg_path, cfg)
         sys.exit()
 
     def auto_fleet_user(self):
@@ -108,22 +101,55 @@ class Main(mainwidget.MainWidget):
     def auto_fleet_pc(self):
         print('auto_pc')
 
-    def click_on_sea(self, scene, cell):
-        m = 'click_on_sea_'
+    def click_left_on_sea(self, scene, cell):
+
+        """
+        клик левой кнопкой мыши
+
+        :param scene: ссылка на сцену
+        :param cell: tuple < int координаты модели
+        """
+        m = 'click_left_on_sea_'
         method = '{}{}'.format(m, scene.name)
         getattr(self, method)(cell)
 
-    def click_on_sea_pc(self, cell):
-        if self.game.game_started:
-            self.sea['pc'].fire(cell)
-        else:
-            self.sea['pc'].do_nothing()
+    def click_right_on_sea(self, scene, cell):
 
-    def click_on_sea_user(self, cell):
+        """
+        клик правой кнопкой мыши
+        """
+        m = 'click_right_on_sea_'
+        method = '{}{}'.format(m, scene.name)
+        getattr(self, method)(cell)
+
+    def click_left_on_sea_user(self, cell):
         if self.game.game_started:
             self.sea['user'].do_nothing()
         else:
             self.sea['user'].build_ship(cell)
+
+    def click_right_on_sea_user(self, cell):
+        if self.game.game_started:
+            self.sea['user'].do_nothing()
+        else:
+            self.sea['user'].delite_ship(cell)
+
+    def click_right_on_sea_pc(self, cell):
+        print('right_pc_click')
+
+    def click_left_on_sea_pc(self, cell):
+        print('left_pc_click')
+
+    def _set_sea_style(self, style):
+        """
+
+        :param style: gui.mainwidget.Style
+        """
+        self.sea['pc'].user_style = style
+        self.sea['user'].user_style = style
+        self.sea['pc'].update_sea()
+        self.sea['user'].update_sea()
+
 
 
 if __name__ == '__main__':

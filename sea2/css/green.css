@@ -1,0 +1,27 @@
+
+View {
+    background-image: url("../resource/textures/green/field.png");
+    border-right: none;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: none;
+}
+
+QFrame#center_frame {
+    border: none;
+    background-image: url("../resource/textures/green/bg.jpg");
+}
+
+Tool {
+    background: #9de398;
+    border: none;
+}
+
+Status {
+    background: #6cdc79;
+    border: none;
+    color: #0505e7;
+    font-family: "Century Gothic";
+    font-size: 14pt;
+    font-weight: 500;
+}

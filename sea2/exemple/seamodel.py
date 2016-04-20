@@ -49,6 +49,10 @@ class Sea:
         for y in _range:
             self.matrix.append([Cell(y, x) for x in _range])
 
+    def clear_matrix(self):
+        for line in self.matrix:
+            for cell in line:
+                cell.status = Cell.StatusEmpty
 
     def __repr__(self):
         return str(numpy.array(self.matrix))
