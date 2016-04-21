@@ -1,5 +1,6 @@
 {
-    "cell_size": 32,
+    "field_size": 320,
+    "count_cell": 10,
     "ship_names": [
         4,
         3,
@@ -12,13 +13,9 @@
         1,
         1
     ],
-    "tool_icon_size": 30,
-    "count_cell": 10,
-    "tool_height": 100,
-    "view_size": 322,
+    "ext": "png",
     "ext_icon": "png",
-    "default_style": "cyan",
-    "status_height": 30,
+    "view_size": 322,
     "actions_names": [
         "finish_game.png",
         "new_game.png",
@@ -31,6 +28,9 @@
         "style_green.png",
         "close_scr.png"
     ],
-    "ext": "png",
-    "field_size": 320
+    "cell_size": 32,
+    "status_height": 30,
+    "tool_height": 100,
+    "default_style": "grey",
+    "tool_icon_size": 30
 }

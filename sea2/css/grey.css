@@ -44,3 +44,9 @@ Status {
     font-size: 14pt;
     font-weight: 400;
 }
+
+QMessageBox {
+    background: #d0d0d0;
+    font-family: Dialog;
+    font-size: 14pt;
+}

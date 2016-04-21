@@ -13,6 +13,30 @@ icon_dir = '../resource/icons'
 texture_path = '../resource/textures'
 
 
+
+MESSAGES = {}
+MESSAGES['close'] = '''Результаты игры Не будут сохранены!
+Вы действительно хотите выйти?'''
+
+def show_dialog(parent, name_mes, message):
+    box = QtWidgets.QMessageBox(parent)
+    box.setIcon(QtWidgets.QMessageBox.Question)
+    box.setWindowTitle(name_mes)
+    box.setText(message)
+    box.setStandardButtons(QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No)
+    buttonY = box.button(QtWidgets.QMessageBox.Yes)
+    buttonY.setText('Да')
+    buttonN = box.button(QtWidgets.QMessageBox.No)
+    buttonN.setText('Нет')
+    box.exec_()
+
+    if box.clickedButton() == buttonY:
+        return True
+    # YES pressed
+    elif box.clickedButton() == buttonN:
+        return False
+
+
 class Status(QtWidgets.QStatusBar):
     def __init__(self, parent, height):
         super().__init__(parent)

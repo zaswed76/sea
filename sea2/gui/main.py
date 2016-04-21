@@ -86,7 +86,12 @@ class Main(mainwidget.MainWidget):
         self.user_sea.clear()
 
     def finish_game(self):
-        print('finish_game')
+        """
+        сбросить игру
+        """
+        self.game.game_started = False
+        self.sea['pc'].the_clear()
+        self.sea['user'].the_clear()
 
     def new_game(self):
         print('new_game')
@@ -94,9 +99,14 @@ class Main(mainwidget.MainWidget):
     def eraser(self):
         self.sea['user'].the_clear()
 
-    def closeEvent(self, *args, **kwargs):
-        config.write_cfg(cfg_path, cfg)
-        sys.exit()
+    def closeEvent(self, e):
+        ms = mainwidget.show_dialog(self, 'выход', mainwidget.MESSAGES['close'])
+        if ms:
+            config.write_cfg(cfg_path, cfg)
+            e.accept()
+        else:
+            e.ignore()
+
 
     def auto_fleet_user(self):
         print('auto_user')

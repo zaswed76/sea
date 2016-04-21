@@ -5,4 +5,4 @@
 class Game:
     def __init__(self):
         # начата ли игра
-        self.game_started = 0
+        self.game_started = False
