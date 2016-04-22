@@ -54,8 +54,19 @@ class Sea:
             for cell in line:
                 cell.status = Cell.StatusEmpty
 
-    def __repr__(self):
+    def create_horizontal_ship(self, bow):
+        pass
+
+    def accept_fleet(self):
+        for line in self.matrix:
+            for cell in line:
+                if cell.status == Cell.StatusShip:
+                    print(cell.coord)
+
+    def __str__(self):
         return str(numpy.array(self.matrix))
+
+
 
 
 

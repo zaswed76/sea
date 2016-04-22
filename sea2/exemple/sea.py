@@ -71,6 +71,9 @@ class SeaModel(QtWidgets.QGraphicsScene):
             self.removeItem(self.ships[cell])
             del(self.ships[cell])
 
+    def accept_fleet(self):
+        self.model.accept_fleet()
+
     def the_clear(self):
         self.model.clear_matrix()
         self.ships.clear()

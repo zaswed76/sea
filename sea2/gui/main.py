@@ -58,6 +58,14 @@ class Main(mainwidget.MainWidget):
 
         self.game = core.Game()
 
+    def closeEvent(self, e):
+        ms = mainwidget.show_dialog(self, 'выход', mainwidget.MESSAGES['close'])
+        if ms:
+            config.write_cfg(cfg_path, cfg)
+            e.accept()
+        else:
+            e.ignore()
+
     def action_method(self, name_action):
         name = name_action.split('_')[0]
         if name == 'style':
@@ -94,19 +102,11 @@ class Main(mainwidget.MainWidget):
         self.sea['user'].the_clear()
 
     def new_game(self):
+        self.sea['user'].accept_fleet()
         print('new_game')
 
     def eraser(self):
         self.sea['user'].the_clear()
-
-    def closeEvent(self, e):
-        ms = mainwidget.show_dialog(self, 'выход', mainwidget.MESSAGES['close'])
-        if ms:
-            config.write_cfg(cfg_path, cfg)
-            e.accept()
-        else:
-            e.ignore()
-
 
     def auto_fleet_user(self):
         print('auto_user')
