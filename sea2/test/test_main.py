@@ -31,7 +31,7 @@ class Widget(mainwidget.MainWidget):
 
 
     def add_ship(self):
-        print('add_ship')
+        self.sea['user'].add_ship()
 
     def click_right_on_sea_user(self, cell):
         print('right', cell)

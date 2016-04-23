@@ -88,16 +88,21 @@ class SeaModel(QtWidgets.QGraphicsScene):
         print('нет действия')
 
     def build_ship(self, cell):
-        print('построить корабль')
-        y, x = cell
-        self.model.matrix[y][x].tag = md.Cell.TagShip
+        ''' построить корабль в одной клетке'''
+        self.model.build_ship(cell)
         self.update_sea()
 
     def delite_ship(self, cell):
-        print('удалить корабль')
+        ''' удалить корабль '''
         y, x = cell
         self.model.matrix[y][x].tag = md.Cell.StatusEmpty
         self.update_sea()
+
+    def build_composite_ship(self, bow, course, deck):
+        pass
+
+
+
 
     def update_sea(self):
         self.clear()

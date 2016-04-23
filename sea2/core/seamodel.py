@@ -176,6 +176,12 @@ class Sea:
     def add_ship(self, name, ship):
         self.fleet[name] = ship
 
+    def build_ship(self, cell):
+        ''' построить корабль '''
+        y, x = cell
+        self.matrix[y][x].tag = Cell.TagShip
+
+
     def init_matrix(self):
         self.matrix.clear()
         _range = range(self.max + 1)
@@ -187,8 +193,12 @@ class Sea:
             for cell in line:
                 cell.tag = Cell.TagEmpty
 
-    def create_horizontal_ship(self, bow):
-        pass
+    def build_composite_ship(self, bow, course, deck):
+        y, x = bow
+        if course == Ship.Horizontal:
+            for n in range(deck):
+                pass
+
 
     def accept_fleet(self):
         for line in self.matrix:
