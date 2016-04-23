@@ -6,7 +6,7 @@ import sys
 
 from PyQt5 import QtWidgets
 
-from exemple import sea, core
+from core import sea, game
 from gui import mainwidget
 from libs import config
 
@@ -26,8 +26,7 @@ class Main(mainwidget.MainWidget):
 
         tool_actions = self.tool_actions(self.user_style.icon_dir,
                                          cfg['actions_names'])
-        self.tool = mainwidget.Tool(self, cfg['tool_height'],
-                                    tool_actions)
+        self.tool = mainwidget.Tool(self, tool_actions)
         self.init_tool_bar(self.tool)
 
         # STATUS ----------------------------------------------------
@@ -56,7 +55,7 @@ class Main(mainwidget.MainWidget):
         self.add_gui_sea(
                 sea.View(self.sea['pc'], self, size=cfg['view_size']))
 
-        self.game = core.Game()
+        self.game = game.Game()
 
     def closeEvent(self, e):
         ms = mainwidget.show_dialog(self, 'выход', mainwidget.MESSAGES['close'])
@@ -66,13 +65,7 @@ class Main(mainwidget.MainWidget):
         else:
             e.ignore()
 
-    def action_method(self, name_action):
-        name = name_action.split('_')[0]
-        if name == 'style':
-            arg = name_action.split('_')[1]
-            getattr(self, 'set_' + name)(arg)
-        else:
-            getattr(self, name_action)()
+
 
     # ----  ------
 
@@ -114,26 +107,7 @@ class Main(mainwidget.MainWidget):
     def auto_fleet_pc(self):
         print('auto_pc')
 
-    def click_left_on_sea(self, scene, cell):
 
-        """
-        клик левой кнопкой мыши
-
-        :param scene: ссылка на сцену
-        :param cell: tuple < int координаты модели
-        """
-        m = 'click_left_on_sea_'
-        method = '{}{}'.format(m, scene.name)
-        getattr(self, method)(cell)
-
-    def click_right_on_sea(self, scene, cell):
-
-        """
-        клик правой кнопкой мыши
-        """
-        m = 'click_right_on_sea_'
-        method = '{}{}'.format(m, scene.name)
-        getattr(self, method)(cell)
 
     def click_left_on_sea_user(self, cell):
         if self.game.game_started:

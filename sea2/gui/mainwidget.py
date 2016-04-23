@@ -46,6 +46,9 @@ class Status(QtWidgets.QStatusBar):
 class Action(QtWidgets.QAction):
     def __init__(self, icon, name, parent):
         super().__init__(icon, name, parent)
+        if icon:
+            self.setIcon(icon)
+        self.setText(name)
 
 
 class Spacer(QtWidgets.QWidget):
@@ -59,10 +62,8 @@ class Spacer(QtWidgets.QWidget):
 class Tool(QtWidgets.QToolBar):
     SPACER = 'SPACER'
 
-    def __init__(self, parent, height, actions):
+    def __init__(self, parent, actions):
         super().__init__(parent)
-        print(height)
-        # self.setFixedHeight(height)
         self.setIconSize(QtCore.QSize(38, 38))
         self.init_actions(actions)
 
@@ -137,6 +138,7 @@ class MainWidget(QtWidgets.QMainWindow):
                 pth = os.path.join(icon_dir, name)
                 if not os.path.isfile(pth):
                     print('иконка с именем - {} не найдена'.format(pth))
+
                 icon = QtGui.QIcon(pth)
                 act = Action(icon, name_not_ext, self)
                 act.triggered.connect(
@@ -155,6 +157,35 @@ class MainWidget(QtWidgets.QMainWindow):
         styleSheet = file.readAll()
         styleSheet = str(styleSheet, encoding='utf8')
         QtWidgets.QApplication.instance().setStyleSheet(styleSheet)
+
+    def action_method(self, name_action):
+        name = name_action.split('_')[0]
+        if name == 'style':
+            arg = name_action.split('_')[1]
+            getattr(self, 'set_' + name)(arg)
+        else:
+            getattr(self, name_action)()
+
+    def click_left_on_sea(self, scene, cell):
+
+        """
+        клик левой кнопкой мыши
+
+        :param scene: ссылка на сцену
+        :param cell: tuple < int координаты модели
+        """
+        m = 'click_left_on_sea_'
+        method = '{}{}'.format(m, scene.name)
+        getattr(self, method)(cell)
+
+    def click_right_on_sea(self, scene, cell):
+
+        """
+        клик правой кнопкой мыши
+        """
+        m = 'click_right_on_sea_'
+        method = '{}{}'.format(m, scene.name)
+        getattr(self, method)(cell)
 
 
 if __name__ == '__main__':

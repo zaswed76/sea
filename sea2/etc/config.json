@@ -1,7 +1,5 @@
 {
-    "field_size": 320,
     "status_height": 30,
-    "ext_icon": "png",
     "tool_height": 100,
     "ship_names": [
         4,
@@ -15,8 +13,12 @@
         1,
         1
     ],
-    "cell_size": 32,
     "ext": "png",
+    "view_size": 322,
+    "field_size": 320,
+    "cell_size": 32,
+    "tool_icon_size": 30,
+    "default_style": "cyan",
     "actions_names": [
         "finish_game.png",
         "new_game.png",
@@ -29,8 +31,6 @@
         "style_green.png",
         "close_scr.png"
     ],
-    "view_size": 322,
-    "default_style": "grey",
-    "tool_icon_size": 30,
+    "ext_icon": "png",
     "count_cell": 10
 }

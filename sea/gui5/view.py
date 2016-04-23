@@ -69,7 +69,7 @@ class SeaModel(QtWidgets.QGraphicsScene):
     def auto_shot(self, cell):
         y, x = self.field_conv.cell_to_coord(cell)
         shot_res, status, name = self.model.fleet.shot(cell)
-        # print(shot_res, status, name)
+        # print(shot_res, tag, name)
         return self.display_shot(shot_res, x, y, status, name)
 
         # print(coord)

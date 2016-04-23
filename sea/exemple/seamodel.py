@@ -27,7 +27,7 @@ class Cell:
         if stat in Cell.StatusNames:
             self._status = stat
         else:
-            raise Exception('not_name status')
+            raise Exception('not_name tag')
 
     def __repr__(self):
         return str(Cell.StatusNames.index(self.status))
@@ -59,5 +59,5 @@ if __name__ == '__main__':
     sea = Sea()
     sea.init_matrix()
 
-    sea[0][0].status = Cell.StatusShip
+    sea[0][0].tag = Cell.StatusShip
     print(sea)

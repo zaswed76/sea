@@ -192,7 +192,7 @@ class Fleet(dict):
             ship = self[name]
             if item in ship.corpus:
                 ship.wound(item)
-                return (True, ship.status, ship.name)
+                return (True, ship.tag, ship.name)
         else:
             return (False, None, None)
 

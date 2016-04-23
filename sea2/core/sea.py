@@ -5,7 +5,7 @@
 import sys
 
 from PyQt5 import QtWidgets, QtGui, QtCore
-from exemple import seamodel as md
+from core import seamodel as md
 
 
 
@@ -36,7 +36,8 @@ class SeaModel(QtWidgets.QGraphicsScene):
         super().__init__(*__args)
         self.ships = {}
         self._user_style = style
-        self.model = md.Sea()
+        self._fleet = md.Fleet()
+        self.model = md.Sea(self._fleet)
         if name is not None:
             self.name = name
         else:
@@ -89,13 +90,13 @@ class SeaModel(QtWidgets.QGraphicsScene):
     def build_ship(self, cell):
         print('построить корабль')
         y, x = cell
-        self.model.matrix[y][x].status = md.Cell.StatusShip
+        self.model.matrix[y][x].tag = md.Cell.TagShip
         self.update_sea()
 
     def delite_ship(self, cell):
         print('удалить корабль')
         y, x = cell
-        self.model.matrix[y][x].status = md.Cell.StatusEmpty
+        self.model.matrix[y][x].tag = md.Cell.StatusEmpty
         self.update_sea()
 
     def update_sea(self):
@@ -103,9 +104,9 @@ class SeaModel(QtWidgets.QGraphicsScene):
         self.ships.clear()
         for line in self.model.matrix:
             for cell in line:
-                if cell.status == md.Cell.StatusShip:
+                if cell.tag == md.Cell.TagShip:
                     self._draw_ship(cell.coord)
-                elif cell.status == md.Cell.StatusEmpty:
+                elif cell.tag == md.Cell.TagEmpty:
                     self._del_ship(cell.coord)
 
 

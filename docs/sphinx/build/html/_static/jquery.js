@@ -1454,7 +1454,7 @@ jQuery.support = (function() {
 	// jQuery.boxModel DEPRECATED in 1.3, use jQuery.support.boxModel instead
 	jQuery.boxModel = support.boxModel = (document.compatMode === "CSS1Compat");
 
-	// Make sure checked status is properly cloned
+	// Make sure checked tag is properly cloned
 	input.checked = true;
 	support.noCloneChecked = input.cloneNode( true ).checked;
 
@@ -5000,7 +5000,7 @@ if ( document.documentElement.compareDocumentPosition ) {
 
 	form.innerHTML = "<a name='" + id + "'/>";
 
-	// Inject it into the root element, check its status, and remove it quickly
+	// Inject it into the root element, check its tag, and remove it quickly
 	root.insertBefore( form, root.firstChild );
 
 	// The workaround has to do additional checks after a getElementById
@@ -7519,7 +7519,7 @@ jQuery.extend({
 				}
 			} else {
 				// We extract error from statusText
-				// then normalize statusText and status for non-aborts
+				// then normalize statusText and tag for non-aborts
 				error = statusText;
 				if ( !statusText || status ) {
 					statusText = "error";
@@ -8300,7 +8300,7 @@ if ( jQuery.support.ajax ) {
 										statusText = "";
 									}
 
-									// Filter status for non standard behaviors
+									// Filter tag for non standard behaviors
 
 									// If the request is local and we have data: assume a success
 									// (success with no data won't get notified, that's the best we
