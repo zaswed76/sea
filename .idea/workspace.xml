@@ -2,13 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d2b38aa-ecb8-4b30-966e-3da2886ffa00" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/schemes/sea.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea/resource/textures/www.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea2/resource/icons/cyan/settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea2/resource/icons/green/close_scr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea2/resource/icons/green/eraser.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea2/resource/icons/green/settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea2/resource/icons/grey/close_scr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/schemes/plane.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea/exemple/around.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea/exemple/matrix2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea/gui/main.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea/gui4/config.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea/gui4/view.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea/scr/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea/scr/matrix2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea/scr/pcshots.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea2/core/game.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea2/core/seamodel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea2/libs/config.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea3/core/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea3/css/green.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old/sea3/gui/main.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/etc/config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/exemple/3r.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/gui/base.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/gui/base_ui.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/gui4/service.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/resource/icons/close2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/resource/icons/style_grey.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/resource/textures/graphics/3_vertical.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/resource/textures/graphics/shot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/resource/textures/graphics/Без имени-1.psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/resource/textures/grey/2_vertical.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/resource/textures/grey/3_vertical.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/resource/textures/grey/shot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/resource/textures/kid/3_h.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/resource/textures/kid/wounded.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/resource/textures/ship.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea/scr/gameprocess.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea2/resource/icons/cyan/close2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea2/resource/icons/cyan/style_grey.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea2/resource/icons/grey/close2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea2/resource/icons/grey/style_grey.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea2/resource/textures/grey/ship.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sea2/scr/cell.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sea.iml" afterPath="$PROJECT_DIR$/.idea/sea.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea2/etc/config.json" afterPath="$PROJECT_DIR$/sea2/etc/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea2/exemple/sea.py" afterPath="$PROJECT_DIR$/sea2/exemple/sea.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea2/exemple/seamodel.py" afterPath="$PROJECT_DIR$/sea2/exemple/seamodel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sea2/gui/main.py" afterPath="$PROJECT_DIR$/sea2/gui/main.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/gui4/__init__.py" afterPath="$PROJECT_DIR$/old/sea/exemple/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/gui5/__init__.py" afterPath="$PROJECT_DIR$/old/sea/gui4/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/resource/icons/auto_fleet_user.png" afterPath="$PROJECT_DIR$/old/sea2/resource/icons/green/auto_fleet_user.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/resource/icons/close_scr.png" afterPath="$PROJECT_DIR$/old/sea/resource/icons/close_scr.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/resource/textures/graphics/1_vertical.png" afterPath="$PROJECT_DIR$/old/sea/resource/textures/graphics/3_horizontal.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/resource/textures/graphics/2_vertical.png" afterPath="$PROJECT_DIR$/old/sea/resource/textures/graphics/2_vertical.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/resource/textures/graphics/field.png" afterPath="$PROJECT_DIR$/old/sea/resource/textures/kid/field.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/resource/textures/graphics/wounded.png" afterPath="$PROJECT_DIR$/old/sea/resource/textures/grey/wounded.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/resource/textures/grey/4_vertical.png" afterPath="$PROJECT_DIR$/old/sea/resource/textures/graphics/4_vertical.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/resource/textures/kid/3_v.png" afterPath="$PROJECT_DIR$/old/sea/resource/textures/kid/3_v.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/resource/textures/kid/4_h.png" afterPath="$PROJECT_DIR$/old/sea/resource/textures/kid/4_h.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/resource/textures/kid/main.png" afterPath="$PROJECT_DIR$/old/sea/resource/textures/kid/main.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea/resource/textures/kid/sea.png" afterPath="$PROJECT_DIR$/old/sea/resource/textures/kid/sea.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea2/resource/icons/cyan/finish_game.png" afterPath="$PROJECT_DIR$/old/sea2/resource/icons/grey/finish_game.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea2/resource/icons/green/auto_fleet_user.png" afterPath="$PROJECT_DIR$/old/sea2/resource/icons/grey/auto_fleet_user.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea2/resource/icons/green/new_game.png" afterPath="$PROJECT_DIR$/old/sea2/resource/icons/cyan/new_game.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea2/resource/icons/grey/style_cyan.png" afterPath="$PROJECT_DIR$/old/sea2/resource/icons/grey/style_cyan.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea2/resource/textures/grey/bg.jpg" afterPath="$PROJECT_DIR$/old/sea2/resource/textures/grey/bg.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea2/test/__init__.py" afterPath="$PROJECT_DIR$/old/sea/gui5/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sea3/core/__init__.py" afterPath="$PROJECT_DIR$/old/sea/resource/icons/__init__.py" />
     </list>
     <ignored path="sea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,10 +83,14 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/sea$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1488464873408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea2/gui" />
+    <SUITE FILE_PATH="coverage/sea$sea__2_.coverage" NAME="sea (2) Coverage Results" MODIFIED="1488481108926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/scr" />
+    <SUITE FILE_PATH="coverage/sea$cell.coverage" NAME="cell Coverage Results" MODIFIED="1488471601131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/scr" />
+    <SUITE FILE_PATH="coverage/sea$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1488464566458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea3/gui" />
+    <SUITE FILE_PATH="coverage/sea$sea.coverage" NAME="sea Coverage Results" MODIFIED="1488465109135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/scr" />
     <SUITE FILE_PATH="coverage/sea$main.coverage" NAME="main Coverage Results" MODIFIED="1458922026279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea/gui" />
-    <SUITE FILE_PATH="coverage/sea$sea.coverage" NAME="sea Coverage Results" MODIFIED="1458494109235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea" />
     <SUITE FILE_PATH="coverage/sea$seamodel.coverage" NAME="seamodel Coverage Results" MODIFIED="1461342975560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea2/exemple" />
-    <SUITE FILE_PATH="coverage/sea$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1461343973657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea2/gui" />
+    <SUITE FILE_PATH="coverage/sea$sea__1_.coverage" NAME="sea (1) Coverage Results" MODIFIED="1488464949482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea2/scr" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -36,78 +101,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sea2/gui/main.py">
+      <file leaf-file-name="cell.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new/scr/cell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="105" column="25" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
+            <state relative-caret-position="230">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
-                <element signature="e#1793#1984#0" expanded="true" />
-                <element signature="e#2303#2463#0" expanded="true" />
-                <element signature="e#2544#2637#0" expanded="true" />
-                <element signature="e#2914#2971#0" expanded="true" />
+                <element signature="e#198#269#0" expanded="true" />
+                <element signature="e#310#324#0" expanded="true" />
+                <element signature="e#365#379#0" expanded="true" />
+                <element signature="e#425#444#0" expanded="true" />
+                <element signature="e#498#629#0" expanded="true" />
+                <element signature="e#662#706#0" expanded="true" />
+                <element signature="e#740#777#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sea2/etc/config.json">
+      <file leaf-file-name="sea.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/new/scr/sea.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+            <state relative-caret-position="368">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              <folding>
+                <element signature="e#70#146#0" expanded="true" />
+                <element signature="e#191#209#0" expanded="true" />
+                <element signature="e#249#272#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainwidget.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sea2/gui/mainwidget.py">
+      <file leaf-file-name="plane.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/schemes/plane.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1848">
-              <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+            <state relative-caret-position="69">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sea.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
-              <folding>
-                <element signature="e#48#58#0" expanded="true" />
-                <element signature="e#799#1324#0" expanded="true" />
-                <element signature="e#1925#1950#0" expanded="true" />
-                <element signature="e#2565#2879#0" expanded="true" />
-                <marker date="1461343829201" expanded="false" signature="3545:3572" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seamodel.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sea2/exemple/seamodel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
-              <folding>
-                <element signature="e#912#1054#0" expanded="true" />
-                <element signature="e#1092#1193#0" expanded="true" />
-                <element signature="e#1246#1250#0" expanded="true" />
-                <element signature="e#1288#1431#0" expanded="true" />
-                <element signature="e#1464#1500#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -117,23 +179,27 @@
         <option value="$PROJECT_DIR$/sea/css/kid.css" />
         <option value="$PROJECT_DIR$/sea/gui/base.py" />
         <option value="$PROJECT_DIR$/sea2/etc/config.json" />
-        <option value="$PROJECT_DIR$/sea/scr/sea.py" />
         <option value="$PROJECT_DIR$/sea2/gui/main.py" />
         <option value="$PROJECT_DIR$/sea2/exemple/sea.py" />
         <option value="$PROJECT_DIR$/sea2/exemple/seamodel.py" />
+        <option value="$PROJECT_DIR$/sea/scr/sea.py" />
+        <option value="$PROJECT_DIR$/new/scr/cell.py" />
+        <option value="$PROJECT_DIR$/new/scr/sea.py" />
+        <option value="$PROJECT_DIR$/docs/schemes/plane.txt" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -160,9 +226,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="NBKnowledgePane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -191,7 +254,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sea2" />
+              <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -205,20 +268,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sea2" />
+              <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="exemple" />
+              <option name="myItemId" value="schemes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="NBKnowledgePane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CubeOS (2)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -233,46 +299,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\save\serg\progects\sea\old" />
       <recent name="$PROJECT_DIR$/docs/schemes" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
-    <configuration default="false" name="sea" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="sea" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/sea.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea/gui" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="sea" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/gui/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.sea (2)">
     <configuration default="false" name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -291,33 +322,76 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="seamodel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="sea (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea2/exemple" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea2/scr" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="sea" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea2/exemple/seamodel.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea2/scr/sea.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+    <configuration default="false" name="sea" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="/bin/bash" />
-      <option name="WORKING_DIRECTORY" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea/scr" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sea" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea/scr/sea.py" />
       <option name="PARAMETERS" value="" />
-      <module name="" />
-      <envs />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="cell" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/new/scr" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sea" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new/scr/cell.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="sea (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/new/scr" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="sea" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new/scr/sea.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -528,18 +602,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Python.sea" />
-      <item index="1" class="java.lang.String" itemvalue="Python.main" />
-      <item index="2" class="java.lang.String" itemvalue="Python.main (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.seamodel" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.main (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.sea (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.sea" />
+      <item index="3" class="java.lang.String" itemvalue="Python.cell" />
+      <item index="4" class="java.lang.String" itemvalue="Python.sea (2)" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.main (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.seamodel" />
-        <item index="2" class="java.lang.String" itemvalue="Python.main" />
-        <item index="3" class="java.lang.String" itemvalue="Python.sea" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.sea (2)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.cell" />
+        <item index="2" class="java.lang.String" itemvalue="Python.sea" />
+        <item index="3" class="java.lang.String" itemvalue="Python.sea (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -617,29 +693,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22002141" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24551387" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Copy/Paste" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4860681" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26303318" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Copy/Paste" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -665,450 +742,309 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sea2/gui/main.py">
+    <entry file="file://$PROJECT_DIR$/old/sea2/etc/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1793#1984#0" expanded="true" />
-            <element signature="e#2303#2463#0" expanded="true" />
-            <element signature="e#2544#2637#0" expanded="true" />
-            <element signature="e#2914#2971#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="782">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/etc/config.json">
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/mainwidget.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2001">
+          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/sea2/etc/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/gui/mainwidget.py">
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/mainwidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1848">
           <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="128" column="25" selection-start-line="128" selection-start-column="25" selection-end-line="128" selection-end-column="25" />
-          <folding>
-            <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#799#1324#0" expanded="true" />
-            <element signature="e#1925#1950#0" expanded="true" />
-            <element signature="e#2565#2879#0" expanded="true" />
-            <marker date="1461343829201" expanded="false" signature="3545:3572" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/gui/main.py">
+    <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py" />
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
-          <folding>
-            <element signature="e#1793#1984#0" expanded="true" />
-            <element signature="e#2303#2463#0" expanded="true" />
-            <element signature="e#2544#2637#0" expanded="true" />
-            <element signature="e#2914#2971#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/etc/config.json">
+    <entry file="file://$PROJECT_DIR$/old/sea2/etc/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/gui/mainwidget.py">
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/mainwidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1166">
           <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
-          <folding>
-            <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#799#1324#0" expanded="true" />
-            <element signature="e#1925#1950#0" expanded="true" />
-            <element signature="e#2565#2879#0" expanded="true" />
-            <marker date="1461343829201" expanded="false" signature="3545:3572" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
+    <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py" />
+    <entry file="file://$PROJECT_DIR$/old/sea/scr/sea.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2143#2532#0" expanded="false" />
-            <element signature="e#2570#2624#0" expanded="false" />
-            <element signature="e#2670#2689#0" expanded="false" />
-            <element signature="e#2728#2936#0" expanded="false" />
-            <element signature="e#2982#3040#0" expanded="false" />
-            <element signature="e#3077#3550#0" expanded="false" />
-            <element signature="e#3587#4083#0" expanded="false" />
-            <element signature="e#4117#4655#0" expanded="false" />
-            <element signature="e#4709#4776#0" expanded="false" />
-            <element signature="e#4831#4898#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/exemple/seamodel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="e#912#1054#0" expanded="true" />
-            <element signature="e#1092#1193#0" expanded="true" />
-            <element signature="e#1246#1250#0" expanded="true" />
-            <element signature="e#1288#1431#0" expanded="true" />
-            <element signature="e#1464#1500#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/gui/main.py">
+    <entry file="file://$PROJECT_DIR$/sea2/exemple/seamodel.py" />
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="54" column="65" selection-start-line="54" selection-start-column="65" selection-end-line="54" selection-end-column="65" />
-          <folding>
-            <element signature="e#1793#1984#0" expanded="true" />
-            <element signature="e#2303#2463#0" expanded="true" />
-            <element signature="e#2544#2637#0" expanded="true" />
-            <element signature="e#2914#2971#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/etc/config.json">
+    <entry file="file://$PROJECT_DIR$/old/sea2/etc/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/gui/mainwidget.py">
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/mainwidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="150" column="11" selection-start-line="150" selection-start-column="11" selection-end-line="150" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
-          <folding>
-            <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#799#1324#0" expanded="true" />
-            <element signature="e#1925#1950#0" expanded="true" />
-            <element signature="e#2565#2879#0" expanded="true" />
-            <marker date="1461343829201" expanded="false" signature="3545:3572" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
+    <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py" />
+    <entry file="file://$PROJECT_DIR$/old/sea/scr/sea.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2143#2532#0" expanded="false" />
-            <element signature="e#2570#2624#0" expanded="false" />
-            <element signature="e#2670#2689#0" expanded="false" />
-            <element signature="e#2728#2936#0" expanded="false" />
-            <element signature="e#2982#3040#0" expanded="false" />
-            <element signature="e#3077#3550#0" expanded="false" />
-            <element signature="e#3587#4083#0" expanded="false" />
-            <element signature="e#4117#4655#0" expanded="false" />
-            <element signature="e#4709#4776#0" expanded="false" />
-            <element signature="e#4831#4898#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/exemple/seamodel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="e#912#1054#0" expanded="true" />
-            <element signature="e#1092#1193#0" expanded="true" />
-            <element signature="e#1246#1250#0" expanded="true" />
-            <element signature="e#1288#1431#0" expanded="true" />
-            <element signature="e#1464#1500#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/gui/main.py">
+    <entry file="file://$PROJECT_DIR$/sea2/exemple/seamodel.py" />
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="54" column="65" selection-start-line="54" selection-start-column="65" selection-end-line="54" selection-end-column="65" />
-          <folding>
-            <element signature="e#1793#1984#0" expanded="true" />
-            <element signature="e#2303#2463#0" expanded="true" />
-            <element signature="e#2544#2637#0" expanded="true" />
-            <element signature="e#2914#2971#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/etc/config.json">
+    <entry file="file://$PROJECT_DIR$/old/sea2/etc/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/gui/mainwidget.py">
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/mainwidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="150" column="11" selection-start-line="150" selection-start-column="11" selection-end-line="150" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#799#1324#0" expanded="true" />
-            <element signature="e#1925#1950#0" expanded="true" />
-            <element signature="e#2565#2879#0" expanded="true" />
-            <marker date="1461343829201" expanded="false" signature="3545:3572" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/exemple/seamodel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="e#912#1054#0" expanded="true" />
-            <element signature="e#1092#1193#0" expanded="true" />
-            <element signature="e#1246#1250#0" expanded="true" />
-            <element signature="e#1288#1431#0" expanded="true" />
-            <element signature="e#1464#1500#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/gui/main.py">
+    <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py" />
+    <entry file="file://$PROJECT_DIR$/sea2/exemple/seamodel.py" />
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
-          <folding>
-            <element signature="e#1793#1984#0" expanded="true" />
-            <element signature="e#2303#2463#0" expanded="true" />
-            <element signature="e#2544#2637#0" expanded="true" />
-            <element signature="e#2914#2971#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/etc/config.json">
+    <entry file="file://$PROJECT_DIR$/old/sea2/etc/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/gui/mainwidget.py">
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/mainwidget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="86" column="42" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#799#1324#0" expanded="true" />
-            <element signature="e#1925#1950#0" expanded="true" />
-            <element signature="e#2565#2879#0" expanded="true" />
-            <marker date="1461343829201" expanded="false" signature="3545:3572" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/exemple/seamodel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="e#912#1054#0" expanded="true" />
-            <element signature="e#1092#1193#0" expanded="true" />
-            <element signature="e#1246#1250#0" expanded="true" />
-            <element signature="e#1288#1431#0" expanded="true" />
-            <element signature="e#1464#1500#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sea/gui/main.py">
+    <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py" />
+    <entry file="file://$PROJECT_DIR$/sea2/exemple/seamodel.py" />
+    <entry file="file://$PROJECT_DIR$/old/sea/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
+    <entry file="file://$PROJECT_DIR$/old/sea/scr/sea.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/gui/main.py">
+    <entry file="file://$PROJECT_DIR$/old/sea/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
+    <entry file="file://$PROJECT_DIR$/old/sea/scr/sea.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/gui/base.py">
+    <entry file="file://$PROJECT_DIR$/old/sea/gui/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/gui/base.py">
+    <entry file="file://$PROJECT_DIR$/old/sea/gui/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/css/kid.css">
+    <entry file="file://$PROJECT_DIR$/old/sea/css/kid.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/gui/main.py">
+    <entry file="file://$PROJECT_DIR$/old/sea/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/etc/config.json">
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/mainwidget.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="2001">
+          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/gui/mainwidget.py">
+    <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py" />
+    <entry file="file://$PROJECT_DIR$/sea2/exemple/seamodel.py" />
+    <entry file="file://$PROJECT_DIR$/old/sea3/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="92">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/sphinx/build/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea/scr/sea.py">
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+        <state relative-caret-position="138">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/sea2/etc/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/sea2/scr/cell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/sea2/scr/sea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old/sea/scr/sea.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="176" column="18" selection-start-line="176" selection-start-column="18" selection-end-line="176" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new/scr/cell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <element signature="e#2143#2532#0" expanded="false" />
-            <element signature="e#2570#2624#0" expanded="false" />
-            <element signature="e#2670#2689#0" expanded="false" />
-            <element signature="e#2728#2936#0" expanded="false" />
-            <element signature="e#2982#3040#0" expanded="false" />
-            <element signature="e#3077#3550#0" expanded="false" />
-            <element signature="e#3587#4083#0" expanded="false" />
-            <element signature="e#4117#4655#0" expanded="false" />
-            <element signature="e#4709#4776#0" expanded="false" />
-            <element signature="e#4831#4898#0" expanded="false" />
+            <element signature="e#198#269#0" expanded="true" />
+            <element signature="e#310#324#0" expanded="true" />
+            <element signature="e#365#379#0" expanded="true" />
+            <element signature="e#425#444#0" expanded="true" />
+            <element signature="e#498#629#0" expanded="true" />
+            <element signature="e#662#706#0" expanded="true" />
+            <element signature="e#740#777#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/gui/main.py">
+    <entry file="file://$PROJECT_DIR$/docs/schemes/plane.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="105" column="25" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="25" />
-          <folding>
-            <element signature="e#1793#1984#0" expanded="true" />
-            <element signature="e#2303#2463#0" expanded="true" />
-            <element signature="e#2544#2637#0" expanded="true" />
-            <element signature="e#2914#2971#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="69">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/exemple/sea.py">
+    <entry file="file://$PROJECT_DIR$/README.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
-          <folding>
-            <element signature="e#48#58#0" expanded="true" />
-            <element signature="e#799#1324#0" expanded="true" />
-            <element signature="e#1925#1950#0" expanded="true" />
-            <element signature="e#2565#2879#0" expanded="true" />
-            <marker date="1461343829201" expanded="false" signature="3545:3572" placeholder="..." />
-          </folding>
+        <state relative-caret-position="46">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sea2/exemple/seamodel.py">
+    <entry file="file://$PROJECT_DIR$/new/scr/sea.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
+        <state relative-caret-position="368">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
           <folding>
-            <element signature="e#912#1054#0" expanded="true" />
-            <element signature="e#1092#1193#0" expanded="true" />
-            <element signature="e#1246#1250#0" expanded="true" />
-            <element signature="e#1288#1431#0" expanded="true" />
-            <element signature="e#1464#1500#0" expanded="true" />
+            <element signature="e#70#146#0" expanded="true" />
+            <element signature="e#191#209#0" expanded="true" />
+            <element signature="e#249#272#0" expanded="true" />
           </folding>
         </state>
       </provider>

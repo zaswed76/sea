@@ -2,10 +2,12 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/sea2" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/sea3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/old/sea2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/old/sea3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/old/sea" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/new" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.4.3 (/usr/bin/python3.4)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6.0 (D:\save\serg\programm\anaconda\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">
