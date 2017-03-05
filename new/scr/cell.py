@@ -18,6 +18,10 @@ class Cell:
         self._x = x
         self._status = CellStatus.empty
 
+        self.build_mod_vertical = None
+        self.build_mod_horizontal = None
+
+
     @property
     def x(self):
         return self._x
