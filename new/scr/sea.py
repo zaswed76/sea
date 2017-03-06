@@ -1,47 +1,57 @@
 
-from new.scr import cell
+from collections import MutableSet
 
-class Sea:
+import random
+pc_sea = set(range(100))
+allow = pc_sea.copy()
+currently_unavailable = {}
+not_available= {}
+fleet = list()
+
+class Sea(set):
     def __init__(self):
-        self._field = set(cell.Cell(x, y) for x in range(10) for y in range(10))
-        self.occupied_space = set()
+        super().__init__()
 
 
-    @property
-    def field(self):
-        return self._field
 
-    def create_fleet(self):
-        pass
+def get_bow(size, vector):
+    while True:
+        b = random.choice(list(allow))
+        if check_bow(allow, b, size, vector):
+            return b
+        else:
+            allow = allow - b
 
-    def create_ship(self, bow, size, vector):
-        pass
-
-    def get_bow(self, size, vector):
-        """
-        :return координаты носа корабля
-        """
-        pass
-
-    def building_allow(self, bow, size, vector):
-        x, y = bow
-        if vector == "horizontal":
-            s = [x for x in range(size)]
+def check_bow(allow, bow, size, vector):
+    for s in range(bow, bow + size):
+        if not s in allow:
+            return False
+    else:
+        return True
 
 
 
 
+def get_ship(bow, size, vector):
+    if vector == "-":
+        assert ((int(str(bow)[1]) + size-1) < 10)
+        return set(x for x in range(bow, bow + size))
+    elif vector == "1":
+        assert (bow + (size-1) * 10) < 100
+        return set(x for x in range(bow, (bow + size * 10), 10))
 
-    def get_vector(self):
-        """
-        :return направление  vertical or horizontal
-        """
-        pass
+def get_fleet(names):
+    f = []
+    for n in names:
+        f.append(get_ship("bow", n, "vector"))
 
-    def __call__(self, x, y):
-        return self.field[x, y]
+
+
 
 
 if __name__ == '__main__':
-    sea = Sea()
-    print(sea.field)
+
+    get_bow(allow)
+
+
+
