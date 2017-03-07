@@ -8,6 +8,7 @@ class Ship(Set):
         self.vector = vector
         self.size = size
         self.bow = bow
+        self.around = set()
 
         if vector == Ship.Horizontal:
             self._seq = set(x for x in range(bow, bow + size))
@@ -30,6 +31,9 @@ class Ship(Set):
     def __add__(self, other):
         self._seq.add(other)
         return self._seq
+
+    def set_around(self):
+        pass
 
 
 if __name__ == '__main__':
