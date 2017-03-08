@@ -2,6 +2,8 @@ from collections import Set, Sequence, MutableSet
 
 
 class Ship(Set):
+    Max = 99
+    Min = 0
     Horizontal = "horizontal"
     Vertical = "vertical"
     def __init__(self, bow, size, vector):
@@ -42,7 +44,7 @@ class Ship(Set):
         for s in self._seq:
             a.update(self._around_cell(s))
         a -= self._seq
-        return set(x for x in a if 100 > x > -1)
+        return set(x for x in a if Ship.Max >= x >= Ship.Min)
 
 
 
