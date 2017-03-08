@@ -75,7 +75,7 @@ class Ship(Set):
 
 
 if __name__ == '__main__':
-    ship = Ship((1, 1), 1, Ship.Vertical)
+    ship = Ship((1, 1), 4, Ship.Vertical)
     print(ship)
     print(ship.around)
     # print(ship.bow)
