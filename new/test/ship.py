@@ -15,13 +15,20 @@ class Ship(Set):
         self._all = set()
 
         if vector == Ship.Horizontal:
-            self._ship.update(set(x for x in range(bow, bow + size)))
+            self._ship.update(set((x, self.y) for x in range(self.x, self.x + size)))
         elif vector == Ship.Vertical:
-            assert (bow + (size - 1) * 10) < 100
-            self._ship.update(set(x for x in range(bow, (bow + size * 10), 10)))
+            self._ship.update(set((self.x, y) for y in range(self.y, self.y + size)))
+        #
+        # self._set_around_ship()
+        # self._set_all()
 
-        self._set_around_ship()
-        self._set_all()
+    @property
+    def x(self):
+        return self.bow[0]
+
+    @property
+    def y(self):
+        return self.bow[1]
 
     @property
     def ship(self):
@@ -68,12 +75,13 @@ class Ship(Set):
 
 
 if __name__ == '__main__':
-    ship = Ship(1, 2, Ship.Vertical)
+    ship = Ship((1, 1), 2, Ship.Vertical)
+    print(ship)
     # print(ship)
     # print(ship.bow)
     # print(len(ship))
     # print(ship.vector)
-    opt = ["bow", "vector", "size", "ship", "around", "all"]
-    for v in opt:
-        print("{} = {}".format(v, getattr(ship, v)))
+    # opt = ["bow", "vector", "size", "ship", "around", "all"]
+    # for v in opt:
+    #     print("{} = {}".format(v, getattr(ship, v)))
 

@@ -13,7 +13,6 @@ class Sea(set):
         super().__init__()
 
 
-
 def get_bow(size, vector):
     while True:
         b = random.choice(list(allow))

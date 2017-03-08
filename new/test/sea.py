@@ -6,10 +6,7 @@ class Sea(Set):
 
     def __init__(self, iterable):
 
-        self._seq = lst = set()
-        for value in iterable:
-            if value not in lst:
-                lst.add(value)
+        self._seq = set((x, y) for x in range(10) for y in range(10))
         self._allow = self._seq.copy()
         self._occupied = set()
 
@@ -20,6 +17,9 @@ class Sea(Set):
     @property
     def occupied(self):
         return self._occupied
+
+    # def __getitem__(self, item):
+    #     return list(self._seq)[item]
 
     def __contains__(self, item):
         return item in self._seq
@@ -38,17 +38,17 @@ class Sea(Set):
         return self._seq
 
     def update(self, ship):
-        self._occupied |= ship
-        self._allow -= ship
+        self._occupied.update(ship)
+        self._allow.difference_update(ship)
 
 
 
 if __name__ == '__main__':
 
+    from new.test.ship import Ship
+    sea = Sea((range(100)))
+    print(sea)
+    ship = Ship(1, 2, Ship.Horizontal)
+    print(ship)
+    # sea.update(ship)
 
-    sea = Sea((1, 2, 3))
-    ship = {1, 2}
-    sea.update(ship)
-
-    print(sea.allow)
-    print(sea.occupied)
