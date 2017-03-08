@@ -13,13 +13,14 @@ class Ship(Set):
         self._ship = set()
         self._around = set()
         self._all = set()
-
+        self.__mx = [-1, 1, -1, 0, 1, -1, 0, 1]
+        self.__my = [0, 0, -1, -1, -1, 1, 1, 1]
         if vector == Ship.Horizontal:
-            self._ship.update(set((x, self.y) for x in range(self.x, self.x + size)))
+            self._ship.update(set((self.y, x) for x in range(self.x, self.x + size)))
         elif vector == Ship.Vertical:
-            self._ship.update(set((self.x, y) for y in range(self.y, self.y + size)))
+            self._ship.update(set((y, self.x) for y in range(self.y, self.y + size)))
         #
-        # self._set_around_ship()
+        self._set_around_ship()
         # self._set_all()
 
     @property
@@ -59,25 +60,25 @@ class Ship(Set):
         return self._ship
 
     def _set_around_cell(self, cell):
-        m = [-1, 1, -10, 10, -11, -9, 9, 11]
-        a = set(cell + x for x in m)
-        return a
+        y, x = cell
+        return set((y + _y, x + _x) for _y, _x in zip(self.__my, self.__mx))
 
     def _set_around_ship(self):
         a = set()
-        for s in self._ship:
-            a.update(self._set_around_cell(s))
-        a -= self._ship
-        self._around.update(set(x for x in a if Ship.Max >= x >= Ship.Min))
+        for cell in self._ship:
+            a.update(self._set_around_cell(cell))
+        a.difference_update(self.ship)
+        self._around.update(a)
 
     def _set_all(self):
         self._all.update(self.ship.union(self.around))
 
 
 if __name__ == '__main__':
-    ship = Ship((1, 1), 2, Ship.Vertical)
+    ship = Ship((1, 1), 1, Ship.Vertical)
     print(ship)
-    # print(ship)
+    print(ship.around)
+    # print(ship.bow)
     # print(ship.bow)
     # print(len(ship))
     # print(ship.vector)

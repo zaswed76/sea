@@ -6,7 +6,7 @@ class Sea(Set):
 
     def __init__(self, iterable):
 
-        self._seq = set((x, y) for x in range(10) for y in range(10))
+        self._seq = set((y, x) for y in range(10) for x in range(10))
         self._allow = self._seq.copy()
         self._occupied = set()
 
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     from new.test.ship import Ship
     sea = Sea((range(100)))
     print(sea)
-    ship = Ship(1, 2, Ship.Horizontal)
+    ship = Ship((1, 1), 2, Ship.Horizontal)
     print(ship)
     # sea.update(ship)
 
