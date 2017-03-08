@@ -32,13 +32,26 @@ class Ship(Set):
         self._seq.add(other)
         return self._seq
 
-    def set_around(self):
-        pass
+    def _around_cell(self, cell):
+        m = [-1, 1, -10, 10, -11, -9, 9, 11]
+        a = set(cell + x for x in m)
+        return a
+
+    def around_ship(self):
+        a = set()
+        for s in self._seq:
+            a.update(self._around_cell(s))
+        a -= self._seq
+        return set(x for x in a if 100 > x > -1)
+
+
+
 
 
 if __name__ == '__main__':
-    ship = Ship(1, 3, Ship.Vertical)
-    print(ship)
-    print(ship.bow)
-    print(len(ship))
-    print(ship.vector)
+    ship = Ship(1, 2, Ship.Vertical)
+    # print(ship)
+    # print(ship.bow)
+    # print(len(ship))
+    # print(ship.vector)
+    print(ship.around_ship())
