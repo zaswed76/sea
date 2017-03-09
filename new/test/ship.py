@@ -21,7 +21,7 @@ class Ship(Set):
             self._ship.update(set((y, self.x) for y in range(self.y, self.y + size)))
         #
         self._set_around_ship()
-        # self._set_all()
+        self._set_all()
 
     @property
     def x(self):

@@ -4,8 +4,7 @@ from collections import Set, Sequence, MutableSet
 
 class Sea(Set):
 
-    def __init__(self, iterable):
-
+    def __init__(self):
         self._seq = set((y, x) for y in range(10) for x in range(10))
         self._allow = self._seq.copy()
         self._occupied = set()

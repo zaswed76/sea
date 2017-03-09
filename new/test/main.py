@@ -7,7 +7,7 @@ ship_names = [4]
 
 class Main:
     def __init__(self):
-        self.sea = sea.Sea(range(100))
+        self.sea = sea.Sea()
         self.fleet = fleet.Fleet()
 
         # self.create_fleet()
@@ -26,11 +26,12 @@ class Main:
         return cell
 
     def _check_ship(self, cell, vector, size):
+        y, x = cell
         if vector == ship.Ship.Horizontal:
-            for c in range(cell, cell + size):
+            for _y, _x in range(cell, cell + size):
                 if c not in self.sea.allow:
                     if c == cell + size-1:
-                    print(c)
+                        print(c)
                     return False
             else: return True
 
@@ -41,4 +42,4 @@ class Main:
 
 if __name__ == '__main__':
     mine = Main()
-    print(mine._check_ship(55, ship.Ship.Horizontal, 4))
+    print(mine._check_ship((5, 5), ship.Ship.Horizontal, 4))
