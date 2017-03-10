@@ -25,11 +25,11 @@ class Ship(Set):
 
     @property
     def x(self):
-        return self.bow[0]
+        return self.bow[1]
 
     @property
     def y(self):
-        return self.bow[1]
+        return self.bow[0]
 
     @property
     def ship(self):

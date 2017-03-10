@@ -1,22 +1,11 @@
 
 
-
-
-class Ship:
-
-
-    def __init__(self, x, y):
-        self.y = y
+class Cell:
+    def __init__(self, x):
         self.x = x
-        self.z = 4
+    def __repr__(self):
+        return "{}".format(self.x)
 
-    @classmethod
-    def set_get(cls):
-        cls.z = 5
-
-
-s1 = Ship(1, 2)
-s2 = Ship(3, 4)
-print(s1.z)
-s2.set_get()
-print(s1.z)
+a = [Cell(x) for x in range(5)]
+c = Cell(1)
+print(c in a)
