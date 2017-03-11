@@ -64,15 +64,15 @@ class Sea(UserDict):
         r = numpy.array([lst[i:i+10] for i in range(0,len(lst),10)])
         return str(r)
 
-
-
-
+    def create_ship(self, bow, size, vector):
+        pass
 
 
 
 if __name__ == '__main__':
     import pprint
     sea = Sea()
+    sea.create_ship(bow, size, vector)
     print(sea)
 
 
