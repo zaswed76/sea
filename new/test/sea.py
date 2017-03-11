@@ -1,13 +1,14 @@
 
-from collections import Set, Sequence, MutableSequence, Hashable, Container
+from collections import Set, Sequence, MutableSequence, Hashable, UserDict
+import numpy
 
 class Cell:
     Min = 0
     Max = 10
-    Empty = "empty"
-    Ship = "ship"
-    Wound = "wound"
-    Around = "around"
+    Empty = "0"
+    Ship = "8"
+    Wound = "x"
+    Around = "-"
     def __init__(self, y, x):
         assert (y < Cell.Max and x < Cell.Max) and (y >= Cell.Min and x >= Cell.Min)
         self.coord = (y, x)
@@ -21,7 +22,7 @@ class Cell:
         return hash((self.y, self.x))
 
     def __eq__(self, other):
-        if other.x == self.x and other.y == self.y:
+        if other[1] == self.x and other[0] == self.y:
             return True
         else:
             return False
@@ -30,7 +31,7 @@ class Cell:
         return self.coord[item]
 
     def __repr__(self):
-        return "({},{})".format(*self.coord)
+        return "Cell-({},{})".format(*self.coord)
 
     @property
     def vertical_allow(self):
@@ -53,47 +54,27 @@ class Cell:
     def horizontal_allow(self, cell):
         self._horizontal_allow = cell.x - self.x
 
-class Sea(Set):
-
+class Sea(UserDict):
     def __init__(self):
-        self._seq = set(Cell(y, x) for y in range(10) for x in range(10))
-        self._allow = self._seq.copy()
-        self._occupied = set()
+        super().__init__()
+        self.data.update({(y, x):Cell(y, x) for y in range(10) for x in range(10)})
 
-    @property
-    def allow(self):
-        return self._allow
+    def __str__(self):
+        lst = [x.status for x in self.data.values()]
+        r = numpy.array([lst[i:i+10] for i in range(0,len(lst),10)])
+        return str(r)
 
-    @property
-    def occupied(self):
-        return self._occupied
 
-    def __getitem__(self, item):
-        return list(self._seq)[item]
 
-    def __contains__(self, item):
-        return item in self._seq
 
-    def __iter__(self):
-        return iter(self._seq)
-
-    def __len__(self):
-        return len(self._seq)
-
-    def __repr__(self):
-        return "{}".format(self._seq)
-
-    def update(self, ship):
-        self._occupied.update(ship)
-        self._allow.difference_update(ship)
 
 
 
 if __name__ == '__main__':
-
-    from new.test.ship import Ship
+    import pprint
     sea = Sea()
     print(sea)
+
 
 
 

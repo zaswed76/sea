@@ -2,8 +2,8 @@ from collections import Set, Sequence, MutableSet
 
 
 class Ship(Set):
-    Max = 99
-    Min = 0
+    # Max = 99
+    # Min = 0
     Horizontal = "horizontal"
     Vertical = "vertical"
     def __init__(self, bow, size, vector):
@@ -43,6 +43,8 @@ class Ship(Set):
     def all(self):
         return self._all
 
+
+
     def __contains__(self, item):
         return item in self._ship
 
@@ -61,7 +63,17 @@ class Ship(Set):
 
     def _set_around_cell(self, cell):
         y, x = cell
-        return set((y + _y, x + _x) for _y, _x in zip(self.__my, self.__mx))
+        s = set()
+        for _y, _x in zip(self.__my, self.__mx):
+            ry = (y + _y)
+            rx = (x + _x)
+            if ry > 9 or ry < 0 or rx > 9 or rx < 0:
+                continue
+            else:
+                s.add((ry, rx))
+        return s
+
+
 
     def _set_around_ship(self):
         a = set()
@@ -72,6 +84,7 @@ class Ship(Set):
 
     def _set_all(self):
         self._all.update(self.ship.union(self.around))
+
 
 
 if __name__ == '__main__':

@@ -1,11 +1,7 @@
 
 
-class Cell:
-    def __init__(self, x):
-        self.x = x
-    def __repr__(self):
-        return "{}".format(self.x)
 
-a = [Cell(x) for x in range(5)]
-c = Cell(1)
-print(c in a)
+a = [1, 2, 3]
+b = [2, 3]
+
+print(a + b)
