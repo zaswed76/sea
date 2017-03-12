@@ -59,9 +59,11 @@ class Cell:
 class Ship(UserDict):
     Horizontal = "horizontal"
     Vertical = "vertical"
-    def __init__(self, ship):
+    def __init__(self, sea, bow, size):
         super().__init__()
-        self.data.update(ship)
+        self.sea = sea
+        y, x = bow
+        self.data.update({(y, x): sea[(y, x)] for x in range(x, x + size)})
         for k, c in self.data.items():
             c.status = Cell.Ship
 class Sea(UserDict):
@@ -75,11 +77,8 @@ class Sea(UserDict):
         return str(r)
 
     def create_ship(self, bow, size, vector):
-        y, x = bow
-        if vector == Ship.Horizontal:
-            return Ship({(y, x): self.data[(y, x)] for x in range(x, x + size)})
-        elif vector == Ship.Vertical:
-            return Ship({(y, x): self.data[(y, x)] for y in range(y, y + size)})
+        return Ship(self, bow, size)
+
 
 
 
