@@ -65,14 +65,19 @@ class Sea(UserDict):
         return str(r)
 
     def create_ship(self, bow, size, vector):
-        pass
+        y, x = bow
+        _ship = {}
+        for x in range(x, x + size):
+            _ship[(y, x)] = self.data[(y, x)]
+            _ship[(y, x)].status = Cell.Ship
+        return _ship
 
 
 
 if __name__ == '__main__':
     import pprint
     sea = Sea()
-    sea.create_ship(bow, size, vector)
+    ship = sea.create_ship((0, 0), 2, 1)
     print(sea)
 
 
