@@ -2,6 +2,8 @@
 from collections import Set, Sequence, MutableSequence, Hashable, UserDict
 import numpy
 
+
+
 class Cell:
     Min = 0
     Max = 10
@@ -54,6 +56,12 @@ class Cell:
     def horizontal_allow(self, cell):
         self._horizontal_allow = cell.x - self.x
 
+class Ship(UserDict):
+    def __init__(self, ship):
+        super().__init__()
+        self.data.update(ship)
+        for k, c in self.data.items():
+            c.status = Cell.Ship
 class Sea(UserDict):
     def __init__(self):
         super().__init__()
@@ -69,8 +77,8 @@ class Sea(UserDict):
         _ship = {}
         for x in range(x, x + size):
             _ship[(y, x)] = self.data[(y, x)]
-            _ship[(y, x)].status = Cell.Ship
-        return _ship
+        ship = Ship(_ship)
+        return ship
 
 
 

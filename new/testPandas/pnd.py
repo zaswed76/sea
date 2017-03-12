@@ -1,7 +1,14 @@
 
 
+from collections import UserDict
 
-a = [1, 2, 3]
-b = [2, 3]
 
-print(a + b)
+
+class Ship(UserDict):
+    def __init__(self, sea, bow):
+        super().__init__()
+
+        self.data[bow] = 5
+        self.data[bow+1] = sea[bow+1]
+
+

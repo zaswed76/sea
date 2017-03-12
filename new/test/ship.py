@@ -1,4 +1,4 @@
-from collections import Set, Sequence, MutableSet
+from collections import Set, UserDict
 
 
 class Ship(Set):
@@ -6,7 +6,7 @@ class Ship(Set):
     # Min = 0
     Horizontal = "horizontal"
     Vertical = "vertical"
-    def __init__(self, bow, size, vector):
+    def __init__(self, sea, bow, size, vector):
         self.vector = vector
         self.size = size
         self.bow = bow
