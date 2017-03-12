@@ -57,6 +57,8 @@ class Cell:
         self._horizontal_allow = cell.x - self.x
 
 class Ship(UserDict):
+    Horizontal = "horizontal"
+    Vertical = "vertical"
     def __init__(self, ship):
         super().__init__()
         self.data.update(ship)
@@ -74,18 +76,18 @@ class Sea(UserDict):
 
     def create_ship(self, bow, size, vector):
         y, x = bow
-        _ship = {}
-        for x in range(x, x + size):
-            _ship[(y, x)] = self.data[(y, x)]
-        ship = Ship(_ship)
-        return ship
+        if vector == Ship.Horizontal:
+            return Ship({(y, x): self.data[(y, x)] for x in range(x, x + size)})
+        elif vector == Ship.Vertical:
+            return Ship({(y, x): self.data[(y, x)] for y in range(y, y + size)})
+
+
 
 
 
 if __name__ == '__main__':
-    import pprint
     sea = Sea()
-    ship = sea.create_ship((0, 0), 2, 1)
+    ship = sea.create_ship((5, 5), 4, Ship.Vertical)
     print(sea)
 
 
