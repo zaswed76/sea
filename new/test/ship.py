@@ -26,6 +26,20 @@ class Ship(UserDict):
         self._set_around_ship()
         self._set_all()
         self._set_status()
+        self._update_sea_status()
+
+
+    def _top_cells(self):
+        print(sorted(list(self.around.keys())))
+        return {}
+
+    def _right_cells(self):
+        return {}
+
+
+    def _update_sea_status(self):
+        print("top", self._top_cells())
+        print("right", self._right_cells())
 
     def _set_status(self):
         for k, c in self.all.items():

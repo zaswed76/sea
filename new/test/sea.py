@@ -18,7 +18,9 @@ class Sea(UserDict):
             bow = random.choice(self._get_allow_field(vector, size))
             ship = self._create_ship(self, bow, size, vector)
             self.fleet.add_ship(ship)
-            self._update_status(ship)
+
+
+
 
     def _create_ship(self, sea,  bow, size, vector):
         return Ship(sea, bow, size, vector)
@@ -43,14 +45,15 @@ class Sea(UserDict):
         r = numpy.array([lst[i:i+10] for i in range(0,len(lst),10)])
         return str(r)
 
-    def _update_status(self, ship):
-        pass
+
 
 
 if __name__ == '__main__':
     sea = Sea()
-    sea.create_fleet()
+    sea._create_ship(sea, Cell(3, 3), 2, Ship.Horizontal)
     print(sea)
+    # sea.create_fleet()
+    # print(sea.fleet[0])
 
 
 
