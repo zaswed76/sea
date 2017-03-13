@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d2b38aa-ecb8-4b30-966e-3da2886ffa00" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/test/sea.py" afterPath="$PROJECT_DIR$/new/test/sea.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/test/ship.py" afterPath="$PROJECT_DIR$/new/test/ship.py" />
     </list>
     <ignored path="sea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -805,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489441085501</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="ship add  around">
+      <created>1489442070834</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1489442070834</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
