@@ -1,101 +1,48 @@
 from collections import Set, UserDict
+from new.test.cell import Cell
 
-
-class Ship(Set):
-    # Max = 99
-    # Min = 0
+class Ship(UserDict):
     Horizontal = "horizontal"
     Vertical = "vertical"
     def __init__(self, sea, bow, size, vector):
-        self.vector = vector
-        self.size = size
-        self.bow = bow
-        self._ship = set()
-        self._around = set()
-        self._all = set()
+        super().__init__()
+        self.sea = sea
+        self.ship = self.data
+        self.around = {}
+        self.all = {}
+        y, x = bow
+        if vector == Ship.Horizontal:
+            self.data.update({(y, x): sea[(y, x)] for x in range(x, x + size)})
+        elif vector == Ship.Vertical:
+            self.data.update({(y, x): sea[(y, x)] for y in range(y, y + size)})
+
         self.__mx = [-1, 1, -1, 0, 1, -1, 0, 1]
         self.__my = [0, 0, -1, -1, -1, 1, 1, 1]
-        if vector == Ship.Horizontal:
-            self._ship.update(set((self.y, x) for x in range(self.x, self.x + size)))
-        elif vector == Ship.Vertical:
-            self._ship.update(set((y, self.x) for y in range(self.y, self.y + size)))
-        #
+
         self._set_around_ship()
         self._set_all()
+        self._set_status()
 
-    @property
-    def x(self):
-        return self.bow[1]
+    def _set_status(self):
+        for k, c in self.all.items():
+            if k in self.ship:
+                c.status = Cell.Ship
+            elif k in self.around:
+                c.status = Cell.Around
 
-    @property
-    def y(self):
-        return self.bow[0]
-
-    @property
-    def ship(self):
-        return self._ship
-
-    @property
-    def around(self):
-        return self._around
-
-    @property
-    def all(self):
-        return self._all
-
-
-
-    def __contains__(self, item):
-        return item in self._ship
-
-    def __iter__(self):
-        return iter(self._ship)
-
-    def __len__(self):
-        return len(self._ship)
-
-    def __repr__(self):
-        return "{}".format(self._ship)
-
-    def __add__(self, other):
-        self._ship.add(other)
-        return self._ship
-
-    def _set_around_cell(self, cell):
+    def _get_around_cell(self, cell):
         y, x = cell
-        s = set()
-        for _y, _x in zip(self.__my, self.__mx):
-            ry = (y + _y)
-            rx = (x + _x)
-            if ry > 9 or ry < 0 or rx > 9 or rx < 0:
-                continue
-            else:
-                s.add((ry, rx))
-        return s
-
-
+        a = set(((y + _y), (x + _x)) for _y, _x in zip(self.__my, self.__mx))
+        return a
 
     def _set_around_ship(self):
-        a = set()
-        for cell in self._ship:
-            a.update(self._set_around_cell(cell))
-        a.difference_update(self.ship)
-        self._around.update(a)
+        for name in self.data:
+            around_cell = self._get_around_cell(name)
+            for k in around_cell:
+                if k in self.sea:
+                    if not k in self.ship:
+                        self.around[k] = self.sea[k]
 
     def _set_all(self):
-        self._all.update(self.ship.union(self.around))
-
-
-
-if __name__ == '__main__':
-    ship = Ship((1, 1), 4, Ship.Vertical)
-    print(ship)
-    print(ship.around)
-    # print(ship.bow)
-    # print(ship.bow)
-    # print(len(ship))
-    # print(ship.vector)
-    # opt = ["bow", "vector", "size", "ship", "around", "all"]
-    # for v in opt:
-    #     print("{} = {}".format(v, getattr(ship, v)))
-
+        self.all.update(self.ship)
+        self.all.update(self.around)
