@@ -16,19 +16,24 @@ class Sea(UserDict):
         for size in self.ship_sizes:
             vector = random.choice((Ship.Horizontal, Ship.Vertical))
             bow = random.choice(self._get_allow_field(vector, size))
-            ship = Ship(self, bow, size, vector)
+            ship = self._create_ship(self, bow, size, vector)
             self.fleet.add_ship(ship)
+            self._update_status(ship)
 
+    def _create_ship(self, sea,  bow, size, vector):
+        return Ship(sea, bow, size, vector)
 
     def _get_allow_field(self, vector, size):
         d = {}
         if vector == Ship.Horizontal:
             for k, cell in self.items():
-                if cell.horizontal_allow >= size:
+                if (cell.horizontal_allow >= size and
+                        cell.status == Cell.Empty):
                     d[k] = cell
         elif vector == Ship.Vertical:
             for k, cell in self.items():
-                if cell.vertical_allow >= size:
+                if (cell.vertical_allow >= size and
+                    cell.status == Cell.Empty):
                     d[k] = cell
         return list(d.values())
 
@@ -38,11 +43,8 @@ class Sea(UserDict):
         r = numpy.array([lst[i:i+10] for i in range(0,len(lst),10)])
         return str(r)
 
-    def create_ship(self, bow, size, vector):
-        return Ship(self, bow, size, vector)
-
-
-
+    def _update_status(self, ship):
+        pass
 
 
 if __name__ == '__main__':
