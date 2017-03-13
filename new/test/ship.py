@@ -49,7 +49,7 @@ class Ship(UserDict):
             for n in range(1, 4):
                 key = (y, _x - n)
                 if key in self.sea:
-                    self.sea[key].vertical_allow = self.sea[(y, _x)]
+                    self.sea[key].horizontal_allow = self.sea[(y, _x)]
 
 
     def _set_status(self):

@@ -8,7 +8,7 @@ from new.test.cell import Cell
 class Sea(UserDict):
     def __init__(self):
         super().__init__()
-        self.ship_sizes = [4, 4, 4, 4, 4, 4]
+        self.ship_sizes = [4, 4, 4, 4, 4, 4, 4, 4]
         self.data.update({(y, x):Cell(y, x) for y in range(10) for x in range(10)})
         self.fleet = Fleet()
 
