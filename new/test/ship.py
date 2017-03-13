@@ -30,16 +30,27 @@ class Ship(UserDict):
 
 
     def _top_cells(self):
-        print(sorted(list(self.around.keys())))
-        return {}
+        _y = self.bow[0] - 1
+        return [(y, x) for y, x in self.around.keys() if y == _y]
+
 
     def _right_cells(self):
-        return {}
+        _x = self.bow[1] - 1
+        return [(y, x) for y, x in self.around.keys() if x == _x]
 
 
     def _update_sea_status(self):
-        print("top", self._top_cells())
-        print("right", self._right_cells())
+        for _y, x in self._top_cells():
+            for n in range(1, 4):
+                key = (_y - n, x)
+                if key in self.sea:
+                    self.sea[key].vertical_allow = self.sea[(_y, x)]
+        for y, _x in self._right_cells():
+            for n in range(1, 4):
+                key = (y, _x - n)
+                if key in self.sea:
+                    self.sea[key].vertical_allow = self.sea[(y, _x)]
+
 
     def _set_status(self):
         for k, c in self.all.items():

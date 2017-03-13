@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5d2b38aa-ecb8-4b30-966e-3da2886ffa00" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/test/cell.py" afterPath="$PROJECT_DIR$/new/test/cell.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/test/sea.py" afterPath="$PROJECT_DIR$/new/test/sea.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new/test/ship.py" afterPath="$PROJECT_DIR$/new/test/ship.py" />
     </list>
@@ -24,7 +25,7 @@
     <SUITE FILE_PATH="coverage/sea$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1488464566458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea3/gui" />
     <SUITE FILE_PATH="coverage/sea$t1.coverage" NAME="t1 Coverage Results" MODIFIED="1488829113275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$ship.coverage" NAME="ship Coverage Results" MODIFIED="1489163092927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
-    <SUITE FILE_PATH="coverage/sea$sea.coverage" NAME="sea Coverage Results" MODIFIED="1489420322168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
+    <SUITE FILE_PATH="coverage/sea$sea.coverage" NAME="sea Coverage Results" MODIFIED="1489441025022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$main.coverage" NAME="main Coverage Results" MODIFIED="1489235171310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$sea__1_.coverage" NAME="sea (1) Coverage Results" MODIFIED="1488464949482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea2/scr" />
     <SUITE FILE_PATH="coverage/sea$seamodel.coverage" NAME="seamodel Coverage Results" MODIFIED="1461342975560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea2/exemple" />
@@ -55,15 +56,15 @@
       <file leaf-file-name="sea.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/new/test/sea.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+            <state relative-caret-position="69">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <element signature="e#209#370#0" expanded="true" />
-                <element signature="e#408#674#0" expanded="true" />
-                <element signature="e#740#775#0" expanded="true" />
-                <element signature="e#831#1297#0" expanded="true" />
-                <element signature="e#1331#1466#0" expanded="true" />
+                <element signature="e#209#385#0" expanded="true" />
+                <element signature="e#423#689#0" expanded="true" />
+                <element signature="e#755#790#0" expanded="true" />
+                <element signature="e#846#1312#0" expanded="true" />
+                <element signature="e#1346#1481#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,8 +73,8 @@
       <file leaf-file-name="cell.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new/test/cell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="23">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
               <folding>
                 <element signature="e#140#415#0" expanded="true" />
                 <element signature="e#449#478#0" expanded="true" />
@@ -92,18 +93,18 @@
       <file leaf-file-name="ship.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/new/test/ship.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="45" />
+            <state relative-caret-position="364">
+              <caret line="51" column="67" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
                 <element signature="e#204#870#0" expanded="true" />
-                <element signature="e#1002#1011#0" expanded="true" />
-                <element signature="e#1056#1131#0" expanded="true" />
-                <element signature="e#1168#1339#0" expanded="true" />
-                <element signature="e#1387#1493#0" expanded="true" />
-                <element signature="e#1535#1775#0" expanded="true" />
-                <element signature="e#1809#1872#0" expanded="true" />
-                <element signature="e#1905#2220#0" expanded="true" />
+                <element signature="e#907#993#0" expanded="true" />
+                <element signature="e#1032#1118#0" expanded="true" />
+                <element signature="e#1620#1791#0" expanded="true" />
+                <element signature="e#1839#1945#0" expanded="true" />
+                <element signature="e#1987#2227#0" expanded="true" />
+                <element signature="e#2261#2324#0" expanded="true" />
+                <element signature="e#2357#2672#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,8 +147,8 @@
         <option value="$PROJECT_DIR$/new/test/fleet.py" />
         <option value="$PROJECT_DIR$/new/test/main.py" />
         <option value="$PROJECT_DIR$/new/testPandas/pnd.py" />
-        <option value="$PROJECT_DIR$/new/test/cell.py" />
         <option value="$PROJECT_DIR$/new/test/ship.py" />
+        <option value="$PROJECT_DIR$/new/test/cell.py" />
         <option value="$PROJECT_DIR$/new/test/sea.py" />
       </list>
     </option>
@@ -792,7 +793,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489411724622</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="ship add  around">
+      <created>1489420334772</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1489420334772</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -804,9 +812,9 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1096" height="800" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18127961" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49881518" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.64810425" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19168027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19168027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22267537" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1135,10 +1143,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/new/test/ship.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="51" column="67" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#204#870#0" expanded="true" />
+            <element signature="e#907#993#0" expanded="true" />
+            <element signature="e#1032#1118#0" expanded="true" />
+            <element signature="e#1620#1791#0" expanded="true" />
+            <element signature="e#1839#1945#0" expanded="true" />
+            <element signature="e#1987#2227#0" expanded="true" />
+            <element signature="e#2261#2324#0" expanded="true" />
+            <element signature="e#2357#2672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/new/test/cell.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="23">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
           <folding>
             <element signature="e#140#415#0" expanded="true" />
             <element signature="e#449#478#0" expanded="true" />
@@ -1153,35 +1179,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/new/test/ship.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#204#870#0" expanded="true" />
-            <element signature="e#1002#1011#0" expanded="true" />
-            <element signature="e#1056#1131#0" expanded="true" />
-            <element signature="e#1168#1339#0" expanded="true" />
-            <element signature="e#1387#1493#0" expanded="true" />
-            <element signature="e#1535#1775#0" expanded="true" />
-            <element signature="e#1809#1872#0" expanded="true" />
-            <element signature="e#1905#2220#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/new/test/sea.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+        <state relative-caret-position="69">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <element signature="e#209#370#0" expanded="true" />
-            <element signature="e#408#674#0" expanded="true" />
-            <element signature="e#740#775#0" expanded="true" />
-            <element signature="e#831#1297#0" expanded="true" />
-            <element signature="e#1331#1466#0" expanded="true" />
+            <element signature="e#209#385#0" expanded="true" />
+            <element signature="e#423#689#0" expanded="true" />
+            <element signature="e#755#790#0" expanded="true" />
+            <element signature="e#846#1312#0" expanded="true" />
+            <element signature="e#1346#1481#0" expanded="true" />
           </folding>
         </state>
       </provider>

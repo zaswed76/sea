@@ -8,7 +8,7 @@ from new.test.cell import Cell
 class Sea(UserDict):
     def __init__(self):
         super().__init__()
-        self.ship_sizes = [4]
+        self.ship_sizes = [4, 4, 4, 4, 4, 4]
         self.data.update({(y, x):Cell(y, x) for y in range(10) for x in range(10)})
         self.fleet = Fleet()
 
@@ -50,9 +50,10 @@ class Sea(UserDict):
 
 if __name__ == '__main__':
     sea = Sea()
-    sea._create_ship(sea, Cell(3, 3), 2, Ship.Horizontal)
+    # sea._create_ship(sea, Cell(3, 3), 2, Ship.Horizontal)
+    # print(sea)
+    sea.create_fleet()
     print(sea)
-    # sea.create_fleet()
     # print(sea.fleet[0])
 
 
