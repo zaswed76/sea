@@ -16,8 +16,8 @@ class Sea(UserDict):
         for size in self.ship_sizes:
             vector = random.choice((Ship.Horizontal, Ship.Vertical))
             bow = random.choice(self._get_allow_field(vector, size))
-            print(bow)
-            print(vector)
+            ship = Ship(self, bow, size, vector)
+            self.fleet.add_ship(ship)
 
 
     def _get_allow_field(self, vector, size):
@@ -48,6 +48,7 @@ class Sea(UserDict):
 if __name__ == '__main__':
     sea = Sea()
     sea.create_fleet()
+    print(sea)
 
 
 

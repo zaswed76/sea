@@ -7,9 +7,13 @@ class Ship(UserDict):
     def __init__(self, sea, bow, size, vector):
         super().__init__()
         self.sea = sea
+        self.bow = bow
+        self.size = size
+        self.vector = vector
         self.ship = self.data
         self.around = {}
         self.all = {}
+
         y, x = bow
         if vector == Ship.Horizontal:
             self.data.update({(y, x): sea[(y, x)] for x in range(x, x + size)})
@@ -46,3 +50,9 @@ class Ship(UserDict):
     def _set_all(self):
         self.all.update(self.ship)
         self.all.update(self.around)
+
+    def __str__(self):
+        return "bow - {}\nvector - {}\nsize - {}\nship - {}".format(self.bow,
+                                                                    self.vector,
+                                                                    self.size,
+                                                                    self.ship.keys())
