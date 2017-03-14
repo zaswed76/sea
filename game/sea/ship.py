@@ -1,5 +1,5 @@
 from collections import Set, UserDict
-from new.test.cell import Cell
+from new.sea.cell import Cell
 
 class Ship(UserDict):
     Horizontal = "horizontal"

@@ -1,9 +1,9 @@
 import random
 from collections import UserDict
 import numpy
-from new.test.fleet import Fleet
-from new.test.ship import Ship
-from new.test.cell import Cell
+from new.sea.fleet import Fleet
+from new.sea.ship import Ship
+from new.sea.cell import Cell
 
 class Sea(UserDict):
     def __init__(self):

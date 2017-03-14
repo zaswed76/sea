@@ -1,0 +1,60 @@
+
+Main {
+    background-color: #e3e3e3;
+}
+
+View {
+    background-image: url("../resource/textures/grey/field.png");
+    border-right: none;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: none;
+}
+
+Field {
+    background-color: #b5b5b5;
+}
+
+QFrame#center_frame {
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    background-image: url("../resource/textures/grey/bg.jpg");
+}
+
+Tool {
+
+    background: #e4e4e4;
+    border: none;
+}
+
+QToolButton {
+    background-color: #0e84b5;
+    border: none;
+    margin-top: 10px;
+    margin-right: 2px ;
+    margin-bottom: 10px;
+    margin-left: 2px;
+
+}
+
+QToolButton:hover {
+    background: none;
+    border: 1px solid #6f7b8a;
+
+}
+
+
+Status {
+
+    background: #cecece;
+    border: none;
+    color: #4d4a4c;
+    font-family: "DejaVu Sans Mono";
+    font-size: 14pt;
+    font-weight: 400;
+}
+
+QMessageBox {
+    background: #d0d0d0;
+    font-family: Dialog;
+    font-size: 14pt;
+}
