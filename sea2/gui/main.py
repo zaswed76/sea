@@ -6,8 +6,8 @@ import sys
 
 from PyQt5 import QtWidgets
 
-from core import sea, game
-from gui import mainwidget
+from sea2.core import sea, game
+from sea2.gui import mainwidget
 from libs import config
 
 cfg_path = '../etc/config.json'

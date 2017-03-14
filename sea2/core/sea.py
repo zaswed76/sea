@@ -5,7 +5,7 @@
 import sys
 
 from PyQt5 import QtWidgets, QtGui, QtCore
-from core import seamodel as md
+from sea2.core import seamodel as md
 
 
 
