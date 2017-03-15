@@ -5,6 +5,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import QFile
 
 from game.gui import field
+from game.sea import sea
 
 class Main(QtWidgets.QMainWindow):
     def __init__(self,*args, **kwargs):
@@ -14,8 +15,12 @@ class Main(QtWidgets.QMainWindow):
         self.setCentralWidget(self.central)
         self.box = QtWidgets.QHBoxLayout(self.central)
 
-        self.field = field.Field("pc")
+        self.sea = sea.Sea()
+        # self.sea.create_fleet()
+        self.field = field.Field("pc", self.sea)
         self.box.addWidget(self.field)
+        self.field.update_sea()
+
 
 
     def load_style_sheet(self, sheetName):
@@ -29,6 +34,11 @@ class Main(QtWidgets.QMainWindow):
         styleSheet = file.readAll()
         styleSheet = str(styleSheet, encoding='utf8')
         QtWidgets.QApplication.instance().setStyleSheet(styleSheet)
+
+    def wheelEvent(self, event):
+        if event.angleDelta().y() / 120 > 0:
+            self.sea.create_fleet()
+            self.field.update_sea()
 
 
 if __name__ == '__main__':
