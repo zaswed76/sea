@@ -1,9 +1,9 @@
 import random
 from collections import UserDict
 import numpy
-from new.sea.fleet import Fleet
-from new.sea.ship import Ship
-from new.sea.cell import Cell
+from game.sea.fleet import Fleet
+from game.sea.ship import Ship
+from game.sea.cell import Cell
 
 class Sea(UserDict):
     def __init__(self):
@@ -18,9 +18,6 @@ class Sea(UserDict):
             bow = random.choice(self._get_allow_field(vector, size))
             ship = self._create_ship(self, bow, size, vector)
             self.fleet.add_ship(ship)
-
-
-
 
     def _create_ship(self, sea,  bow, size, vector):
         return Ship(sea, bow, size, vector)
@@ -50,11 +47,9 @@ class Sea(UserDict):
 
 if __name__ == '__main__':
     sea = Sea()
-    # sea._create_ship(sea, Cell(3, 3), 2, Ship.Horizontal)
-    # print(sea)
     sea.create_fleet()
     print(sea)
-    # print(sea.fleet[0])
+
 
 
 

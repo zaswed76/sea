@@ -10,11 +10,11 @@ class Main(QtWidgets.QMainWindow):
     def __init__(self,*args, **kwargs):
         super().__init__(*args, **kwargs)
         self.resize(500, 500)
-        self.central = QtWidgets.QFrame()
+        self.central = QtWidgets.QFrame(self)
         self.setCentralWidget(self.central)
         self.box = QtWidgets.QHBoxLayout(self.central)
 
-        self.field = field.Field()
+        self.field = field.Field("pc")
         self.box.addWidget(self.field)
 
 

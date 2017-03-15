@@ -15,31 +15,40 @@ Field {
     background-color: #b5b5b5;
 }
 
-QFrame#center_frame {
-    border: 1px solid rgba(0, 0, 0, 0.35);
+QFrame#pc {
+    border-top: none;
+    border-right: none;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
     background-image: url("../resource/textures/grey/bg.jpg");
 }
 
-Tool {
+/*Tool {*/
 
-    background: #e4e4e4;
-    border: none;
+    /*background: #e4e4e4;*/
+    /*border: none;*/
+/*}*/
+
+Cell {
+    background-color: #e0e0e0;
+    border-top: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: none;
+    border-left: none;
+
 }
 
-QToolButton {
-    background-color: #0e84b5;
-    border: none;
-    /*margin-top: 10px;*/
-    /*margin-right: 2px ;*/
-    /*margin-bottom: 10px;*/
-    /*margin-left: 2px;*/
+Cell:checked {
+    background-color: #6fe043;
+    border-top: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: none;
+    border-left: none;
 
 }
 
-QToolButton:hover {
+Cell:hover {
     background: none;
-    border: 1px solid #6f7b8a;
-
 }
 
 
