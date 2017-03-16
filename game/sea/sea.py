@@ -1,4 +1,5 @@
 import random
+import copy
 from collections import UserDict
 import numpy
 from game.sea.fleet import Fleet
@@ -10,9 +11,12 @@ class Sea(UserDict):
         super().__init__()
         self.ship_sizes = [4, 3, 3, 2, 2, 2, 1, 1, 1, 1]
         self.data.update({(y, x):Cell(y, x) for y in range(10) for x in range(10)})
+        self.data_copy = copy.deepcopy(self.data)
         self.fleet = Fleet()
 
     def create_fleet(self):
+        self.data.clear()
+        self.data.update({(y, x):Cell(y, x) for y in range(10) for x in range(10)})
         for size in self.ship_sizes:
             vector = random.choice((Ship.Horizontal, Ship.Vertical))
             bow = random.choice(self._get_allow_field(vector, size))
@@ -35,6 +39,10 @@ class Sea(UserDict):
                     cell.status == Cell.Empty):
                     d[k] = cell
         return list(d.values())
+
+    def clear(self):
+        for cell in self.data.values():
+            cell.status = Cell.Empty
 
 
     def __str__(self):

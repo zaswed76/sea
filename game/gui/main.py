@@ -38,6 +38,7 @@ class Main(QtWidgets.QMainWindow):
     def wheelEvent(self, event):
         if event.angleDelta().y() / 120 > 0:
             self.sea.create_fleet()
+            self.field.clear()
             self.field.update_sea()
 
 

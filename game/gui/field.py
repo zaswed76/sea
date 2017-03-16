@@ -32,10 +32,17 @@ class Field(QtWidgets.QFrame):
                 self.field[(y, x)].setText("{},{}".format(y, x))
                 self.grid.addWidget(self.field[(y, x)], y, x)
 
+    def clear(self):
+        for k, cell in self.sea.items():
+            self.field[k].setStyleSheet("background-color: lightgrey")
+
     def update_sea(self):
         for k, cell in self.sea.items():
             if cell.status == MCell.Ship:
-                self.field[k].setChecked(True)
+                self.field[k].setStyleSheet("background-color: green")
+            elif cell.status == MCell.Around:
+                self.field[k].setStyleSheet("background-color: grey")
+
 
 
 
