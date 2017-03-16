@@ -29,15 +29,17 @@ class Main(QtWidgets.QMainWindow):
         self.box = QtWidgets.QHBoxLayout(self.central)
         self.box.setSpacing(50)
 
-        self.pc_sea = sea.Sea()
-        self.field = field.Field("pc", self.pc_sea)
-        self.box.addWidget(self.field)
-        self.field.update_sea()
-
         self.user_sea = sea.Sea()
-        self.field = field.Field("user", self.user_sea)
-        self.box.addWidget(self.field)
-        self.field.update_sea()
+        self.user_field = field.Field(self, "user", self.user_sea)
+        self.box.insertWidget(0, self.user_field)
+        self.user_field.update_sea()
+
+        self.pc_sea = sea.Sea()
+        self.pc_field = field.Field(self, "pc", self.pc_sea)
+        self.box.insertWidget(1, self.pc_field)
+        self.pc_field.update_sea()
+
+
 
         tool_actions = self.tool_actions(icon_dir, actions_names)
         self.tool = tool.Tool(self, tool_actions)
@@ -66,12 +68,33 @@ class Main(QtWidgets.QMainWindow):
         return actions
 
     def action_method(self, name_action):
+        print(name_action, "!!!")
         name = name_action.split('_')[0]
         if name == 'style':
             arg = name_action.split('_')[1]
             getattr(self, 'set_' + name)(arg)
         else:
-            getattr(self, name_action)()
+
+            try:
+                getattr(self, name_action)()
+            except AttributeError as err:
+                print(err)
+
+    def new_game(self):
+        self.pc_sea.create_fleet()
+        self.pc_field.clear()
+        self.pc_field.update_sea()
+
+    def auto_fleet_user(self):
+
+        """
+        очистить поле игрока
+        """
+        self.user_field.clear()
+        # self.user_field.update_sea()
+
+    def close_scr(self):
+        self.close()
 
     def init_tool_bar(self, tool_bar):
         self.addToolBar(tool_bar)

@@ -2,62 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d2b38aa-ecb8-4b30-966e-3da2886ffa00" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/field.psd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/icons/auto_fleet_user.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/icons/close2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/icons/close_scr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/icons/new_game.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/icons/settings.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/icons/style_grey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/icons/style_writer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/back2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/graphics/1_horizontal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/graphics/1_vertical.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/graphics/2_horizontal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/graphics/2_vertical.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/graphics/3_horizontal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/graphics/3_vertical.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/graphics/4_horizontal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/graphics/4_vertical.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/graphics/field.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/graphics/shot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/graphics/wounded.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/graphics/Без имени-1.psd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/grey/1_horizontal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/grey/1_vertical.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/grey/2_horizontal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/grey/2_vertical.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/grey/3_horizontal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/grey/3_vertical.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/grey/4_horizontal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/grey/4_vertical.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/grey/field.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/grey/karta.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/grey/shot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/grey/wounded.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/kid/1_v.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/kid/2_h.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/kid/2_v.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/kid/3_h.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/kid/3_v.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/kid/4_h.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/kid/4_v.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/kid/field.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/kid/main.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/kid/sea.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/kid/shot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/kid/wounded.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/ship.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/ship2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/shoot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/wounded.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/wrirter/more.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/textures/www.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/gui/tool.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game/resource/icons/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/css/grey.css" afterPath="$PROJECT_DIR$/game/css/grey.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/gui/field.py" afterPath="$PROJECT_DIR$/game/gui/field.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/gui/main.py" afterPath="$PROJECT_DIR$/game/gui/main.py" />
     </list>
@@ -81,7 +26,7 @@
     <SUITE FILE_PATH="coverage/sea$ship.coverage" NAME="ship Coverage Results" MODIFIED="1489163092927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$fleet.coverage" NAME="fleet Coverage Results" MODIFIED="1488890154271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$t1.coverage" NAME="t1 Coverage Results" MODIFIED="1488829113275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
-    <SUITE FILE_PATH="coverage/sea$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1489667447678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/gui" />
+    <SUITE FILE_PATH="coverage/sea$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1489680345128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/gui" />
     <SUITE FILE_PATH="coverage/sea$cell.coverage" NAME="cell Coverage Results" MODIFIED="1489141030127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$sea.coverage" NAME="sea Coverage Results" MODIFIED="1489606600967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$seamodel.coverage" NAME="seamodel Coverage Results" MODIFIED="1461342975560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea2/exemple" />
@@ -99,7 +44,7 @@
       <file leaf-file-name="sea.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/sea/sea.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="391">
               <caret line="18" column="83" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -116,31 +61,11 @@
       <file leaf-file-name="cell.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/sea/cell.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="437">
               <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
               <folding>
                 <element signature="e#140#415#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/old/sea2/gui/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -169,47 +94,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tool.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/game/gui/tool.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-              <folding>
-                <element signature="e#1#11#0" expanded="true" />
-                <element signature="e#134#218#0" expanded="true" />
-                <element signature="e#301#326#0" expanded="true" />
-                <element signature="e#402#598#0" expanded="true" />
-                <element signature="e#705#811#0" expanded="true" />
-                <element signature="e#858#1091#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game/gui/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+            <state relative-caret-position="294">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#503#1216#0" expanded="true" />
-                <element signature="e#1271#2138#0" expanded="true" />
-                <element signature="e#2190#2395#0" expanded="true" />
-                <element signature="e#2444#2469#0" expanded="true" />
-                <element signature="e#2522#2861#0" expanded="true" />
-                <element signature="e#2904#3046#0" expanded="true" />
+                <element signature="e#1321#2188#0" expanded="true" />
+                <element signature="e#2240#2570#0" expanded="true" />
+                <element signature="e#2604#2695#0" expanded="true" />
+                <element signature="e#2737#2852#0" expanded="true" />
+                <element signature="e#2887#2899#0" expanded="true" />
+                <element signature="e#2948#2973#0" expanded="true" />
+                <element signature="e#3026#3365#0" expanded="true" />
+                <element signature="e#3408#3550#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/old/sea/etc/config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="10" selection-end-column="6" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -217,14 +117,15 @@
       <file leaf-file-name="field.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/gui/field.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="240">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="19" />
               <folding>
                 <element signature="e#2#12#0" expanded="true" />
-                <element signature="e#165#439#0" expanded="true" />
-                <element signature="e#711#1064#0" expanded="true" />
-                <element signature="e#1095#1198#0" expanded="true" />
-                <element signature="e#1234#1499#0" expanded="true" />
+                <element signature="e#162#454#0" expanded="true" />
+                <element signature="e#763#1190#0" expanded="true" />
+                <element signature="e#1226#1269#0" expanded="true" />
+                <element signature="e#1300#1401#0" expanded="true" />
+                <element signature="e#1437#1702#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -233,7 +134,7 @@
       <file leaf-file-name="grey.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/css/grey.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
+            <state relative-caret-position="525">
               <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
@@ -288,9 +189,9 @@
         <option value="$PROJECT_DIR$/game/test.py" />
         <option value="$PROJECT_DIR$/game/sea/cell.py" />
         <option value="$PROJECT_DIR$/game/sea/sea.py" />
-        <option value="$PROJECT_DIR$/game/gui/field.py" />
         <option value="$PROJECT_DIR$/game/css/grey.css" />
         <option value="$PROJECT_DIR$/game/gui/tool.py" />
+        <option value="$PROJECT_DIR$/game/gui/field.py" />
         <option value="$PROJECT_DIR$/game/gui/main.py" />
       </list>
     </option>
@@ -1022,26 +923,33 @@
       <option name="project" value="LOCAL" />
       <updated>1489643382023</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="ship add  around">
+      <created>1489667499468</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1489667499468</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1980728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1980728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18127961" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30131003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3023001" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22267537" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3995633" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1096" height="800" />
@@ -1082,7 +990,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sea2/exemple/seamodel.py" />
     <entry file="file://$PROJECT_DIR$/old/sea2/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1245,7 +1152,7 @@
         <state relative-caret-position="48">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1259,19 +1166,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/sea/cell.py">
+    <entry file="file://$PROJECT_DIR$/game/resource/textures/wounded.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.1/system/python_stubs/-2110857978/PyQt5/QtWidgets/QBoxLayout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        <state relative-caret-position="202">
+          <caret line="104" column="8" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="8" />
           <folding>
-            <element signature="e#140#415#0" expanded="true" />
+            <element signature="e#3898#4023#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/sea/sea.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="391">
           <caret line="18" column="83" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -1284,46 +1196,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/gui/field.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding>
-            <element signature="e#2#12#0" expanded="true" />
-            <element signature="e#165#439#0" expanded="true" />
-            <element signature="e#711#1064#0" expanded="true" />
-            <element signature="e#1095#1198#0" expanded="true" />
-            <element signature="e#1234#1499#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game/css/grey.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
+        <state relative-caret-position="525">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/gui/tool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-          <folding>
-            <element signature="e#1#11#0" expanded="true" />
-            <element signature="e#134#218#0" expanded="true" />
-            <element signature="e#301#326#0" expanded="true" />
-            <element signature="e#402#598#0" expanded="true" />
-            <element signature="e#705#811#0" expanded="true" />
-            <element signature="e#858#1091#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/game/resource/textures/wounded.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/old/sea/etc/config.json">
@@ -1334,11 +1212,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/old/sea2/gui/main.py">
+    <entry file="file://$PROJECT_DIR$/game/gui/tool.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="48">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+          <folding>
+            <element signature="e#1#11#0" expanded="false" />
+            <element signature="e#134#218#0" expanded="false" />
+            <element signature="e#301#326#0" expanded="false" />
+            <element signature="e#402#598#0" expanded="false" />
+            <element signature="e#705#811#0" expanded="false" />
+            <element signature="e#858#1091#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1364,18 +1249,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/old/sea2/gui/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="96" column="23" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
+          <folding>
+            <element signature="e#302#1695#0" expanded="false" />
+            <element signature="e#2600#2657#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/sea/cell.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding>
+            <element signature="e#140#415#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/gui/field.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#2#12#0" expanded="true" />
+            <element signature="e#162#454#0" expanded="true" />
+            <element signature="e#763#1190#0" expanded="true" />
+            <element signature="e#1226#1269#0" expanded="true" />
+            <element signature="e#1300#1401#0" expanded="true" />
+            <element signature="e#1437#1702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+        <state relative-caret-position="294">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#503#1216#0" expanded="true" />
-            <element signature="e#1271#2138#0" expanded="true" />
-            <element signature="e#2190#2395#0" expanded="true" />
-            <element signature="e#2444#2469#0" expanded="true" />
-            <element signature="e#2522#2861#0" expanded="true" />
-            <element signature="e#2904#3046#0" expanded="true" />
+            <element signature="e#1321#2188#0" expanded="true" />
+            <element signature="e#2240#2570#0" expanded="true" />
+            <element signature="e#2604#2695#0" expanded="true" />
+            <element signature="e#2737#2852#0" expanded="true" />
+            <element signature="e#2887#2899#0" expanded="true" />
+            <element signature="e#2948#2973#0" expanded="true" />
+            <element signature="e#3026#3365#0" expanded="true" />
+            <element signature="e#3408#3550#0" expanded="true" />
           </folding>
         </state>
       </provider>
