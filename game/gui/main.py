@@ -1,27 +1,80 @@
-
-
+import os
 import sys
-from PyQt5 import QtWidgets
+from functools import partial
+
+from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import QFile
 
-from game.gui import field
+from game.gui import field, tool
 from game.sea import sea
 
+actions_names = [
+    "new_game.png",
+    "auto_fleet_user.png",
+    "settings.png",
+    "SPACER",
+    "style_grey.png",
+    "style_writer.png",
+    "close_scr.png"
+]
+
+icon_dir = r"D:\0SYNC\python_projects\workshop\sea\game\resource\icons"
+
 class Main(QtWidgets.QMainWindow):
-    def __init__(self,*args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.resize(500, 500)
         self.central = QtWidgets.QFrame(self)
         self.setCentralWidget(self.central)
         self.box = QtWidgets.QHBoxLayout(self.central)
+        self.box.setSpacing(50)
 
-        self.sea = sea.Sea()
-        # self.sea.create_fleet()
-        self.field = field.Field("pc", self.sea)
+        self.pc_sea = sea.Sea()
+        self.field = field.Field("pc", self.pc_sea)
         self.box.addWidget(self.field)
         self.field.update_sea()
 
+        self.user_sea = sea.Sea()
+        self.field = field.Field("user", self.user_sea)
+        self.box.addWidget(self.field)
+        self.field.update_sea()
 
+        tool_actions = self.tool_actions(icon_dir, actions_names)
+        self.tool = tool.Tool(self, tool_actions)
+        self.init_tool_bar(self.tool)
+
+    def tool_actions(self, icon_dir, names):
+        actions = []
+        for name in names:
+            if name == tool.Tool.SPACER:
+                spacer = tool.Spacer(0, 0)
+                actions.append(spacer)
+            else:
+                name_not_ext = os.path.splitext(name)[0]
+                pth = os.path.join(icon_dir, name)
+                if not os.path.isfile(pth):
+                    print('иконка с именем - {} не найдена'.format(pth))
+                    act = tool.BtnAction(name_not_ext)
+                    act.clicked.connect(
+                        partial(self.action_method, name_not_ext))
+                else:
+                    icon = QtGui.QIcon(pth)
+                    act = tool.Action(icon, name_not_ext, self)
+                    act.triggered.connect(
+                        partial(self.action_method, name_not_ext))
+                actions.append(act)
+        return actions
+
+    def action_method(self, name_action):
+        name = name_action.split('_')[0]
+        if name == 'style':
+            arg = name_action.split('_')[1]
+            getattr(self, 'set_' + name)(arg)
+        else:
+            getattr(self, name_action)()
+
+    def init_tool_bar(self, tool_bar):
+        self.addToolBar(tool_bar)
 
     def load_style_sheet(self, sheetName):
         """
@@ -37,7 +90,7 @@ class Main(QtWidgets.QMainWindow):
 
     def wheelEvent(self, event):
         if event.angleDelta().y() / 120 > 0:
-            self.sea.create_fleet()
+            self.pc_sea.create_fleet()
             self.field.clear()
             self.field.update_sea()
 

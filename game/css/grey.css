@@ -23,6 +23,14 @@ QFrame#pc {
     background-image: url("../resource/textures/grey/bg.jpg");
 }
 
+QFrame#user {
+    border-top: none;
+    border-right: none;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-image: url("../resource/textures/grey/bg.jpg");
+}
+
 /*Tool {*/
 
     /*background: #e4e4e4;*/
