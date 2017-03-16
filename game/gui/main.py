@@ -50,6 +50,7 @@ class Main(QtWidgets.QMainWindow):
         for name in names:
             if name == tool.Tool.SPACER:
                 spacer = tool.Spacer(0, 0)
+
                 actions.append(spacer)
             else:
                 name_not_ext = os.path.splitext(name)[0]
