@@ -1,23 +1,32 @@
 import sys
 from PyQt5 import QtWidgets, QtGui, QtCore
 from game.sea.ship import Cell as MCell
+from game.sea.ship import Ship
 
+ACTIONS_NAMES = {'4v': (4, Ship.Vertical),
+                               '4>': (4, Ship.Horizontal),
+                               '3v': (4, Ship.Vertical),
+                               '3>': (4, Ship.Horizontal),
+                               '2v': (4, Ship.Vertical),
+                               '2>': (4, Ship.Horizontal),
+                               '1': (4, Ship.Vertical)}
 
 class Cell(QtWidgets.QPushButton):
     def __init__(self, parent, name):
         super().__init__()
         self.parent = parent
         self.name = name
+        self.status = MCell.Empty
         policy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding,
                                        QtWidgets.QSizePolicy.Expanding)
         self.setSizePolicy(policy)
         # self.setCheckable(True)
-        self._actions_names = ['4v', '4>', '3v', '3>', '2v', '2>', '1']
+
         self.actions = [QtWidgets.QAction(n) for n in
-                        ('4v', '4>', '3v', '3>', '2v', '2>', '1')]
+                        ACTIONS_NAMES.keys()]
 
     def action_method(self, a):
-        self.parent.create_ship(self.name, a.text())
+        self.parent.create_ship(self.name, ACTIONS_NAMES[a.text()])
 
     def contextMenuEvent(self, event):
         menu = QtWidgets.QMenu(self)
@@ -66,14 +75,15 @@ class Field(QtWidgets.QFrame):
             self.field[k].setStyleSheet("background-color: #e3e3e3")
 
     def update_sea(self):
+        print(self.sea)
         for k, cell in self.sea.items():
             if cell.status == MCell.Ship:
                 self.field[k].setStyleSheet("background-color: green")
                 # elif cell.status == MCell.Around:
                 #     self.field[k].setStyleSheet("background-color: grey")
 
-    def create_ship(self, bow, obj):
-        self.parent.create_ship(bow, 4, "horizontal")
+    def create_ship(self, bow, ship_name):
+        self.parent.create_ship(bow, ship_name)
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)

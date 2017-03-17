@@ -44,6 +44,11 @@ class Sea(UserDict):
         for cell in self.data.values():
             cell.status = Cell.Empty
 
+    def create_ship(self, bow, ship_name):
+        size = ship_name[0]
+        vector = ship_name[1]
+        self._create_ship(self, bow, size, vector)
+
 
     def __str__(self):
         lst = [x.status for x in self.data.values()]

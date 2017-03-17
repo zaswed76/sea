@@ -45,8 +45,10 @@ class Main(QtWidgets.QMainWindow):
         self.tool = tool.Tool(self, tool_actions)
         self.init_tool_bar(self.tool)
 
-    def create_ship(self, bow, size, vector):
-        print(bow, size, vector)
+    def create_ship(self, bow, ship_name):
+        self.user_sea.create_ship(bow, ship_name)
+        self.user_field.update_sea()
+
 
     def tool_actions(self, icon_dir, names):
         actions = []
