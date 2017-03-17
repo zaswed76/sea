@@ -19,6 +19,8 @@ class Cell(QtWidgets.QPushButton):
         self.parent = parent
         self.name = name
         self.status = MCell.Empty
+        self.vertical_allow = Cell.Max - self.y
+        self.horizontal_allow = Cell.Max - self.x
         policy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding,
                                        QtWidgets.QSizePolicy.Expanding)
         self.setSizePolicy(policy)
@@ -31,19 +33,22 @@ class Cell(QtWidgets.QPushButton):
         self.parent.create_ship(self.name, ACTIONS_NAMES[a.text()])
 
     def contextMenuEvent(self, event):
-        menu = QtWidgets.QMenu(self)
-        menu.addActions(self.actions)
-        menu.triggered[QtWidgets.QAction].connect(self.action_method)
-        menu.exec_(self.mapToGlobal(event.pos()))
+        if self.status == MCell.Empty:
+            menu = QtWidgets.QMenu(self)
+            menu.addActions(self.actions)
+            menu.triggered[QtWidgets.QAction].connect(self.action_method)
+            menu.exec_(self.mapToGlobal(event.pos()))
 
-        # def enterEvent(self, event):
-        #     self.setStyleSheet("border: 3px solid #59c863;")
-        #
-        # def leaveEvent(self, event):
-        #     self.setStyleSheet("""border-top: 1px solid gray;
-        #                           border-right: 1px solid gray;
-        #                           border-bottom: none;
-        #                           border-left: none;""")
+    def enterEvent(self, event):
+        if self.status == MCell.Empty:
+            self.setStyleSheet("border: 3px solid #59c863;")
+
+    def leaveEvent(self, event):
+        if self.status == MCell.Empty:
+            self.setStyleSheet("""border-top: 1px solid gray;
+                                  border-right: 1px solid gray;
+                                  border-bottom: none;
+                                  border-left: none;""")
 
 
 class Field(QtWidgets.QFrame):
@@ -80,8 +85,9 @@ class Field(QtWidgets.QFrame):
         for k, cell in self.sea.items():
             if cell.status == MCell.Ship:
                 self.field[k].setStyleSheet("background-color: green")
-                # elif cell.status == MCell.Around:
-                #     self.field[k].setStyleSheet("background-color: grey")
+                self.field[k].status = MCell.Ship
+            elif cell.status == MCell.Around:
+                self.field[k].status = MCell.Around
 
     def create_ship(self, bow, ship_name):
         self.parent.create_ship(bow, ship_name)
