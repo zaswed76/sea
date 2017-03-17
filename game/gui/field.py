@@ -3,13 +3,15 @@ from PyQt5 import QtWidgets, QtGui, QtCore
 from game.sea.ship import Cell as MCell
 from game.sea.ship import Ship
 
-ACTIONS_NAMES = {'4v': (4, Ship.Vertical),
-                               '4>': (4, Ship.Horizontal),
-                               '3v': (4, Ship.Vertical),
-                               '3>': (4, Ship.Horizontal),
-                               '2v': (4, Ship.Vertical),
-                               '2>': (4, Ship.Horizontal),
-                               '1': (4, Ship.Vertical)}
+ACTIONS_NAMES = {
+    '4v': (4, Ship.Vertical),
+    '4>': (4, Ship.Horizontal),
+    '3v': (3, Ship.Vertical),
+    '3>': (3, Ship.Horizontal),
+    '2v': (2, Ship.Vertical),
+    '2>': (2, Ship.Horizontal),
+    '1': (1, Ship.Vertical)}
+
 
 class Cell(QtWidgets.QPushButton):
     def __init__(self, parent, name):
@@ -34,15 +36,14 @@ class Cell(QtWidgets.QPushButton):
         menu.triggered[QtWidgets.QAction].connect(self.action_method)
         menu.exec_(self.mapToGlobal(event.pos()))
 
-    def enterEvent(self, event):
-        self.setStyleSheet("border: 3px solid #59c863;")
-
-    def leaveEvent(self, event):
-        self.setStyleSheet("""border-top: 1px solid gray;
-                              border-right: 1px solid gray;
-                              border-bottom: none;
-                              border-left: none;""")
-
+        # def enterEvent(self, event):
+        #     self.setStyleSheet("border: 3px solid #59c863;")
+        #
+        # def leaveEvent(self, event):
+        #     self.setStyleSheet("""border-top: 1px solid gray;
+        #                           border-right: 1px solid gray;
+        #                           border-bottom: none;
+        #                           border-left: none;""")
 
 
 class Field(QtWidgets.QFrame):
@@ -84,6 +85,7 @@ class Field(QtWidgets.QFrame):
 
     def create_ship(self, bow, ship_name):
         self.parent.create_ship(bow, ship_name)
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)

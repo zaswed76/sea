@@ -46,6 +46,7 @@ class Sea(UserDict):
 
     def create_ship(self, bow, ship_name):
         size = ship_name[0]
+        print(size)
         vector = ship_name[1]
         self._create_ship(self, bow, size, vector)
 
