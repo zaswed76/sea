@@ -1,18 +1,39 @@
-
-
 import sys
-from PyQt5 import QtWidgets, QtGui
+from PyQt5 import QtWidgets, QtGui, QtCore
 from game.sea.ship import Cell as MCell
 
-class Cell(QtWidgets.QToolButton):
+
+class Cell(QtWidgets.QPushButton):
     def __init__(self, name):
         super().__init__()
         self.name = name
         policy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding,
                                        QtWidgets.QSizePolicy.Expanding)
         self.setSizePolicy(policy)
-        self.setCheckable(True)
-        # self.setFixedSize(100, 100)
+        # self.setCheckable(True)
+        self._actions_names = ['4v', '4>', '3v', '3>', '2v', '2>', '1']
+        self.actions = [QtWidgets.QAction(n) for n in
+                        ('4v', '4>', '3v', '3>', '2v', '2>', '1')]
+
+    def action_method(self, a):
+        print(a.text())
+
+    def contextMenuEvent(self, event):
+        menu = QtWidgets.QMenu(self)
+        menu.addActions(self.actions)
+        menu.triggered[QtWidgets.QAction].connect(self.action_method)
+        menu.exec_(self.mapToGlobal(event.pos()))
+
+    def enterEvent(self, event):
+        self.setStyleSheet("border: 3px solid #59c863;")
+
+    def leaveEvent(self, event):
+        self.setStyleSheet("""border-top: 1px solid gray;
+                              border-right: 1px solid gray;
+                              border-bottom: none;
+                              border-left: none;""")
+
+
 
 class Field(QtWidgets.QFrame):
     def __init__(self, parent, name, sea):
@@ -47,10 +68,8 @@ class Field(QtWidgets.QFrame):
         for k, cell in self.sea.items():
             if cell.status == MCell.Ship:
                 self.field[k].setStyleSheet("background-color: green")
-            # elif cell.status == MCell.Around:
-            #     self.field[k].setStyleSheet("background-color: grey")
-
-
+                # elif cell.status == MCell.Around:
+                #     self.field[k].setStyleSheet("background-color: grey")
 
 
 if __name__ == '__main__':

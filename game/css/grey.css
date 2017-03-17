@@ -46,18 +46,18 @@ Cell {
 
 }
 
-Cell:checked {
-    background-color: #6fe043;
-    border-top: 1px solid gray;
-    border-right: 1px solid gray;
-    border-bottom: none;
-    border-left: none;
+/*Cell:checked {*/
+    /*background-color: #6fe043;*/
+    /*border-top: 1px solid gray;*/
+    /*border-right: 1px solid gray;*/
+    /*border-bottom: none;*/
+    /*border-left: none;*/
 
-}
+/*}*/
 
-Cell:hover {
-    background: none;
-}
+/*Cell:hover {*/
+    /*border: 3px solid #59c863;*/
+/*}*/
 
 
 Status {

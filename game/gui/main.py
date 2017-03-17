@@ -18,7 +18,7 @@ actions_names = [
     "close_scr.png"
 ]
 
-icon_dir = r"D:\0SYNC\python_projects\workshop\sea\game\resource\icons"
+icon_dir = "../resource/icons"
 
 class Main(QtWidgets.QMainWindow):
     def __init__(self, *args, **kwargs):
