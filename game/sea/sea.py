@@ -10,13 +10,13 @@ class Sea(UserDict):
     def __init__(self):
         super().__init__()
         self.ship_sizes = [4, 3, 3, 2, 2, 2, 1, 1, 1, 1]
-        self.data.update({(y, x):Cell(y, x) for y in range(10) for x in range(10)})
+        self.data.update({(y, x):Cell(self, y=y, x=x) for y in range(10) for x in range(10)})
         self.data_copy = copy.deepcopy(self.data)
         self.fleet = Fleet()
 
     def create_fleet(self):
         self.data.clear()
-        self.data.update({(y, x):Cell(y, x) for y in range(10) for x in range(10)})
+        self.data.update({(y, x):Cell(self, y=y, x=x) for y in range(10) for x in range(10)})
         for size in self.ship_sizes:
             vector = random.choice((Ship.Horizontal, Ship.Vertical))
             bow = random.choice(self._get_allow_field(vector, size))

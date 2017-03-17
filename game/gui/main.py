@@ -96,8 +96,9 @@ class Main(QtWidgets.QMainWindow):
         """
         очистить поле игрока
         """
+        self.user_sea.clear()
         self.user_field.clear()
-        # self.user_field.update_sea()
+        self.user_field.update_sea()
 
     def close_scr(self):
         self.close()

@@ -6,7 +6,7 @@ class Cell:
     Ship = "8"
     Wound = "X"
     Around = "*"
-    def __init__(self, y, x):
+    def __init__(self, parent, y=None, x=None):
         assert (y < Cell.Max and x < Cell.Max) and (y >= Cell.Min and x >= Cell.Min)
         self.coord = (y, x)
         self.x = x
