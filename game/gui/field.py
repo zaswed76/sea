@@ -18,9 +18,8 @@ class Cell(QtWidgets.QPushButton):
         super().__init__()
         self.parent = parent
         self.name = name
+        self.y, self.x = name
         self.status = MCell.Empty
-        self.vertical_allow = Cell.Max - self.y
-        self.horizontal_allow = Cell.Max - self.x
         policy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding,
                                        QtWidgets.QSizePolicy.Expanding)
         self.setSizePolicy(policy)
