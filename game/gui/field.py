@@ -4,8 +4,9 @@ from game.sea.ship import Cell as MCell
 
 
 class Cell(QtWidgets.QPushButton):
-    def __init__(self, name):
+    def __init__(self, parent, name):
         super().__init__()
+        self.parent = parent
         self.name = name
         policy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding,
                                        QtWidgets.QSizePolicy.Expanding)
@@ -16,7 +17,7 @@ class Cell(QtWidgets.QPushButton):
                         ('4v', '4>', '3v', '3>', '2v', '2>', '1')]
 
     def action_method(self, a):
-        print(a.text())
+        self.parent.create_ship(self.name, a.text())
 
     def contextMenuEvent(self, event):
         menu = QtWidgets.QMenu(self)
@@ -51,7 +52,7 @@ class Field(QtWidgets.QFrame):
         self.grid.setContentsMargins(0, 0, 0, 0)
         for y in range(10):
             for x in range(10):
-                self.field[(y, x)] = Cell((y, x))
+                self.field[(y, x)] = Cell(self, (y, x))
                 self.field[(y, x)].clicked.connect(self.click_cell)
                 # self.field[(y, x)].setText("{},{}".format(y, x))
                 self.grid.addWidget(self.field[(y, x)], y, x)
@@ -71,6 +72,8 @@ class Field(QtWidgets.QFrame):
                 # elif cell.status == MCell.Around:
                 #     self.field[k].setStyleSheet("background-color: grey")
 
+    def create_ship(self, bow, obj):
+        self.parent.create_ship(bow, 4, "horizontal")
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
