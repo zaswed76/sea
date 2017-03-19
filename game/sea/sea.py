@@ -51,8 +51,8 @@ class Sea(UserDict):
             return
         elif vector == Ship.Horizontal and  size > self[bow].horizontal_allow:
             return
-        self._create_ship(self, bow, size, vector)
-
+        ship = self._create_ship(self, bow, size, vector)
+        self.fleet.add_ship(ship)
 
     def __str__(self):
         lst = [x.status for x in self.data.values()]
