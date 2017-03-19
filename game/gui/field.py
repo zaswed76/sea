@@ -82,6 +82,7 @@ class Field(QtWidgets.QFrame):
     def clear(self):
         for k, cell in self.sea.items():
             self.field[k].setStyleSheet("background-color: #e3e3e3")
+            self.field[k].status = MCell.Empty
 
     def update_sea(self):
         # print(self.sea)
@@ -93,7 +94,6 @@ class Field(QtWidgets.QFrame):
                 self.field[k].status = MCell.Around
 
     def create_ship(self, bow, ship_name):
-
         self.parent.create_ship(bow, ship_name)
 
 
