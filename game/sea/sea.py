@@ -45,10 +45,12 @@ class Sea(UserDict):
             cell.status = Cell.Empty
 
     def create_ship(self, bow, ship_name):
-
         size = ship_name[0]
-        print(size)
         vector = ship_name[1]
+        if vector == Ship.Vertical and size > self[bow].vertical_allow:
+            return
+        elif vector == Ship.Horizontal and  size > self[bow].horizontal_allow:
+            return
         self._create_ship(self, bow, size, vector)
 
 

@@ -1,4 +1,6 @@
 
+
+
 class Cell:
     Min = 0
     Max = 10
@@ -33,7 +35,7 @@ class Cell:
 
     @property
     def vertical_allow(self):
-       return 4 if self._vertical_allow >= 4 else self._vertical_allow
+        return 4 if self._vertical_allow >= 4 else self._vertical_allow
 
     @vertical_allow.setter
     def vertical_allow(self, cell):

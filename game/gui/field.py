@@ -30,7 +30,6 @@ class Cell(QtWidgets.QPushButton, MCell):
                         ACTIONS_NAMES.keys()]
 
     def action_method(self, a):
-        print( "!!!", ACTIONS_NAMES[a.text()], self.name)
         self.parent.create_ship(self.name, ACTIONS_NAMES[a.text()])
 
     def contextMenuEvent(self, event):
