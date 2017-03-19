@@ -13,12 +13,13 @@ ACTIONS_NAMES = {
     '1': (1, Ship.Vertical)}
 
 
-class Cell(QtWidgets.QPushButton):
-    def __init__(self, parent, name):
+class Cell(QtWidgets.QPushButton, MCell):
+    def __init__(self, parent=None, y=0, x=0):
         super().__init__()
+
         self.parent = parent
-        self.name = name
-        self.y, self.x = name
+        self.name = (y, x)
+        self.y, self.x = y, x
         self.status = MCell.Empty
         policy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding,
                                        QtWidgets.QSizePolicy.Expanding)
@@ -29,13 +30,17 @@ class Cell(QtWidgets.QPushButton):
                         ACTIONS_NAMES.keys()]
 
     def action_method(self, a):
+        print( "!!!", ACTIONS_NAMES[a.text()], self.name)
         self.parent.create_ship(self.name, ACTIONS_NAMES[a.text()])
 
     def contextMenuEvent(self, event):
+
         if self.status == MCell.Empty:
+
             menu = QtWidgets.QMenu(self)
             menu.addActions(self.actions)
             menu.triggered[QtWidgets.QAction].connect(self.action_method)
+
             menu.exec_(self.mapToGlobal(event.pos()))
 
     def enterEvent(self, event):
@@ -66,7 +71,7 @@ class Field(QtWidgets.QFrame):
         self.grid.setContentsMargins(0, 0, 0, 0)
         for y in range(10):
             for x in range(10):
-                self.field[(y, x)] = Cell(self, (y, x))
+                self.field[(y, x)] = Cell(parent=self, y=y, x=x)
                 self.field[(y, x)].clicked.connect(self.click_cell)
                 # self.field[(y, x)].setText("{},{}".format(y, x))
                 self.grid.addWidget(self.field[(y, x)], y, x)
@@ -80,7 +85,7 @@ class Field(QtWidgets.QFrame):
             self.field[k].setStyleSheet("background-color: #e3e3e3")
 
     def update_sea(self):
-        print(self.sea)
+        # print(self.sea)
         for k, cell in self.sea.items():
             if cell.status == MCell.Ship:
                 self.field[k].setStyleSheet("background-color: green")
@@ -89,6 +94,7 @@ class Field(QtWidgets.QFrame):
                 self.field[k].status = MCell.Around
 
     def create_ship(self, bow, ship_name):
+
         self.parent.create_ship(bow, ship_name)
 
 

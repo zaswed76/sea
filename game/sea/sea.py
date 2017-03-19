@@ -45,6 +45,7 @@ class Sea(UserDict):
             cell.status = Cell.Empty
 
     def create_ship(self, bow, ship_name):
+
         size = ship_name[0]
         print(size)
         vector = ship_name[1]
