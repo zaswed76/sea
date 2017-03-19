@@ -45,6 +45,9 @@ class Main(QtWidgets.QMainWindow):
         self.tool = tool.Tool(self, tool_actions)
         self.init_tool_bar(self.tool)
 
+    def user_shot(self, cell):
+        print(self.pc_sea[cell].status)
+
     def create_ship(self, bow, ship_name):
 
         self.user_sea.create_ship(bow, ship_name)

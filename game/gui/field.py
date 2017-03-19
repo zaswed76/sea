@@ -55,7 +55,7 @@ class Cell(QtWidgets.QPushButton, MCell):
 
     def mousePressEvent(self, *args, **kwargs):
         if self.parent.objectName() == "pc":
-            print("выстрел")
+            self.parent.shot(self.name)
 
 
 class Field(QtWidgets.QFrame):
@@ -68,16 +68,10 @@ class Field(QtWidgets.QFrame):
         self.setObjectName(name)
         self._init_grid()
 
-    def _init_grid(self):
-        self.grid = QtWidgets.QGridLayout(self)
-        self.grid.setSpacing(0)
-        self.grid.setContentsMargins(0, 0, 0, 0)
-        for y in range(10):
-            for x in range(10):
-                self.field[(y, x)] = Cell(parent=self, y=y, x=x)
-                self.field[(y, x)].clicked.connect(self.click_cell)
-                # self.field[(y, x)].setText("{},{}".format(y, x))
-                self.grid.addWidget(self.field[(y, x)], y, x)
+
+    def shot(self, cell):
+        self.parent.user_shot(cell)
+
 
     def click_cell(self):
         obj = self.sender()
@@ -100,7 +94,16 @@ class Field(QtWidgets.QFrame):
     def create_ship(self, bow, ship_name):
         self.parent.create_ship(bow, ship_name)
 
-
+    def _init_grid(self):
+        self.grid = QtWidgets.QGridLayout(self)
+        self.grid.setSpacing(0)
+        self.grid.setContentsMargins(0, 0, 0, 0)
+        for y in range(10):
+            for x in range(10):
+                self.field[(y, x)] = Cell(parent=self, y=y, x=x)
+                self.field[(y, x)].clicked.connect(self.click_cell)
+                # self.field[(y, x)].setText("{},{}".format(y, x))
+                self.grid.addWidget(self.field[(y, x)], y, x)
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)

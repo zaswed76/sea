@@ -4,7 +4,7 @@
 class Cell:
     Min = 0
     Max = 10
-    Empty = " "
+    Empty = "0"
     Ship = "8"
     Wound = "X"
     Around = "*"
