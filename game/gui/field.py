@@ -53,6 +53,10 @@ class Cell(QtWidgets.QPushButton, MCell):
                                   border-bottom: none;
                                   border-left: none;""")
 
+    def mousePressEvent(self, *args, **kwargs):
+        if self.parent.objectName() == "pc":
+            print("выстрел")
+
 
 class Field(QtWidgets.QFrame):
     def __init__(self, parent, name, sea):
@@ -95,6 +99,7 @@ class Field(QtWidgets.QFrame):
 
     def create_ship(self, bow, ship_name):
         self.parent.create_ship(bow, ship_name)
+
 
 
 if __name__ == '__main__':

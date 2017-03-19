@@ -23,7 +23,7 @@
     <SUITE FILE_PATH="coverage/sea$main.coverage" NAME="main Coverage Results" MODIFIED="1489235171310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$fleet.coverage" NAME="fleet Coverage Results" MODIFIED="1488890154271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$sea__2_.coverage" NAME="sea (2) Coverage Results" MODIFIED="1488802022447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/scr" />
-    <SUITE FILE_PATH="coverage/sea$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1489917411630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/gui" />
+    <SUITE FILE_PATH="coverage/sea$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1489918096686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/gui" />
     <SUITE FILE_PATH="coverage/sea$test.coverage" NAME="test Coverage Results" MODIFIED="1489911061554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game" />
     <SUITE FILE_PATH="coverage/sea$main__2_.coverage" NAME="main (2) Coverage Results" MODIFIED="1489606812757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/sea" />
     <SUITE FILE_PATH="coverage/sea$t1.coverage" NAME="t1 Coverage Results" MODIFIED="1488829113275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
@@ -44,7 +44,7 @@
       <file leaf-file-name="sea.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/sea/sea.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="1173">
               <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -93,7 +93,7 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/gui/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
+            <state relative-caret-position="-621">
               <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="e#1279#1357#0" expanded="true" />
@@ -119,8 +119,8 @@
       <file leaf-file-name="field.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game/gui/field.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
+            <state relative-caret-position="267">
+              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#458#911#0" expanded="true" />
@@ -128,12 +128,12 @@
                 <element signature="e#1062#1305#0" expanded="true" />
                 <element signature="e#1348#1439#0" expanded="true" />
                 <element signature="e#1482#1750#0" expanded="true" />
-                <element signature="e#1835#2024#0" expanded="true" />
-                <element signature="e#2060#2502#0" expanded="true" />
-                <element signature="e#2538#2581#0" expanded="true" />
-                <element signature="e#2612#2760#0" expanded="true" />
-                <element signature="e#2796#3115#0" expanded="true" />
-                <element signature="e#3168#3207#0" expanded="true" />
+                <element signature="e#1958#2147#0" expanded="true" />
+                <element signature="e#2183#2625#0" expanded="true" />
+                <element signature="e#2661#2704#0" expanded="true" />
+                <element signature="e#2735#2883#0" expanded="true" />
+                <element signature="e#2919#3238#0" expanded="true" />
+                <element signature="e#3291#3330#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -619,13 +619,6 @@
       <option name="presentableId" value="Default" />
       <updated>1458231147630</updated>
     </task>
-    <task id="LOCAL-00001" summary="1">
-      <created>1458236997440</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1458236997440</updated>
-    </task>
     <task id="LOCAL-00002" summary="create sea">
       <created>1458318445942</created>
       <option name="number" value="00002" />
@@ -962,7 +955,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489916853138</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="add user ship">
+      <created>1489917500162</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1489917500163</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1278,7 +1278,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game/sea/sea.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="1173">
           <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -1295,7 +1295,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
+        <state relative-caret-position="-621">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#1279#1357#0" expanded="true" />
@@ -1307,8 +1307,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game/gui/field.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
+        <state relative-caret-position="267">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#458#911#0" expanded="true" />
@@ -1316,12 +1316,12 @@
             <element signature="e#1062#1305#0" expanded="true" />
             <element signature="e#1348#1439#0" expanded="true" />
             <element signature="e#1482#1750#0" expanded="true" />
-            <element signature="e#1835#2024#0" expanded="true" />
-            <element signature="e#2060#2502#0" expanded="true" />
-            <element signature="e#2538#2581#0" expanded="true" />
-            <element signature="e#2612#2760#0" expanded="true" />
-            <element signature="e#2796#3115#0" expanded="true" />
-            <element signature="e#3168#3207#0" expanded="true" />
+            <element signature="e#1958#2147#0" expanded="true" />
+            <element signature="e#2183#2625#0" expanded="true" />
+            <element signature="e#2661#2704#0" expanded="true" />
+            <element signature="e#2735#2883#0" expanded="true" />
+            <element signature="e#2919#3238#0" expanded="true" />
+            <element signature="e#3291#3330#0" expanded="true" />
           </folding>
         </state>
       </provider>
