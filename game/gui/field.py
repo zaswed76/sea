@@ -29,6 +29,15 @@ class Cell(QtWidgets.QPushButton, MCell):
         self.actions = [QtWidgets.QAction(n) for n in
                         ACTIONS_NAMES.keys()]
 
+    def draw_ship(self):
+        self.setStyleSheet("background-color: #21BBD4")
+
+    def draw_shot(self):
+        self.setText("*")
+
+    def draw_wound_ship(self):
+        self.setText("X")
+
     def action_method(self, a):
         self.parent.create_ship(self.name, ACTIONS_NAMES[a.text()])
 
@@ -53,9 +62,14 @@ class Cell(QtWidgets.QPushButton, MCell):
                                   border-bottom: none;
                                   border-left: none;""")
 
+    def clear(self):
+        self.setText("")
+
     def mousePressEvent(self, *args, **kwargs):
         if self.parent.objectName() == "pc":
             self.parent.shot(self.name)
+
+
 
 
 class Field(QtWidgets.QFrame):
@@ -81,26 +95,17 @@ class Field(QtWidgets.QFrame):
         for k, cell in self.sea.items():
             self.field[k].setStyleSheet("background-color: #e3e3e3")
             self.field[k].status = MCell.Empty
+            self.field[k].clear()
 
     def update_sea(self):
-        # # print(self.sea)
-        # # print(self.sea)
-        # for k, it in self.sea.items():
-        #     if it.status == MCell.Shot:
-        #         print(k, it.status, "1")
-        #         print(self.field[k].setText("*"))
-        #         # self.field[k].setStyleSheet("background-color: cyan")
-
-
-
         for k, cell in self.sea.items():
             if cell.status == MCell.Ship:
-                self.field[k].setStyleSheet("background-color: green")
+                self.field[k].draw_ship()
                 self.field[k].status = MCell.Ship
             elif cell.status == MCell.Around:
                 self.field[k].status = MCell.Around
             elif cell.status == MCell.Shot or cell.status == MCell.AroundShot:
-                self.field[k].setText("*")
+                self.field[k].draw_shot()
             elif cell.status == MCell.WoundShip:
                 self.field[k].setText("X")
 

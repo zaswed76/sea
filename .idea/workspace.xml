@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d2b38aa-ecb8-4b30-966e-3da2886ffa00" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sea.iml" afterPath="$PROJECT_DIR$/.idea/sea.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/css/grey.css" afterPath="$PROJECT_DIR$/game/css/grey.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/gui/field.py" afterPath="$PROJECT_DIR$/game/gui/field.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/gui/main.py" afterPath="$PROJECT_DIR$/game/gui/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/sea/cell.py" afterPath="$PROJECT_DIR$/game/sea/cell.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/old/sea2/gui/mainwidget.py" afterPath="$PROJECT_DIR$/old/sea2/gui/mainwidget.py" />
     </list>
     <ignored path="sea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +27,7 @@
     <SUITE FILE_PATH="coverage/sea$ship.coverage" NAME="ship Coverage Results" MODIFIED="1489163092927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$fleet.coverage" NAME="fleet Coverage Results" MODIFIED="1488890154271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$t1.coverage" NAME="t1 Coverage Results" MODIFIED="1488829113275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
-    <SUITE FILE_PATH="coverage/sea$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1490095189795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/gui" />
+    <SUITE FILE_PATH="coverage/sea$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1490101092644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/game/gui" />
     <SUITE FILE_PATH="coverage/sea$cell.coverage" NAME="cell Coverage Results" MODIFIED="1489141030127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$sea.coverage" NAME="sea Coverage Results" MODIFIED="1489606600967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/new/test" />
     <SUITE FILE_PATH="coverage/sea$seamodel.coverage" NAME="seamodel Coverage Results" MODIFIED="1461342975560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sea2/exemple" />
@@ -99,38 +95,44 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/gui/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
+            <state relative-caret-position="480">
+              <caret line="101" column="24" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#1266#1619#0" expanded="true" />
                 <element signature="e#1673#1751#0" expanded="true" />
-                <element signature="e#3091#3182#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="field.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="field.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game/gui/field.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="103" column="47" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
+            <state relative-caret-position="288">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="e#458#911#0" expanded="true" />
-                <element signature="e#1482#1750#0" expanded="true" />
-                <element signature="e#1808#1884#0" expanded="true" />
-                <element signature="e#2195#2222#0" expanded="true" />
-                <element signature="e#3388#3427#0" expanded="true" />
+                <element signature="e#946#993#0" expanded="true" />
+                <element signature="e#1028#1045#0" expanded="true" />
+                <element signature="e#1086#1103#0" expanded="true" />
+                <element signature="e#1674#1942#0" expanded="true" />
+                <element signature="e#1973#1989#0" expanded="true" />
+                <element signature="e#2047#2123#0" expanded="true" />
+                <element signature="e#2436#2463#0" expanded="true" />
+                <element signature="e#2574#2756#0" expanded="true" />
+                <element signature="e#2792#3269#0" expanded="true" />
+                <element signature="e#3322#3361#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="grey.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="grey.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/game/css/grey.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -183,12 +185,12 @@
         <option value="$USER_HOME$/.PyCharm2016.1/system/python_stubs/1527852379/PyQt5/QtWidgets/QFrame.py" />
         <option value="$PROJECT_DIR$/game/test.py" />
         <option value="$PROJECT_DIR$/game/sea/sea.py" />
-        <option value="$PROJECT_DIR$/game/css/grey.css" />
         <option value="$PROJECT_DIR$/game/gui/tool.py" />
         <option value="$PROJECT_DIR$/old/sea2/gui/mainwidget.py" />
         <option value="$PROJECT_DIR$/game/sea/cell.py" />
         <option value="$PROJECT_DIR$/game/gui/main.py" />
         <option value="$PROJECT_DIR$/game/gui/field.py" />
+        <option value="$PROJECT_DIR$/game/css/grey.css" />
       </list>
     </option>
   </component>
@@ -940,26 +942,33 @@
       <option name="project" value="LOCAL" />
       <updated>1489683337040</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="ship add  around">
+      <created>1490095211636</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1490095211636</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20342612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20342612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18127961" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30131003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3023001" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22267537" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3995633" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1096" height="800" />
@@ -1194,14 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game/css/grey.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/old/sea/etc/config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -1263,27 +1264,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/game/gui/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
+        <state relative-caret-position="480">
+          <caret line="101" column="24" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#1266#1619#0" expanded="true" />
             <element signature="e#1673#1751#0" expanded="true" />
-            <element signature="e#3091#3182#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/game/gui/field.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="103" column="47" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
+        <state relative-caret-position="288">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="e#458#911#0" expanded="true" />
-            <element signature="e#1482#1750#0" expanded="true" />
-            <element signature="e#1808#1884#0" expanded="true" />
-            <element signature="e#2195#2222#0" expanded="true" />
-            <element signature="e#3388#3427#0" expanded="true" />
+            <element signature="e#946#993#0" expanded="true" />
+            <element signature="e#1028#1045#0" expanded="true" />
+            <element signature="e#1086#1103#0" expanded="true" />
+            <element signature="e#1674#1942#0" expanded="true" />
+            <element signature="e#1973#1989#0" expanded="true" />
+            <element signature="e#2047#2123#0" expanded="true" />
+            <element signature="e#2436#2463#0" expanded="true" />
+            <element signature="e#2574#2756#0" expanded="true" />
+            <element signature="e#2792#3269#0" expanded="true" />
+            <element signature="e#3322#3361#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game/css/grey.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
