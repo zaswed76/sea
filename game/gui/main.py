@@ -46,7 +46,14 @@ class Main(QtWidgets.QMainWindow):
         self.init_tool_bar(self.tool)
 
     def user_shot(self, cell):
-        print(self.pc_sea[cell].status)
+        status = self.pc_sea[cell].status
+        if status == sea.Cell.Empty:
+            self.pc_sea[cell].status = sea.Cell.Shot
+        elif status == sea.Cell.Around:
+            self.pc_sea[cell].status = sea.Cell.AroundShot
+        elif status == sea.Cell.Ship:
+            self.pc_sea[cell].status = sea.Cell.WoundShip
+        self.pc_field.update_sea()
 
     def create_ship(self, bow, ship_name):
 

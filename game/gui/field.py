@@ -83,13 +83,26 @@ class Field(QtWidgets.QFrame):
             self.field[k].status = MCell.Empty
 
     def update_sea(self):
-        # print(self.sea)
+        # # print(self.sea)
+        # # print(self.sea)
+        # for k, it in self.sea.items():
+        #     if it.status == MCell.Shot:
+        #         print(k, it.status, "1")
+        #         print(self.field[k].setText("*"))
+        #         # self.field[k].setStyleSheet("background-color: cyan")
+
+
+
         for k, cell in self.sea.items():
             if cell.status == MCell.Ship:
                 self.field[k].setStyleSheet("background-color: green")
                 self.field[k].status = MCell.Ship
             elif cell.status == MCell.Around:
                 self.field[k].status = MCell.Around
+            elif cell.status == MCell.Shot or cell.status == MCell.AroundShot:
+                self.field[k].setText("*")
+            elif cell.status == MCell.WoundShip:
+                self.field[k].setText("X")
 
     def create_ship(self, bow, ship_name):
         self.parent.create_ship(bow, ship_name)

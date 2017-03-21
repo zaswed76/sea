@@ -161,6 +161,7 @@ class MainWidget(QtWidgets.QMainWindow):
 
         :param sheetName: str имя стиля
         """
+        print(222)
         file_name = sheetName + '.css'
         file = QFile('../css/{}'.format(file_name))
         file.open(QFile.ReadOnly)

@@ -4,10 +4,13 @@
 class Cell:
     Min = 0
     Max = 10
-    Empty = "0"
-    Ship = "8"
-    Wound = "X"
-    Around = "*"
+    Empty = "empty"
+    Ship = "ship"
+    WoundShip = "wound_ship"
+    Wound = "wound "
+    Around = "around"
+    AroundShot = "around_shot"
+    Shot = "shot"
     def __init__(self, parent=None, y=0, x=0):
         # assert (y < Cell.Max and x < Cell.Max) and (y >= Cell.Min and x >= Cell.Min)
         self.coord = (y, x)
