@@ -96,7 +96,7 @@ class Main(mainwidget.MainWidget):
 
     def new_game(self):
         self.sea['user'].accept_fleet()
-        print('new_game')
+        print('create_pc_fleet')
 
     def eraser(self):
         self.sea['user'].the_clear()

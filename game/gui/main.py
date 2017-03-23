@@ -9,7 +9,7 @@ from game.gui import field, tool
 from game.sea import sea
 
 actions_names = [
-    "new_game.png",
+    "create_pc_fleet.png",
     "auto_fleet_user.png",
     "settings.png",
     "SPACER",
@@ -23,6 +23,9 @@ icon_dir = "../resource/icons"
 class Main(QtWidgets.QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self._init_ui()
+
+    def _init_ui(self):
         self.resize(500, 500)
         self.central = QtWidgets.QFrame(self)
         self.setCentralWidget(self.central)
@@ -39,8 +42,6 @@ class Main(QtWidgets.QMainWindow):
         self.box.insertWidget(1, self.pc_field)
         self.pc_field.update_sea()
 
-
-
         tool_actions = self.tool_actions(icon_dir, actions_names)
         self.tool = tool.Tool(self, tool_actions)
         self.init_tool_bar(self.tool)
@@ -56,7 +57,6 @@ class Main(QtWidgets.QMainWindow):
         self.pc_field.update_sea()
 
     def create_ship(self, bow, ship_name):
-
         self.user_sea.create_ship(bow, ship_name)
         self.user_field.update_sea()
 
@@ -97,7 +97,8 @@ class Main(QtWidgets.QMainWindow):
             except AttributeError as err:
                 print(err)
 
-    def new_game(self):
+    def create_pc_fleet(self):
+        print(self.user_sea.fleet)
         self.pc_sea.create_fleet()
         self.pc_field.clear()
         self.pc_field.update_sea()

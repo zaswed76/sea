@@ -13,6 +13,7 @@ class Sea(UserDict):
         self.data.update({(y, x):Cell(self, y=y, x=x) for y in range(10) for x in range(10)})
         self.data_copy = copy.deepcopy(self.data)
         self.fleet = Fleet()
+        self.fleet_status = False # построен ли флот
 
     def create_fleet(self):
         self.data.clear()
@@ -22,6 +23,8 @@ class Sea(UserDict):
             bow = random.choice(self._get_allow_field(vector, size))
             ship = self._create_ship(self, bow, size, vector)
             self.fleet.add_ship(ship)
+        self.fleet_status = True
+
 
     def _create_ship(self, sea,  bow, size, vector):
         return Ship(sea, bow, size, vector)
@@ -52,6 +55,7 @@ class Sea(UserDict):
         elif vector == Ship.Horizontal and  size > self[bow].horizontal_allow:
             return
         ship = self._create_ship(self, bow, size, vector)
+        print(222)
         self.fleet.add_ship(ship)
 
     def __str__(self):
