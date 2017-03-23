@@ -5,6 +5,15 @@ class Fleet(Sequence):
     def __init__(self):
         self._f = []
 
+    def add_ship(self, ship):
+        self._f.append(ship)
+
+    def check(self):
+        if self._f:
+            return True
+        else:
+            return False
+
     def __getitem__(self, item):
         return self._f[item]
 
@@ -23,9 +32,6 @@ class Fleet(Sequence):
 
     def __str__(self):
         return "{}".format(self._f)
-
-    def add_ship(self, ship):
-        self._f.append(ship)
 
 
 if __name__ == '__main__':

@@ -98,10 +98,10 @@ class Main(QtWidgets.QMainWindow):
                 print(err)
 
     def create_pc_fleet(self):
-        print(self.user_sea.fleet)
-        self.pc_sea.create_fleet()
-        self.pc_field.clear()
-        self.pc_field.update_sea()
+        if self.user_sea.fleet.check():
+            self.pc_sea.create_fleet()
+            self.pc_field.clear()
+            self.pc_field.update_sea()
 
     def auto_fleet_user(self):
 
