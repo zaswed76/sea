@@ -24,6 +24,7 @@ class Main(QtWidgets.QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._init_ui()
+        self.status_game = False
 
     def _init_ui(self):
         self.resize(500, 500)
@@ -46,15 +47,19 @@ class Main(QtWidgets.QMainWindow):
         self.tool = tool.Tool(self, tool_actions)
         self.init_tool_bar(self.tool)
 
+    def pc_shot(self):
+        pass
+
     def user_shot(self, cell):
-        status = self.pc_sea[cell].status
-        if status == sea.Cell.Empty:
-            self.pc_sea[cell].status = sea.Cell.Shot
-        elif status == sea.Cell.Around:
-            self.pc_sea[cell].status = sea.Cell.AroundShot
-        elif status == sea.Cell.Ship:
-            self.pc_sea[cell].status = sea.Cell.WoundShip
-        self.pc_field.update_sea()
+        if self.status_game:
+            status = self.pc_sea[cell].status
+            if status == sea.Cell.Empty:
+                self.pc_sea[cell].status = sea.Cell.Shot
+            elif status == sea.Cell.Around:
+                self.pc_sea[cell].status = sea.Cell.AroundShot
+            elif status == sea.Cell.Ship:
+                self.pc_sea[cell].status = sea.Cell.WoundShip
+            self.pc_field.update_sea()
 
     def create_ship(self, bow, ship_name):
         self.user_sea.create_ship(bow, ship_name)
@@ -102,6 +107,7 @@ class Main(QtWidgets.QMainWindow):
             self.pc_sea.create_fleet()
             self.pc_field.clear()
             self.pc_field.update_sea()
+            self.status_game = True
 
     def auto_fleet_user(self):
 
