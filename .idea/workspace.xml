@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5d2b38aa-ecb8-4b30-966e-3da2886ffa00" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/gui/main.py" afterPath="$PROJECT_DIR$/game/gui/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game/sea/fleet.py" afterPath="$PROJECT_DIR$/game/sea/fleet.py" />
     </list>
     <ignored path="sea.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -661,13 +659,6 @@
       <option name="presentableId" value="Default" />
       <updated>1458231147630</updated>
     </task>
-    <task id="LOCAL-00014" summary="ship add  around">
-      <created>1488967972054</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1488967972054</updated>
-    </task>
     <task id="LOCAL-00015" summary="ship add  around">
       <created>1488999040291</created>
       <option name="number" value="00015" />
@@ -1004,7 +995,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490518403716</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="add user ship">
+      <created>1490520299729</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1490520299730</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="ToolWindowManager">
