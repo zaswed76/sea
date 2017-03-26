@@ -1,9 +1,11 @@
 from collections import Set, UserDict
 from game.sea.cell import Cell
 
+
 class Ship(UserDict):
     Horizontal = "horizontal"
     Vertical = "vertical"
+
     def __init__(self, sea, bow, size, vector):
         super().__init__()
         self.sea = sea
@@ -28,16 +30,13 @@ class Ship(UserDict):
         self._set_status()
         self._update_sea_status()
 
-
     def _top_cells(self):
         _y = self.bow[0] - 1
         return [(y, x) for y, x in self.around.keys() if y == _y]
 
-
     def _right_cells(self):
         _x = self.bow[1] - 1
         return [(y, x) for y, x in self.around.keys() if x == _x]
-
 
     def _update_sea_status(self):
         for _y, x in self._top_cells():
@@ -50,7 +49,6 @@ class Ship(UserDict):
                 key = (y, _x - n)
                 if key in self.sea:
                     self.sea[key].horizontal_allow = self.sea[(y, _x)]
-
 
     def _set_status(self):
         for k, c in self.all.items():
@@ -76,8 +74,10 @@ class Ship(UserDict):
         self.all.update(self.ship)
         self.all.update(self.around)
 
-    def __str__(self):
-        return "bow - {}\nvector - {}\nsize - {}\nship - {}".format(self.bow,
+
+
+    def __repr__(self):
+        return "bow - {}\nvector - {}\nsize - {}\nship - {}\n".format(self.bow,
                                                                     self.vector,
                                                                     self.size,
                                                                     self.ship.keys())

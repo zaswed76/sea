@@ -63,7 +63,7 @@ class Main(QtWidgets.QMainWindow):
 
     def user_shot(self, cell):
         if self.status_game:
-            print(self.pc_sea.fleet)
+
             status = self.pc_sea[cell].status
             if status == sea.Cell.Empty:
                 self.pc_sea[cell].status = sea.Cell.Shot
@@ -73,6 +73,8 @@ class Main(QtWidgets.QMainWindow):
                 self.pc_shot()
             elif status == sea.Cell.Ship:
                 self.pc_sea[cell].status = sea.Cell.WoundShip
+                if self.pc_sea.fleet.wound(cell) == 0:
+                    pass
 
             self.pc_field.update_sea()
 

@@ -15,7 +15,11 @@ class Fleet(Sequence):
             return False
 
     def wound(self, item):
-        pass
+        for ship in self._f:
+            if item in ship:
+                ship.pop(item)
+                return len(ship)
+
 
     def __getitem__(self, item):
         return self._f[item]
@@ -33,7 +37,7 @@ class Fleet(Sequence):
     def __len__(self):
         return len(self._f)
 
-    def __str__(self):
+    def __repr__(self):
         return "{}".format(self._f)
 
 
