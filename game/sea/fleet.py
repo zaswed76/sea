@@ -14,6 +14,9 @@ class Fleet(Sequence):
         else:
             return False
 
+    def wound(self, item):
+        pass
+
     def __getitem__(self, item):
         return self._f[item]
 

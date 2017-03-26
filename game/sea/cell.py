@@ -34,7 +34,7 @@ class Cell:
         return self.coord[item]
 
     def __repr__(self):
-        return "({},{}; {})".format(*self.coord, self.status)
+        return "({},{})".format(*self.coord)
 
     @property
     def vertical_allow(self):
