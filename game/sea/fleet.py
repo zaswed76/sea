@@ -18,7 +18,7 @@ class Fleet(Sequence):
         for ship in self._f:
             if item in ship:
                 ship.pop(item)
-                return len(ship)
+                return len(ship), ship.around
 
 
     def __getitem__(self, item):

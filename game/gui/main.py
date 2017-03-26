@@ -73,8 +73,11 @@ class Main(QtWidgets.QMainWindow):
                 self.pc_shot()
             elif status == sea.Cell.Ship:
                 self.pc_sea[cell].status = sea.Cell.WoundShip
-                if self.pc_sea.fleet.wound(cell) == 0:
-                    pass
+                length, around =  self.pc_sea.fleet.wound(cell)
+                if not length:
+                    for c in around:
+                        self.pc_sea[c].status = sea.Cell.AroundShot
+
 
             self.pc_field.update_sea()
 
