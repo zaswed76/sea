@@ -6,7 +6,7 @@ from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import QFile
 
 from game.gui import field, tool
-from game.sea import sea
+from game.sea import sea, shooter
 
 actions_names = [
     "create_pc_fleet.png",
@@ -25,6 +25,7 @@ class Main(QtWidgets.QMainWindow):
         super().__init__(*args, **kwargs)
         self._init_ui()
         self.status_game = False
+        self.pc_shooter = shooter.Shooter()
 
     def _init_ui(self):
         self.resize(500, 500)
@@ -48,15 +49,29 @@ class Main(QtWidgets.QMainWindow):
         self.init_tool_bar(self.tool)
 
     def pc_shot(self):
-        pass
+        cell = self.pc_shooter.shot()
+        print("pc shot = ", cell)
+
+        if self.status_game:
+            status = self.user_sea[cell].status
+            if status == sea.Cell.Empty:
+                self.user_sea[cell].status = sea.Cell.Shot
+            elif status == sea.Cell.Around:
+                self.user_sea[cell].status = sea.Cell.AroundShot
+            elif status == sea.Cell.Ship:
+                self.user_sea[cell].status = sea.Cell.WoundShip
+            self.user_field.update_sea()
+
 
     def user_shot(self, cell):
         if self.status_game:
             status = self.pc_sea[cell].status
             if status == sea.Cell.Empty:
                 self.pc_sea[cell].status = sea.Cell.Shot
+                self.pc_shot()
             elif status == sea.Cell.Around:
                 self.pc_sea[cell].status = sea.Cell.AroundShot
+                self.pc_shot()
             elif status == sea.Cell.Ship:
                 self.pc_sea[cell].status = sea.Cell.WoundShip
             self.pc_field.update_sea()
