@@ -3,32 +3,32 @@ Main {
     background-color: #e3e3e3;
 }
 
-View {
-    background-image: url("../resource/textures/grey/field.png");
-    border-right: none;
-    border-left: 1px solid gray;
-    border-top: 1px solid gray;
-    border-bottom: none;
-}
+/*View {*/
+    /*background-image: url("../resource/textures/grey/field.png");*/
+    /*border-right: none;*/
+    /*border-left: 1px solid gray;*/
+    /*border-top: 1px solid gray;*/
+    /*border-bottom: none;*/
+/*}*/
 
 Field {
     background-color: #b5b5b5;
 }
 
-QFrame#pc {
-    border-top: none;
-    border-right: none;
-    border-left: 1px solid gray;
-    border-bottom: 1px solid gray;
-    background-image: url("../resource/textures/grey/bg.jpg");
-}
+/*QFrame#pc {*/
+    /*border-top: none;*/
+    /*border-right: none;*/
+    /*border-left: 1px solid gray;*/
+    /*border-bottom: 1px solid gray;*/
+    /*background-image: url("../resource/textures/grey/bg.jpg");*/
+/*}*/
 
-QFrame#user {
-    border-top: none;
-    border-right: none;
-    border-left: 1px solid gray;
-    border-bottom: 1px solid gray;
-    background-image: url("../resource/textures/grey/bg.jpg");
+/*QFrame#user {*/
+    /*border-top: none;*/
+    /*border-right: none;*/
+    /*border-left: 1px solid gray;*/
+    /*border-bottom: 1px solid gray;*/
+    /*background-image: url("../resource/textures/grey/bg.jpg");*/
 }
 
 /*Tool {*/
@@ -41,8 +41,8 @@ Cell {
     background-color: #e0e0e0;
     border-top: 1px solid gray;
     border-right: 1px solid gray;
-    border-bottom: none;
-    border-left: none;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
     font-size: 25px;
 
 }

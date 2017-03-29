@@ -167,5 +167,6 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     main = Main()
     main.show()
+    print(main.user_field.field[(0, 0)].size())
     main.load_style_sheet("grey")
     sys.exit(app.exec_())

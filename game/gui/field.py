@@ -16,14 +16,15 @@ ACTIONS_NAMES = {
 class Cell(QtWidgets.QPushButton, MCell):
     def __init__(self, parent=None, y=0, x=0):
         super().__init__()
-
+        # self.setWindowFlags(QtCore.Qt.MSWindowsFixedSizeDialogHint)
         self.parent = parent
         self.name = (y, x)
         self.y, self.x = y, x
         self.status = MCell.Empty
-        policy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding,
-                                       QtWidgets.QSizePolicy.Expanding)
-        self.setSizePolicy(policy)
+        self.setFixedSize(50, 50)
+        # policy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding,
+        #                                QtWidgets.QSizePolicy.Expanding)
+        # self.setSizePolicy(policy)
         # self.setCheckable(True)
 
         self.actions = [QtWidgets.QAction(n) for n in
@@ -76,6 +77,7 @@ class Field(QtWidgets.QFrame):
     def __init__(self, parent, name, sea):
         super().__init__()
         self.parent = parent
+
         self.sea = sea
         self.setFixedSize(500, 500)
         self.field = {}
