@@ -6,11 +6,11 @@ import sys
 
 from PyQt5 import QtWidgets
 
-# from core import scene
-from gui import mainwidget
+from sea2.core import sea, game
+from sea2.gui import mainwidget
 from libs import config
 
-cfg_path = '../etc/config.json'
+cfg_path = 'config.json'
 
 cfg = config.read_cfg(cfg_path)
 
@@ -36,6 +36,26 @@ class Main(mainwidget.MainWidget):
 
 
 
+        # GAME ------
+
+        self.sea = {}
+        self.sea['user'] = sea.SeaModel(0, 0, cfg['field_size'],
+                                        cfg['field_size'], self,
+                                        name='user', style=self.user_style)
+        self.add_gui_sea(
+                sea.View(self.sea['user'], self,
+                         size=cfg['view_size']))
+
+        # --- PC SEA ------
+
+        self.sea['pc'] = sea.SeaModel(0, 0, cfg['field_size'],
+                                      cfg['field_size'],
+                                      self,
+                                      name='pc', style=self.user_style)
+        self.add_gui_sea(
+                sea.View(self.sea['pc'], self, size=cfg['view_size']))
+
+        self.game = game.Game()
 
     def closeEvent(self, e):
         ms = mainwidget.show_dialog(self, 'выход', mainwidget.MESSAGES['close'])

@@ -1,0 +1,36 @@
+{
+    "field_size": 320,
+    "ext": "png",
+    "ship_names": [
+        4,
+        3,
+        3,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+    ],
+    "default_style": "grey",
+    "actions_names": [
+        "finish_game.png",
+        "new_game.png",
+        "auto_fleet_user.png",
+        "eraser.png",
+        "settings.png",
+        "SPACER",
+        "style_grey.png",
+        "style_cyan.png",
+        "style_green.png",
+        "close_scr.png"
+    ],
+    "tool_icon_size": 30,
+    "ext_icon": "png",
+    "status_height": 30,
+    "tool_height": 100,
+    "view_size": 322,
+    "count_cell": 10,
+    "cell_size": 32
+}
