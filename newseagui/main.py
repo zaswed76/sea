@@ -6,8 +6,8 @@ import sys
 
 from PyQt5 import QtWidgets
 
-from sea2.core import sea, game
-from sea2.gui import mainwidget
+from newseagui.core import sea, game
+from newseagui import mainwidget
 from libs import config
 
 cfg_path = 'config.json'
@@ -18,12 +18,11 @@ cfg = config.read_cfg(cfg_path)
 class Main(mainwidget.MainWidget):
     def __init__(self):
         super().__init__()
-
         self.user_style = mainwidget.Style(cfg['default_style'])
         self.load_style_sheet(self.user_style.default_style)
 
         # TOOL ------------------------------------------------------
-
+        print(self.user_style.icon_dir, "dir")
         tool_actions = self.tool_actions(self.user_style.icon_dir,
                                          cfg['actions_names'])
         self.tool = mainwidget.Tool(self, tool_actions)

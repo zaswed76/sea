@@ -233,4 +233,4 @@ if __name__ == '__main__':
     sea.init_matrix()
 
     sea[0][0].tag = Cell.TagShip
-    print(sea)
+    print(sea[0][0].coord)

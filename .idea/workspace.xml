@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d2b38aa-ecb8-4b30-966e-3da2886ffa00" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/newseagui/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newseagui/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newseagui/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newseagui/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sea.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sea.iml" afterDir="false" />
+    <list default="true" id="5d2b38aa-ecb8-4b30-966e-3da2886ffa00" name="Default" comment="create sea">
+      <change afterPath="$PROJECT_DIR$/newseagui/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/core/game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/core/sea.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/core/seamodel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/mainwidget.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/cyan/auto_fleet_user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/cyan/close2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/cyan/close_scr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/cyan/eraser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/cyan/finish_game.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/cyan/new_game.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/cyan/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/cyan/style_cyan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/cyan/style_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/cyan/style_grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/green/auto_fleet_user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/green/close2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/green/close_scr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/green/eraser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/green/finish_game.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/green/new_game.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/green/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/green/style_cyan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/green/style_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/green/style_grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/grey/auto_fleet_user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/grey/close2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/grey/close_scr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/grey/eraser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/grey/finish_game.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/grey/new_game.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/grey/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/grey/style_cyan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/grey/style_green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/icons/grey/style_grey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/textures/cyan/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/textures/cyan/field.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/textures/cyan/ship.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/textures/green/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/textures/green/field.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/textures/green/ship.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/textures/grey/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/textures/grey/field.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newseagui/resource/textures/grey/ship.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sea3/gui/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/sea3/gui/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newseagui/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/newseagui/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sea2/core/seamodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/sea2/core/seamodel.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +85,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectId" id="1XJGZn89ERVGymnnTfAXL0pku7k" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/newseagui" />
@@ -211,28 +253,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="sea" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea3/gui" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea3/gui/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sea" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -255,7 +275,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mainwidget" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="sea" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sea" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -263,12 +283,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sea2/gui" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/newseagui/core" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea2/gui/mainwidget.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newseagui/core/sea.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -277,7 +297,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sea (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="seamodel (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sea" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/newseagui/core" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newseagui/core/seamodel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="seamodel" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sea" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -290,7 +332,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea2/core/sea.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sea2/core/seamodel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -379,18 +421,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.main (1)" />
-      <item itemvalue="Python.sea (1)" />
-      <item itemvalue="Python.mainwidget" />
-      <item itemvalue="Python.main (2)" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.seamodel" />
+      <item itemvalue="Python.sea" />
+      <item itemvalue="Python.seamodel (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.seamodel (1)" />
+        <item itemvalue="Python.sea" />
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.main (2)" />
-        <item itemvalue="Python.mainwidget" />
-        <item itemvalue="Python.sea (1)" />
+        <item itemvalue="Python.seamodel" />
       </list>
     </recent_temporary>
   </component>
@@ -461,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1461087247825</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="create sea">
+      <created>1580762610752</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580762610752</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
